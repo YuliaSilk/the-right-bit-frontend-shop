@@ -1,5 +1,5 @@
 import styles from './OurMission.module.css';
-import banner from '@/assets/banners/mission.png';
+import banner from '@/assets/banners/mission.jpg';
 import NewsLetter from '@/components/home/NewsLetter/NewsLetter';
 export default function OurMission() {
   return (
