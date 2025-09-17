@@ -1,13 +1,15 @@
 .container {
   width: 40vw;
   border-radius: 12px;
-  background-color: #ededed;
+ background-color: #FEFEFE;
+
 }
 
 .header {
   font-size: 32px;
   padding: 20px;
-  background-color: #d5d5d5;
+  background-color: #2D6B41;
+  color: #FEFEFE;
   text-align: center;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -15,6 +17,7 @@
 
 .mainContainer {
   padding: 2rem 90px 35px;
+  color: #0A1207;
 }
 
 .resultsContainer {
@@ -45,6 +48,35 @@
   justify-content: space-around;
   font-size: 14px;
 }
+.scaleIndexLabelsUnderWeight{
+  background-color: #299C4E;
+}
+.bmiBar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap:1px
+}
+.underWeightBar{
+  height: 40px;
+  width: 6px;
+  background-color: #299C4E;
+  border-radius: 4px;
+}
+.healthyBar{
+  height: 40px;
+  width: 6px;
+  background-color: #EE9229;
+  border-radius: 4px;
+}
+.overWeightBar{
+  height: 40px;
+  width: 6px;
+  background-color: #DD0000;
+  border-radius: 4px;
+}
+
+
 
 .divider {
   background-color: #ACACAC;
@@ -62,7 +94,7 @@
 .underweightLabel {
   padding: 0.7rem 0;
   color: #000000;
-  background-color: #f8f8f8;
+  background-color: #F9F1EB;
   font-size: 24px;
   text-align: center;
   border-radius: 8px;
@@ -71,7 +103,7 @@
 .healthyLabel {
   padding: 0.7rem 0;
   color: #000000;
-  background-color: #f8f8f8;
+  background-color: #F9F1EB;
   font-size: 24px;
   text-align: center;
   border-radius: 8px;
@@ -80,7 +112,7 @@
 .overweightLabel {
   padding: 0.7rem 0;
   color: #000000;
-  background-color: #d9d9d9;
+  background-color: #F9F1EB;
   font-size: 24px;
   text-align: center;
   border-radius: 8px;
@@ -88,5 +120,5 @@
 
 .footer {
   padding: 0 3rem 2rem;
-  color: #606060;
+  color: #525252;
 }

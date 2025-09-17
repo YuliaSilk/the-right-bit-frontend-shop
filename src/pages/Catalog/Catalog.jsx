@@ -24,94 +24,230 @@ export default function Catalog() {
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(10);
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const loadProducts = async () => {
-      setIsLoading(true);
-      setErrorMessage('');
-      try {
-        const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
-        let response;
-        if (hasFilters) {
-          response = await fetch(`${API_URL}/api/v1/catalog/filter`, {
+  // useEffect(() => {
+  //   const controller = new AbortController();
+  //   const loadProducts = async () => {
+  //     setIsLoading(true);
+  //     setErrorMessage('');
+  //     try {
+  //       const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
+  //       let response;
+  //       if (hasFilters) {
+  //         response = await fetch(`${API_URL}/api/v1/catalog/filter`, {
+  //           method: 'POST',
+  //           headers: { 'Content-Type': 'application/json', accept: 'application/json' },
+  //           body: JSON.stringify({
+  //             categoryName: selectedCategory || undefined,
+  //             brand: selectedBrands[0] || undefined,
+  //             priceFrom: priceFrom != null && priceFrom !== '' ? Number(priceFrom) : undefined,
+  //             priceTo: priceTo != null && priceTo !== '' ? Number(priceTo) : undefined,
+  //             sortBy: sortBy || undefined,
+  //             page,
+  //             size,
+  //             aZ: aZ || undefined,
+  //           }),
+  //           signal: controller.signal,
+  //         });
+  //       } else {
+  //         response = await fetch(`${API_URL}/api/v1/catalog`, {
+  //           method: 'GET',
+  //           headers: { accept: 'application/json' },
+  //           signal: controller.signal,
+  //         });
+  //       }
+
+  //       const contentType = response.headers.get('content-type') || '';
+  //       let payload = null;
+  //       try {
+  //         if (contentType.includes('application/json')) {
+  //           payload = await response.json();
+  //         } else {
+  //           const text = await response.text();
+  //           payload = text ? { message: text } : null;
+  //         }
+  //       } catch (_) {
+  //         payload = null;
+  //       }
+
+  //       if (!response.ok) {
+  //         const message = (payload && (payload.message || payload.error)) || `Request failed with status ${response.status}`;
+  //         setErrorMessage(message);
+  //         setProducts([]);
+  //         return;
+  //       }
+
+  //       const itemsCandidate = Array.isArray(payload)
+  //         ? payload
+  //         : payload?.content || payload?.items || payload?.data || [];
+  //       const items = Array.isArray(itemsCandidate) ? itemsCandidate : [];
+  //       setProducts(items);
+  //     } catch (err) {
+  //       if (err?.name !== 'AbortError') {
+  //         setErrorMessage('Network error. Please try again later.');
+  //       }
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   loadProducts();
+  //   return () => controller.abort();
+  // }, [API_URL, selectedBrands, selectedCategory, priceFrom, priceTo, sortBy, aZ, page, size]);
+
+  // const mapProductToCardProps = (product, index) => {
+  //   const id = product?.id ?? index + 1;
+  //   const name = product?.productName ?? 'Product';
+  //   const price = product?.price ?? 0;
+  //   const kcal = product?.kcal ?? product?.calories ?? 0;
+  //   const description = product?.description ?? '';
+  //   let imageUrl = '';
+
+  //   if (Array.isArray(product?.images) && product.images.length > 0) {
+  //     imageUrl = product.images[0]?.url || '';
+  //   }
+  //   if (imageUrl && imageUrl.startsWith('/')) {
+  //     const base = (API_URL || '').replace(/\/+$/, '');
+  //     imageUrl = `${base}${imageUrl}`;
+  //   }
+
+  //   return { id, name, price, kcal, description, imageUrl };
+  // };
+
+
+//get all catalog items
+
+//   useEffect(() => {
+//     const controller = new AbortController();
+
+//     const getAllCatalogItems = async () => {
+//       setIsLoading(true);
+//       setErrorMessage('');
+//       try {
+//         const response = await fetch(`${API_URL}/api/v1/catalog`, {
+//           method: 'GET',
+//           headers: { accept: 'application/json' },
+//           signal: controller.signal,
+//         });
+
+//         if (!response.ok) {
+//           throw new Error(`Request failed with status ${response.status}`);
+//         }
+
+//         const data = await response.json();
+//         setProducts(Array.isArray(data) ? data : []);
+//       } catch (error) {
+//         if (error.name !== 'AbortError') {
+//           setErrorMessage(error.message || 'Network error');
+//         }
+//       } finally {
+//         setIsLoading(false);
+//       }
+//     };
+
+//     getAllCatalogItems();
+//     return () => controller.abort();
+//   }, [API_URL]);
+
+//   useEffect(() => {
+//   const controller = new AbortController();
+
+//   const filterCatalogItems = async () => {
+//     setIsLoading(true);
+//     setErrorMessage('');
+//     try {
+//       const response = await fetch(`${API_URL}/api/v1/catalog/filter`, {
+//         method: 'POST',
+//         headers: { 
+//           'Content-Type': 'application/json',
+//           accept: 'application/json' 
+//         },
+//         body: JSON.stringify({
+//           categoryName: selectedCategory || undefined,
+//           brand: selectedBrands[0] || undefined,
+//           priceFrom: priceFrom ?? undefined,
+//           priceTo: priceTo ?? undefined,
+//           sortBy: sortBy || undefined,
+//           aZ: aZ || undefined,
+//           page,
+//           size
+//         }),
+//         signal: controller.signal,
+//       });
+
+//       if (!response.ok) {
+//         throw new Error(`Request failed with status ${response.status}`);
+//       }
+
+//       const data = await response.json();
+//       // Якщо API повертає масив або об'єкт з content
+//       const items = Array.isArray(data) ? data : data.content || [];
+//       setProducts(items);
+
+//     } catch (error) {
+//       if (error.name !== 'AbortError') {
+//         setErrorMessage(error.message || 'Network error');
+//       }
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   filterCatalogItems();
+
+//   return () => controller.abort();
+// }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
+
+useEffect(() => {
+  const controller = new AbortController();
+
+  const loadProducts = async () => {
+    setIsLoading(true);
+    setErrorMessage('');
+    try {
+      const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
+      const url = hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`;
+      const options = hasFilters
+        ? {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', accept: 'application/json' },
             body: JSON.stringify({
               categoryName: selectedCategory || undefined,
               brand: selectedBrands[0] || undefined,
-              priceFrom: priceFrom != null && priceFrom !== '' ? Number(priceFrom) : undefined,
-              priceTo: priceTo != null && priceTo !== '' ? Number(priceTo) : undefined,
+              priceFrom: priceFrom ?? undefined,
+              priceTo: priceTo ?? undefined,
               sortBy: sortBy || undefined,
-              page,
-              size,
               aZ: aZ || undefined,
+              page,
+              size
             }),
             signal: controller.signal,
-          });
-        } else {
-          response = await fetch(`${API_URL}/api/v1/catalog`, {
+          }
+        : {
             method: 'GET',
             headers: { accept: 'application/json' },
-            signal: controller.signal,
-          });
-        }
+            signal: controller.signal
+          };
 
-        const contentType = response.headers.get('content-type') || '';
-        let payload = null;
-        try {
-          if (contentType.includes('application/json')) {
-            payload = await response.json();
-          } else {
-            const text = await response.text();
-            payload = text ? { message: text } : null;
-          }
-        } catch (_) {
-          payload = null;
-        }
+      const response = await fetch(url, options);
 
-        if (!response.ok) {
-          const message = (payload && (payload.message || payload.error)) || `Request failed with status ${response.status}`;
-          setErrorMessage(message);
-          setProducts([]);
-          return;
-        }
-
-        const itemsCandidate = Array.isArray(payload)
-          ? payload
-          : payload?.content || payload?.items || payload?.data || [];
-        const items = Array.isArray(itemsCandidate) ? itemsCandidate : [];
-        setProducts(items);
-      } catch (err) {
-        if (err?.name !== 'AbortError') {
-          setErrorMessage('Network error. Please try again later.');
-        }
-      } finally {
-        setIsLoading(false);
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
       }
-    };
 
-    loadProducts();
-    return () => controller.abort();
-  }, [API_URL, selectedBrands, selectedCategory, priceFrom, priceTo, sortBy, aZ, page, size]);
-
-  const mapProductToCardProps = (product, index) => {
-    const id = product?.id ?? index + 1;
-    const name = product?.productName ?? 'Product';
-    const price = product?.price ?? 0;
-    const kcal = product?.kcal ?? product?.calories ?? 0;
-    const description = product?.description ?? '';
-    let imageUrl = '';
-
-    if (Array.isArray(product?.images) && product.images.length > 0) {
-      imageUrl = product.images[0]?.url || '';
+      const data = await response.json();
+      const items = Array.isArray(data) ? data : data.content || [];
+      setProducts(items);
+    } catch (error) {
+      if (error.name !== 'AbortError') setErrorMessage(error.message || 'Network error');
+    } finally {
+      setIsLoading(false);
     }
-    if (imageUrl && imageUrl.startsWith('/')) {
-      const base = (API_URL || '').replace(/\/+$/, '');
-      imageUrl = `${base}${imageUrl}`;
-    }
-
-    return { id, name, price, kcal, description, imageUrl };
   };
+
+  loadProducts();
+
+  return () => controller.abort();
+}, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
 
   return (
     <>
@@ -180,13 +316,27 @@ export default function Catalog() {
               <div className={styles.innerCards} style={{ color: '#c62828' }}>{errorMessage}</div>
             )}
 
-            {!isLoading && !errorMessage && (
-              <div className={styles.innerCards}>
-                {products.map((item, index) => (
-                  <CatalogCard key={index} {...mapProductToCardProps(item, index)} />
-                ))}
-              </div>
-            )}
+            <div className={styles.innerCards}>
+              {!isLoading && !errorMessage && products.length > 0 && (
+                products.map((item, index) => {
+                  const imageUrl = item.images?.[0]?.url
+                    ? `${API_URL.replace(/\/+$/, '')}${item.images[0].url}`
+                    : '';
+
+                  return (
+                    <CatalogCard
+                      key={item.id || index}
+                      id={item.id}
+                      name={item.productName}
+                      price={item.price}
+                      kcal={item.kcal || item.calories || 0}
+                      description={item.description || ''}
+                      imageUrl={imageUrl}
+                    />
+                  );
+                })
+              )}
+            </div>
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end', padding: '16px 0' }}>
               <button disabled={page <= 0} onClick={() => setPage((p) => Math.max(0, p - 1))}>Prev</button>
