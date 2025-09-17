@@ -24,16 +24,23 @@ const features = [
 
 export default function AdvantagesList() {
   return (
+    <section className={styles.section}>
     <div className={styles.container}>
       <div className={styles.innerAdvantages}>
+
         {features.map((feature, index) => (
           <div key={index} className={styles.advantagesCard}>
-            <img className={styles.image} src={feature.image} alt="" />
+            <img className={styles.image} src={feature.image} alt={
+        feature.title === "ORGANICALLY GROWN" ? "Ecological products icon" :
+        feature.title === "FREE AND FAST DELIVERY" ? "Fast delivery icon" :
+        feature.title === "24/7 CUSTOMER SERVICE" ? "Customer support icon" : ""
+      } />
             <h3 className={styles.title}>{feature.title}</h3>
             <p className={styles.description}>{feature.description}</p>
           </div>
         ))}
       </div>
     </div>
+    </section>
   );
 }

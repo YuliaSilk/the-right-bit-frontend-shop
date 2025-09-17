@@ -3,12 +3,11 @@
   font-weight: 300;
   line-height: 100%;
   margin-bottom: 48px;
-  margin-left: 4vw;
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .data {
@@ -21,6 +20,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  max-width: 333px;
 }
 
 .flex {
@@ -31,7 +31,7 @@
 
 .block {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
   margin: 0 auto;
   background-color: #def2d6;
 }
@@ -39,7 +39,8 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 21px;
+  gap: 20px;
+  
 }
 
 .image {
@@ -47,4 +48,9 @@
   height: 202px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.list {
+  width: 1324px;
+  margin: 0 auto;
 }

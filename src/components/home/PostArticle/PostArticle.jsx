@@ -7,6 +7,7 @@ import styles from './PostArticle.module.css';
 export default function PostArticle() {
   return (
     <div className={styles.block}>
+      <div className={styles.list}>
       <h2 className={styles.title}>Latest Posts & Articles</h2>
       <div className={styles.container}>
         <Item
@@ -24,6 +25,7 @@ export default function PostArticle() {
           date={'MAY 14 2025'}
           content={'What technologies are used in vertical farming?'}
         />
+      </div>
       </div>
     </div>
   );

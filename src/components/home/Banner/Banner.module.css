@@ -131,7 +131,14 @@
 
   button {
     color: #ffff;
-    background-color: #7cb184;
+    background-color: #7CB184;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: var(--accent-color-hover); 
+      color: #ffffff;
+      cursor: pointer;
+    }
   }
 }
 

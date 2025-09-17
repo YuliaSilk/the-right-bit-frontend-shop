@@ -14,6 +14,15 @@
 
 .btn {
   margin-top: 80px;
+  background-color: #234D2E;
+  color: #FFFAF0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: var(--accent-color-hover); 
+    color: #ffffff;
+    cursor: pointer;
+  }
 }
 
 .btnContainer {

@@ -6,7 +6,7 @@ import euroIcon from '@/assets/icons/euro.svg';
 export default function ProductItem({ image, title, content, price }) {
   return (
     <div className={styles.item}>
-      <img className={styles.image} src={image} alt="Product" />
+      <img className={styles.image} src={image} alt={title} />
       <div className={styles.textInner}>
         <p className={styles.title}>{title}</p>
         <p className={styles.content}>{content}</p>
