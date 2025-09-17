@@ -1,7 +1,23 @@
 .container {
+  background-color: #F9F1EB;
   color: #484848;
 }
 
+.banner{
+  background: url(../../assets/images/71a4ca034f23b11dc0eb83092b7a620b05768418.jpg);
+  color: #ffffff;
+  padding: 36.5px ;
+  width:max-content;
+  height:max-content;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner h1{
+  background-color: #364B3AB2 ;
+ padding: 36.5px 50.5px ;
+ text-align: center;
+}
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -15,6 +31,7 @@
 }
 
 .header {
+  color: #202020;
   font-size: 36px;
 }
 
@@ -43,7 +60,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #d9d9d9;
+  background-color: #7CB184;
   padding: 3rem;
   margin-bottom: 60px;
   gap: 24px;
@@ -60,6 +77,7 @@
 }
 
 .productListTitle {
+  color: #202020;
   font-size: 2rem;
 }
 

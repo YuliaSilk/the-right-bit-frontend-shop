@@ -1,5 +1,5 @@
 import styles from './CalculatorOutputCard.module.css';
-import scale from '@assets/images/scaleBMI.svg';
+// import scale from '@assets/images/scaleBMI.svg';
 
 export default function CalculatorOutputCard({ bmiResult }) {
   const resultNumber = bmiResult?.bmi || 0;
@@ -13,8 +13,32 @@ export default function CalculatorOutputCard({ bmiResult }) {
         <div className={styles.resultsContainer}>
           <div className={styles.resultLabel}>Your BMI:</div>
           <div className={styles.resultNumber}>{resultNumber.toFixed(2)}</div>
-          <div className={styles.scaleIndexContainer}>
-            <img src={scale} alt="scale of BMI index" />
+          <div className={styles.scaleIndexBMIContainer}>
+            {/* <img src={scale} alt="scale of BMI index" /> */}
+            <div className={styles.scaleIndexLabels}>
+              <div className={styles.bmiBar}>
+                {Array.from({ length: 13 }).map((_, i) => {
+                  return (
+                    <div className={styles.underWeightBar}></div>
+                  )
+                })}
+              </div>
+              <div className={styles.bmiBar}>
+                {Array.from({ length: 13 }).map((_, i) => {
+                  return (
+                    <div className={styles.healthyBar}></div>
+                  )
+                })}
+              </div>
+              <div className={styles.bmiBar}>
+                {Array.from({ length: 13 }).map((_, i) => {
+                  return (
+                    <div className={styles.overWeightBar}></div>
+                  )
+                })}
+              </div>
+            </div>
+
             <div className={styles.scaleIndexLabels}>
               <div>Underweight</div>
               <div>Healthy</div>

@@ -189,7 +189,40 @@ export default function Item() {
         </div>
       </div>
       )}
+
       {/* Recommendation sections removed until wired to real data */}
+      <div className={styles.detailsBlock}>
+        <div className={styles.shortInfoContainer}>
+          <h3 className={styles.productName}>Similar Products</h3>
+          <button className={styles.btn_showMore}>
+            <h4>Show More</h4>
+            <span className="material-symbols-outlined">arrow_right</span>
+          </button>
+        </div>
+        <div>
+          <div >
+            <img src={imageUrl} alt={name}/>
+            <div>
+              <div className={styles.detailsBlock} >
+                <h2> {name}</h2>
+                <p> </p>
+              </div>
+              <div className={styles.btn_price}>
+                 <span className={styles.actualPrice}>{`€ ${price}`}</span>
+              </div>
+              <p>{description}</p>
+              <Link to={`/catalog/${id}`} className={styles.orderBtn}>
+              <div className={styles.nutritionRow} >
+                <h2>Order now</h2>
+                <span className="material-symbols-outlined"> arrow_right</span>
+              </div>
+              </Link>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
