@@ -37,10 +37,10 @@
 }
 
 .checkbtn {
-  margin-top: 90px;
+  margin-top: 40px;
   padding: 12px 74px;
   font-size: 16px;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   border: none;
   width: 312px;
   height: 48px;
@@ -53,12 +53,12 @@
   }
 }
 
-.container {
+/* .container {
   display: flex;
   justify-content: space-between;
   max-width: 1320px;
   margin: 0 auto;
-}
+} */
 
 .description {
   width: 533px;
@@ -75,8 +75,8 @@
   justify-content: center;
   
   img {
-    height: 100%;
-    width: 100%;
+    height: 400px;
+    width: 648px;
     background-position: cover;
   }
 }

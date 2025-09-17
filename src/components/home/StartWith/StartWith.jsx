@@ -6,7 +6,7 @@ import Button from '@components/common/Button/Button';
 
 export default function StartWith() {
   return (
-    <div className={styles.block}>
+    <section className={styles.block}>
       <div className={styles.container}>
         <div className={styles.left}>
           <h2 className={styles.title}>Start with your Ideal Balance</h2>
@@ -17,11 +17,7 @@ export default function StartWith() {
                 stay energized and in balance.
               </p>
               <p className={styles.content}>
-                Vorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus.
+              Discover your Body Mass Index (BMI) effortlessly and get personalized food suggestions based on your results. Whether you’re aiming to maintain your current weight, lose a few pounds, or simply feel more balanced, our smart recommendations will guide you to the right organic and nutrient-rich choices. Start your wellness journey today—because eating well starts with understanding your body.
               </p>
             </div>
             <div className={styles.btnConteiner}>
@@ -31,10 +27,12 @@ export default function StartWith() {
             </div>
           </div>
         </div>
+
+
         <div className={styles.imageContainer}>
           <img src={exampleImage} alt="Vegetables and weights" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
