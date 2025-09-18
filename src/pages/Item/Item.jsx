@@ -2,6 +2,7 @@ import tomatoes_5 from "@assets/images/tomatoes_5.png";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from "./Item.module.css";
+import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
 
 export default function Item() {
   const { id } = useParams();
@@ -10,54 +11,73 @@ export default function Item() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [addToCart,setAddToCart] = useState(false); 
 
-  useEffect(() => {
-    if (!id) return;
-    const controller = new AbortController();
-    const loadProduct = async () => {
-      setIsLoading(true);
-      setErrorMessage("");
+
+ useEffect(() => {
+  if (!id) return;
+  const controller = new AbortController();
+
+  const loadProduct = async () => {
+    setIsLoading(true);
+    setErrorMessage("");
+    try {
+      const response = await fetch(`${API_URL}/api/v1/catalog/${id}`, {
+        method: "GET",
+        headers: { accept: "application/json" },
+        signal: controller.signal,
+      });
+
+      const contentType = response.headers.get("content-type") || "";
+      let payload = null;
       try {
-        const response = await fetch(`${API_URL}/api/v1/catalog/${id}`, {
-          method: 'GET',
-          headers: { accept: 'application/json' },
-          signal: controller.signal,
-        });
-
-        const contentType = response.headers.get('content-type') || '';
-        let payload = null;
-        try {
-          if (contentType.includes('application/json')) {
-            payload = await response.json();
-          } else {
-            const text = await response.text();
-            payload = text ? { message: text } : null;
-          }
-        } catch (_) {
-          payload = null;
+        if (contentType.includes("application/json")) {
+          payload = await response.json();
+        } else {
+          const text = await response.text();
+          payload = text ? { message: text } : null;
         }
-
-        if (!response.ok) {
-          const message = (payload && (payload.message || payload.error)) || `Request failed with status ${response.status}`;
-          setErrorMessage(message);
-          setProduct(null);
-          return;
-        }
-
-        setProduct(payload);
-      } catch (err) {
-        if (err?.name !== 'AbortError') {
-          setErrorMessage('Network error. Please try again later.');
-        }
-      } finally {
-        setIsLoading(false);
+      } catch (_) {
+        payload = null;
       }
-    };
 
-    loadProduct();
-    return () => controller.abort();
-  }, [API_URL, id]);
+      if (!response.ok) {
+        const message =
+          (payload && (payload.message || payload.error)) ||
+          `Request failed with status ${response.status}`;
+        setErrorMessage(message);
+        setProduct(null);
+        return;
+      }
 
+      setProduct(payload);
+
+     const relatedResponse = await fetch(
+        `${API_URL}/api/v1/catalog/${id}/related`,
+        { signal: controller.signal }
+      );
+
+      if (relatedResponse.ok) {
+        const related = await relatedResponse.json();
+        setRelatedProducts(related);
+      }
+      
+    } catch (err) {
+      if (err?.name !== "AbortError") {
+        setErrorMessage("Network error. Please try again later.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  loadProduct();
+  return () => controller.abort();
+}, [API_URL, id]);
+
+
+  
   const [productCount, setProductCount] = useState(1);
 
   const decrementProductCount = () => {
@@ -79,6 +99,7 @@ export default function Item() {
   const description = product?.description || "";
   const brandName = product?.brand?.brandName || "";
   const categoryName = Array.isArray(product?.categories) && product.categories[0]?.categoryName ? product.categories[0].categoryName : "";
+const weight = product?.weight ?? null
   const protein = product?.protein ?? null;
   const fat = product?.fat ?? null;
   const carbs = product?.carbs ?? null;
@@ -87,6 +108,32 @@ export default function Item() {
     const base = (API_URL || '').replace(/\/+$/, '');
     imageUrl = `${base}${imageUrl}`;
   }
+const [cart, setCart] = useState([]);
+
+const addToCartItem = () => {
+  if (!product) return;
+
+  const item = {
+    id: product.id,
+    name: product.productName,
+    price: product.price,
+    quantity: productCount,
+    image: imageUrl || tomatoes_5,
+  };
+
+  setCart(prevCart => {
+    const existingItem = prevCart.find(p => p.id === product.id);
+    if (existingItem) {
+      return prevCart.map(p =>
+        p.id === product.id ? { ...p, quantity: p.quantity + productCount } : p
+      );
+    } else {
+      return [...prevCart, item];
+    }
+  });
+
+  setAddToCart(true); 
+};
 
   return (
     <div className={styles.container}>
@@ -132,9 +179,12 @@ export default function Item() {
                     +
                   </div>
                 </div>
-                <button className={styles.addToCartButton}>
+                <Link to='/cart'>
+                <button className={styles.addToCartButton} onClick={addToCartItem}>
                   <div className="material-symbols-outlined">shopping_bag</div>
                 </button>
+                </Link>
+                
               </div>
             </div>
           </div>
@@ -223,6 +273,7 @@ export default function Item() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
