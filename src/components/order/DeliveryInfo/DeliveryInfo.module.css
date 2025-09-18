@@ -15,16 +15,16 @@
 }
 
 .header {
-  padding: 24px 0px 23px 70px;
+  padding: 14px 40px;
   background: #d2e7d3;
   border-radius: 8px 8px 0 0;
+  height: 60px;
 }
 
 .tableTitle {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .gridContainer {
@@ -38,6 +38,34 @@
 .formGroup {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.labelText {
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; 
+  letter-spacing: -0.315px;
+}
+
+.labelTextReq {
+    color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; 
+  letter-spacing: -0.315px;
+  align-self: flex-end;
+}
+.required {
+  color: red;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.315px;
 }
 
 .input {
@@ -45,6 +73,12 @@
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+
+  color: #0F0F0F;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .error {

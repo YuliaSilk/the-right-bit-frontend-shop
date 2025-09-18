@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import styles from './DeliveryInfo.module.css';
+import { useFormContext } from "@/hooks/useFormContext";
+import Cleave from 'cleave.js/react';
+import 'cleave.js/dist/addons/cleave-phone.ua';
 
 const schema = yup.object().shape({
   firstName: yup.string().required('First name is required'),
@@ -13,32 +16,41 @@ const schema = yup.object().shape({
   city: yup.string().required('City is required'),
   streetName: yup.string().required('Street name is required'),
   houseNumber: yup.string().required('House number is required'),
-  apartment: yup.string(), // необов'язкове поле
+  apartment: yup.string(), 
   postalCode: yup.string().required('Postal code is required'),
 });
 
-const defaultValues = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  country: '',
-  city: '',
-  streetName: '',
-  houseNumber: '',
-  apartment: '',
-  postalCode: '',
-};
+// const defaultValues = {
+//   firstName: '',
+//   lastName: '',
+//   email: '',
+//   phone: '',
+//   country: '',
+//   city: '',
+//   streetName: '',
+//   houseNumber: '',
+//   apartment: '',
+//   postalCode: '',
+// };
 
 export default function DeliveryInfo() {
-  const { control, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(schema),
-    defaultValues: defaultValues,
-  });
+  const { formData, updateField } = useFormContext();
 
+  const { control, handleSubmit, watch,  formState: { errors } } = useForm({
+    resolver: yupResolver(schema),
+defaultValues: formData,   
+});
+
+const watchedFields = watch ();
+useEffect(() => {
+    const handler = setTimeout(() => {
+      updateField('deliveryInfo', watchedFields);
+    }, 200);
+
+    return () => clearTimeout(handler);
+  }, [watchedFields, updateField]);
 const onSubmit = (data) => {
   console.log(data);
-  // Тут ви можете відправити дані на сервер
 }
   return (
     <div>
@@ -49,7 +61,7 @@ const onSubmit = (data) => {
 
       <div className={styles.gridContainer}>
         <div className={styles.formGroup}>
-          <label htmlFor="firstName">First name *</label>
+          <label className={styles.labelText} htmlFor="firstName">First name <span className={styles.required}>*</span></label>
           <Controller
             name="firstName"
             control={control}
@@ -59,7 +71,7 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="lastName">Last name *</label>
+          <label className={styles.labelText} htmlFor="lastName">Last name <span className={styles.required}>*</span></label>
           <Controller
             name="lastName"
             control={control}
@@ -70,7 +82,7 @@ const onSubmit = (data) => {
         
          
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email adress *</label>
+          <label className={styles.labelText} htmlFor="email">Email adress <span className={styles.required}>*</span></label>
           <Controller
             name="email"
             control={control}
@@ -80,17 +92,37 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="phone">Phone number *</label>
+          <label className={styles.labelText} htmlFor="phone">Phone number <span className={styles.required}>*</span></label>
           <Controller
+  name="phone"
+  control={control}
+  render={({ field: { onChange, value, ...field } }) => (
+    <Cleave
+      {...field}
+      value={value}
+      onChange={onChange}
+      className={styles.input}
+      placeholder="+380 XX XXX XX XX"
+      options={{
+        phone: true,
+        phoneRegionCode: 'UA',
+        prefix: '+380',
+        noImmediatePrefix: false,
+        rawValueTrimPrefix: false
+      }}
+    />
+  )}
+/>
+          {/* <Controller
             name="phone"
             control={control}
-            render={({ field }) => <input {...field} className={styles.input} />}
-          />
+            render={({ field }) => <InputMask {...field} mask="+380 (99) 999-99-99" placeholder='+380 (__) ___-__-__' className={styles.input} />}
+          /> */}
           {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="country">Country *</label>
+          <label className={styles.labelText} htmlFor="country">Country <span className={styles.required}>*</span></label>
           <Controller
             name="country"
             control={control}
@@ -100,7 +132,7 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="city">City *</label>
+          <label className={styles.labelText} htmlFor="city">City <span className={styles.required}>*</span></label>
           <Controller
             name="city"
             control={control}
@@ -110,7 +142,7 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="streetName">Street name *</label>
+          <label className={styles.labelText} htmlFor="streetName">Street name <span className={styles.required}>*</span></label>
           <Controller
             name="streetName"
             control={control}
@@ -120,7 +152,7 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="houseNumber">House number *</label>
+          <label htmlFor="houseNumber">House number <span className={styles.required}>*</span></label>
           <Controller
             name="houseNumber"
             control={control}
@@ -130,7 +162,7 @@ const onSubmit = (data) => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="apartmentNumber">Apartment/Suite  ( Optional )</label>
+          <label className={styles.labelText} htmlFor="apartmentNumber">Apartment/Suite  ( Optional )</label>
           <Controller
             name="apartmentNumber"
             control={control}
@@ -140,13 +172,14 @@ const onSubmit = (data) => {
         </div>
         
           <div className={styles.formGroup}>
-          <label htmlFor="postalCode">Postal Code *</label>
+          <label className={styles.labelText} htmlFor="postalCode">Postal Code <span className={styles.required}>*</span></label>
           <Controller
             name="postalCode"
             control={control}
             render={({ field }) => <input {...field} className={styles.input} />}
           />
           {errors.apartmentNumber && <p className={styles.error}>{errors.apartmentNumber.message}</p>}
+          <p className={styles.labelTextReq}>Required fields <span className={styles.required}>*</span></p>
         </div>
         
         <div className={styles.checkboxWrapper}>

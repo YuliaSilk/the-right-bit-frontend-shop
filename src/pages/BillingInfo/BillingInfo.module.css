@@ -1,8 +1,11 @@
 .section {
     background-color: #F9F1EB;;
-    padding: 60px 0;
 }
 
+.contentWrapper{
+padding: 60px 0;
+   
+}
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -13,7 +16,6 @@
     height: 214px;
     object-fit: cover;
     position: relative;
-    /* background-image: url('../../../assets/images/discount_banner.webp'); */
     background-size: cover;
     background-position: center;
 }

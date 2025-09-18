@@ -13,9 +13,14 @@ height: fit-content;
 
 .header {
 background: #D2E7D3;
+height: 60px;
 padding: 14px 40px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+display: flex;
+align-items: center;
+
+
 }
 
 .title {
@@ -24,7 +29,6 @@ font-size: 14px;
 font-weight: 600;
 line-height: 100%;
 letter-spacing: 0.42px;
-display: block;
 text-transform: uppercase;
 }
 

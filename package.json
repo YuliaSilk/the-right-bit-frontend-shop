@@ -16,10 +16,12 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "cleave.js": "^1.6.0",
     "jwt-decode": "^4.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.62.0",
+    "react-imask": "^7.6.1",
     "react-phone-number-input": "^3.4.12",
     "react-router-dom": "^7.6.0",
     "react-select": "^5.10.2",
