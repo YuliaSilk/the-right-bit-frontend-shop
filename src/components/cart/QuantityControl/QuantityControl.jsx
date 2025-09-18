@@ -13,3 +13,4 @@ export default function QuantityControl({ quantity, onDecrease, onIncrease }) {
     </div>
   );
 }
+ 

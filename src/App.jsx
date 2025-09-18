@@ -13,9 +13,11 @@ import {
   CalculatorBMI,
   News,
   OurMission,
+  BillingInfo,
 } from '@pages';
 import ScrollToTop from '@components/utils/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import GoogleCallback from './context/GoogleCallback';
 import ProtectedRoute from './context/ProtectedRoute';
 
@@ -23,6 +25,7 @@ function App() {
   return (
     <Router basename="/online-store-frontend/">
       <AuthProvider>
+        <CartProvider>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -43,11 +46,13 @@ function App() {
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/catalog/:id" element={<Item />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<BillingInfo />} />
             <Route path="/calculator" element={<CalculatorBMI />} />
             <Route path="/news" element={<News />} />
             <Route path="/our-mission" element={<OurMission />} />
           </Route>
         </Routes>
+        </CartProvider>
       </AuthProvider>
     </Router>
   );

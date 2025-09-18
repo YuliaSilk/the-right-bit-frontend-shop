@@ -1,7 +1,7 @@
-import styles from './CartItem.module.css';
+ import styles from './CartItem.module.css';
 
-export default function CartItem({ item, onQuantityChange }) {
-  const { id, name, size, price, quantity, description } = item;
+export default function CartItem({ item, onQuantityChange, onRemove }) {
+  const {  image,  price, quantity,  weight } = item;
   const subtotal = (price * quantity).toFixed(2);
 
   const handleDecrement = () => {
@@ -17,12 +17,21 @@ export default function CartItem({ item, onQuantityChange }) {
   return (
     <div className={styles.row}>
       <div className={styles.product}>
-        <div className={styles.imagePlaceholder} />
+        <div className={styles.imagePlaceholder} >
+            {image ? (
+            <span className={styles.emoji}>{image}</span>
+          ) : (
+            <div className={styles.imagePlaceholder} />
+          )}
+        </div>
         <div className={styles.productInner}>
           <div className={styles.id}>{item.id}</div>
           <div className={styles.name}>
             {item.name} {item.size}
           </div>
+          {weight && (
+            <div className={styles.weight}>{weight}</div>
+          )}
           {item.description && (
             <div className={styles.desc}>{item.description}</div>
           )}
@@ -43,7 +52,7 @@ export default function CartItem({ item, onQuantityChange }) {
 
       <div className={styles.subtotal}>€ {subtotal}</div>
 
-      <button className={styles.remove}>
+      <button className={styles.remove} onClick={onRemove}>
         <svg
           width="24"
           height="24"
