@@ -1,11 +1,22 @@
+import React from 'react';
 // import { useEffect } from "react";
 // import { useCart } from "@/context/CartContext";
+
+import DeliveryInfo from '../../components/order/DeliveryInfo/DeliveryInfo';
+import PaymentForm from '../../components/order/PaymentInfo/PaymentInfo';
+import OrderSummery from '../../components/order/OrderSummery/OrderSummery';
 import bannerDiscount from '@/assets/images/discount_banner.webp';
 import styles from './BillingInfo.module.css';
 import { Link } from 'react-router-dom';
 
 
 export default function BillingInfo() {
+//      const { control, handleSubmit, formState: { errors } } = useForm({
+//     resolver: yupResolver(schema),
+//     defaultValues: defaultValues,
+//   });
+
+
 //      const { cart, loadCart } = useCart();
 
 //   useEffect(() => {
@@ -16,7 +27,7 @@ export default function BillingInfo() {
 //     return <p>Немає даних замовлення. Поверніться до кошика.</p>;
 //   }
     return (
-        <section >
+        <section className={styles.section} >
         <div className={styles.discountBanner} style={{ backgroundImage: `url(${bannerDiscount})` }}>
             <div className={styles.discountTextWrapper}>
             <div className={styles.discountText}>
@@ -67,10 +78,11 @@ export default function BillingInfo() {
 
       <h1 className={styles.title}>Billing Information</h1>
 <div className={styles.innerWrapper}>
- <div className={styles.header}>
-            <span className={styles.tableTitle}>Delivery Information</span>
-            
-          </div>
+    <div className={styles.infoWrapper}>
+      <DeliveryInfo />
+      <PaymentForm />  
+      </div>
+      <OrderSummery /> 
 </div>
       
                {/* <div>

@@ -1,3 +1,8 @@
+.section {
+    background-color: #F9F1EB;;
+    padding: 60px 0;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -86,18 +91,18 @@
   display: flex;
   gap: 24px;
 }
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 840px;
+  /* margin-bottom: 40px; */
+}
 
-.header {
+/* .header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
   padding: 24px 0px 23px 70px;
   background: #d2e7d3;
   border-radius: 8px 8px 0 0;
-}
-
-.tableTitle {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
+} */

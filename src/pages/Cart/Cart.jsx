@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Cart.module.css';
 import { Link } from 'react-router-dom';
+import { useCart } from "@/context/CartContext";
 
 import CartItem from '@/components/cart/CartItem/CartItem';
 import CartTotal from '@/components/cart/CartTotal/CartTotal';
@@ -8,56 +9,23 @@ import CartTotal from '@/components/cart/CartTotal/CartTotal';
 import bannerImage from '@/assets/images/banner_cart.webp';
 
 export default function Cart() {
-  const [items, setItems] = useState([
-    {
-    id: 1,
-    name: 'Broccoli',
-    image: '🥦',
-    price: 2.50,
-    quantity: 2,
-    weight: '1kg'
-  },
-  {
-    id: 2,
-    name: 'Red Tomatoes',
-    image: '🍅',
-    price: 3.20,
-    quantity: 1,
-    weight: '500g'
-  },
-  {
-    id: 3,
-    name: 'Green Lettuce',
-    image: '🥬',
-    price: 1.80,
-    quantity: 3,
-    weight: '300g'
-  },
-  {
-    id: 4,
-    name: 'Red Peppers',
-    image: '🌶️',
-    price: 4.50,
-    quantity: 2,
-    weight: '400g'
-  }
-]);
 
+  const { items, addItem, updateQuantity, removeItem } = useCart();
+
+useEffect(() => {
+  if (items.length === 0) {
+    addItem({ id: 1, name: 'Broccoli', image: '🥦', price: 2.50, quantity: 2, weight: '1kg' });
+    addItem({ id: 2, name: 'Red Tomatoes', image: '🍅', price: 3.20, quantity: 1, weight: '500g' });
+        addItem({ id: 3, name: 'Green Lettuce', image: '🥬', price: 5.20, quantity: 1, weight: '500g' });
+    addItem({ id: 4, name: 'Red Peppers', image: '🌶️', price: 4.20, quantity: 1, weight: '500g' });
+
+  }
+}, [items, addItem])
+  
 // const [couponCode, setCouponCode] = useState('');
 const [appliedCoupon, setAppliedCoupon] = useState(null);
 
-  const handleChangeQuantity = (id, newQty) => {
-    if (newQty < 1) return
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: newQty } : item
-      )
-    );
-  };
-
-const handleRemoveItem = (id) => {
-  setItems((prev) => prev.filter((item) => item.id !== id));
-};
+  
 
 const handleApplyCoupon = (code) => {
   if (code.toUpperCase() === 'DISCOUNT10') {
@@ -125,10 +93,9 @@ const total = subtotal - discount;
                   ...item,
                   subtotal: item.price * item.quantity,
                 }}
-                onQuantityChange={(newQty) =>
-                  handleChangeQuantity(item.id, newQty)
-                }
-                 onRemove={() => handleRemoveItem(item.id)}
+                                  onQuantityChange={(newQty) => updateQuantity(item.id, newQty)}
+
+                  onRemove={() => removeItem(item.id)}
               />
             ))}
           </div>
