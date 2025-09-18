@@ -6,16 +6,19 @@
 }
 
 .container {
-  max-width: 1320px;
-  margin: 0 auto;
+  max-width: 1320px; 
+  margin: 0 auto;  
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 0; 
+background-color: #EE9229;
+
 }
+
 
 .topRight {
   display: flex;
@@ -26,6 +29,7 @@
   font-family: var(--third-family);
   font-weight: 300;
   font-size: 50px;
+  color: #FEFEFE;
 }
 
 .topLink {

@@ -12,16 +12,16 @@
 }
 
 .categoryInput {
-  min-width: 24px;
+  /* min-width: 24px;
   height: 24px;
-  background: #d9d9d9;
+  background: #d9d9d9; */
+  display: none;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
   margin-bottom: 52px;
   margin-top: 44px;
 }
@@ -54,3 +54,9 @@
   align-items: center;
   max-width: 224px;
 }
+
+.categoryInput:checked + .categoryIcon {
+  border-color: #4d90fe;
+  box-shadow: 0 0 6px rgba(77, 144, 254, 0.6);
+}
+

@@ -136,12 +136,6 @@
 .btn_showMore span{
   color: #575757;
 }
-.btn_price{
-  padding: 7px 12px;
-  border-radius: solid #C7C7C7 0.75px;
-  gap: 8px;
-
-}
 
 .detailedInfo {
   flex: 3;
