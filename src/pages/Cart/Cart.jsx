@@ -9,18 +9,35 @@ import CartTotal from '@/components/cart/CartTotal/CartTotal';
 import bannerImage from '@/assets/images/banner_cart.webp';
 
 export default function Cart() {
-
-  const { items, addItem, updateQuantity, removeItem } = useCart();
+const API_URL = import.meta.env.VITE_API_URL;
+const { items, addItem, updateQuantity, removeItem } = useCart();
 
 useEffect(() => {
-  if (items.length === 0) {
-    addItem({ id: 1, name: 'Broccoli', image: '🥦', price: 2.50, quantity: 2, weight: '1kg' });
-    addItem({ id: 2, name: 'Red Tomatoes', image: '🍅', price: 3.20, quantity: 1, weight: '500g' });
-        addItem({ id: 3, name: 'Green Lettuce', image: '🥬', price: 5.20, quantity: 1, weight: '500g' });
-    addItem({ id: 4, name: 'Red Peppers', image: '🌶️', price: 4.20, quantity: 1, weight: '500g' });
+    const localCart = localStorage.getItem("cart");
+    if (localCart && JSON.parse(localCart).length > 0) return;
 
-  }
-}, [items, addItem])
+    const loadCartItems = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/v1/cart`);
+        if (!res.ok) throw new Error("Failed to load cart");
+        const data = await res.json();
+
+        data.forEach(item =>
+          addItem({
+            id: item.id,
+            name: item.productName,
+            price: item.price,
+            quantity: item.quantity,
+            image: item.imageUrl || '', // тепер URL
+          })
+        );
+      } catch (err) {
+        console.error("Cart fetch error:", err);
+      }
+    };
+
+    loadCartItems();
+  }, [items, addItem, API_URL]);
   
 // const [couponCode, setCouponCode] = useState('');
 const [appliedCoupon, setAppliedCoupon] = useState(null);
@@ -93,7 +110,7 @@ const total = subtotal - discount;
                   ...item,
                   subtotal: item.price * item.quantity,
                 }}
-                                  onQuantityChange={(newQty) => updateQuantity(item.id, newQty)}
+                   onQuantityChange={(newQty) => updateQuantity(item.id, newQty)}
 
                   onRemove={() => removeItem(item.id)}
               />

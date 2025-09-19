@@ -14,26 +14,6 @@ const API_URL = import.meta.env.VITE_REACT_APP_API_URL || '';
 const TOKEN = import.meta.env.VITE_REACT_APP_TEST_TOKEN || '';
 
 
-
-  // const handleCheckout = async () => {
-  //   try {
-  //     const response = await fetch(`${API_URL}/cart`, {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         "Authorization": `Bearer ${TOKEN}`
-  //       }
-  //     });
-
-  //     if (!response.ok) throw new Error("Не вдалося отримати кошик");
-  //     const cart = await response.json();
-
-  //     saveCart(cart); 
-  //     navigate("/checkout");
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-
  const handleApplyCoupon = () => {
     const success = onApplyCoupon(couponCode);
     if (success) {

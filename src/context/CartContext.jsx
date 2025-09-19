@@ -2,24 +2,21 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
-export function CartProvider({ children }) {
+export const useCart = () => useContext(CartContext);
+
+export const CartProvider = ({ children }) => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [items, setItems] = useState([]);
 
-  // 1. Читаємо з localStorage при першому завантаженні
   useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
-    if (storedCart) {
-      setItems(JSON.parse(storedCart));
+    const localCart = localStorage.getItem("cart");
+    if (localCart) {
+      setItems(JSON.parse(localCart));
     }
   }, []);
 
-  // 2. Оновлюємо localStorage при зміні items
   useEffect(() => {
-    if (items.length > 0) {
-      localStorage.setItem("cart", JSON.stringify(items));
-    } else {
-      localStorage.removeItem("cart"); // якщо корзина пуста — прибираємо
-    }
+    localStorage.setItem("cart", JSON.stringify(items));
   }, [items]);
 
   const addItem = (item) => {
@@ -36,26 +33,19 @@ export function CartProvider({ children }) {
 
   const updateQuantity = (id, quantity) => {
     setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity } : item
-      )
+      prev.map((p) => (p.id === id ? { ...p, quantity } : p))
     );
   };
 
   const removeItem = (id) => {
-    setItems((prev) => prev.filter((item) => item.id !== id));
+    setItems((prev) => prev.filter((p) => p.id !== id));
   };
 
-  const clearCart = () => {
-    setItems([]);
-    localStorage.removeItem("cart");
-  };
+  const clearCart = () => setItems([]);
 
   return (
     <CartContext.Provider value={{ items, addItem, updateQuantity, removeItem, clearCart }}>
       {children}
     </CartContext.Provider>
   );
-}
-
-export const useCart = () => useContext(CartContext);
+};

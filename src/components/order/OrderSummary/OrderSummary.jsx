@@ -22,7 +22,6 @@ export default function OrderSummary() {
       return;
     }
 
-    // доставочна інфа — підтримуємо різні можливі ключі
     const delivery = formData?.deliveryInfo ?? formData?.delivery ?? {};
     const get = (o, ...keys) => {
       for (const k of keys) {
@@ -41,7 +40,6 @@ export default function OrderSummary() {
     const zipCode = get(delivery, "postalCode", "zipCode", "postal_code");
     const comment = get(delivery, "comment");
 
-    // мінімальна перевірка — ім'я + телефон
     if (!firstname || !phoneNumber) {
       const missing = [];
       if (!firstname) missing.push("ім'я");
@@ -168,6 +166,9 @@ export default function OrderSummary() {
       </label>
     </div>
     </div>
+    <pre style={{background:"#f5f5f5", padding:"10px"}}>
+  {JSON.stringify(formData, null, 2)}
+</pre>
     <div>
       <button 
       type="submit" 

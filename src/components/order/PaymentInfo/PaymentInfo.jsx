@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {  useState, } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './PaymentInfo.module.css';
@@ -7,24 +7,8 @@ import Select from 'react-select';
 import Cleave from 'cleave.js/react';
 import { useFormContext as useSharedForm } from "@/hooks/useFormContext";
 
-const paymentOptions = [
-  { 
-    value: 'credit-card', 
-    label: 'Credit Card', 
-    icon: '💳',
-    details: '*3788' 
-  },
-  { 
-    value: 'another-card', 
-    label: 'Another Card', 
-    icon: '💳', 
-    details: '*1234' 
-  },
-  { 
-    value: 'add-new', 
-    label: 'Add new card', 
-    icon: '➕' 
-  },
+const baseOptions = [
+  { value: 'credit-card', label: 'Credit Card', icon: '💳', details: '' },
 ];
 
 const customSelectStyles = {
@@ -96,29 +80,120 @@ const SingleValue = ({ data }) => (
   </div>
 );
 export default function PaymentForm() {
-      const { formData, updateField } = useSharedForm();
-
-  const { control, watch, formState: { errors } } = useForm({
+  const { formData, updateField } = useSharedForm();
+ const [savedCards, setSavedCards] = useState(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const saved = localStorage.getItem("savedCards");
+        return saved ? JSON.parse(saved) : [];
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  });
+  const { control, watch, setValue, reset, formState: { errors } } = useForm({
     resolver: yupResolver(paymentSchema),
-   defaultValues: formData.payment || {
-      paymentMethod: paymentOptions[0],
+   defaultValues: formData.paymentInfo || {
+        paymentMethod: baseOptions[0],
       cardDetails: { cardName: '', cardNumber: '', expireDate: '', cvc: '' },
       saveCard: false,
       orderNotes: '',
     },
   });
-const watchedFields = watch();
-useEffect(() => {
-    const handler = setTimeout(() => {
-      updateField('paymentInfo', watchedFields);
-    }, 200);
+  
 
-    return () => clearTimeout(handler);
-  }, [watchedFields, updateField]);
+// const paymentOptions = [
+//   ...( savedCards || []),  // спочатку saved cards
+//   ...paymentOptions.filter(opt => !savedCards.some(c => c.value === opt.value))
+// ];
+
+// const paymentOptionsWithSaved = [
+//   ...cards,  // спочатку saved cards
+//   ...paymentOptions.filter(opt => !savedCards.some(c => c.value === opt.value))
+// ];
+
+const watchedFields = watch();
+
+   const saveCard = () => {
+  const cardNumber = watchedFields.cardDetails?.cardNumber;
+  if (watchedFields.saveCard && cardNumber) {
+    const lastDigits = cardNumber.slice(-4);
+    const newCard = {
+      value: `card-${lastDigits}`,
+      label: `Saved Card *${lastDigits}`,
+      icon: '💳',
+      details: `*${lastDigits}`,
+      cardDetails: { ...watchedFields.cardDetails },
+    };
+
+    setSavedCards((prev) => {
+      if (prev.some(c => c.value === newCard.value)) return prev;
+      const updated = [...prev, newCard];
+      localStorage.setItem('savedCards', JSON.stringify(updated));
+      return updated;
+    });
+  }
+
+  updateField('paymentInfo', watchedFields);
+};
+
+// useEffect(() => {
+//     const handler = setTimeout(() => {
+//       if (JSON.stringify(prevPaymentInfo.current) !== JSON.stringify(watchedFields)) {
+//         updateField('paymentInfo', watchedFields);
+//         prevPaymentInfo.current = watchedFields;
+
+//         // Додаємо картку в savedCards тільки якщо:
+//         if (
+//           watchedFields.saveCard &&
+//           watchedFields.cardDetails?.cardNumber &&
+//           watchedFields.paymentMethod.value !== baseOptions[0].value
+//         ) {
+//           const lastDigits = watchedFields.cardDetails.cardNumber.slice(-4);
+//           const newCard = {
+//             value: `card-${lastDigits}`,
+//             label: `Saved Card *${lastDigits}`,
+//             icon: '💳',
+//             details: `*${lastDigits}`,
+//             cardDetails: { ...watchedFields.cardDetails }
+//           };
+
+//           setSavedCards(prev => {
+//             if (prev.some(c => c.value === newCard.value)) return prev;
+//             const updated = [...prev, newCard];
+//             localStorage.setItem('savedCards', JSON.stringify(updated));
+//             return updated;
+//           });
+//         }
+//       }
+//     }, 200);
+
+//     return () => clearTimeout(handler);
+//   }, [watchedFields, updateField]);
+
+   const handleCardSelect = (selected) => {
+    setValue('paymentMethod', selected);
+    if (selected.cardDetails) {
+      setValue('cardDetails', selected.cardDetails);
+    }
+  };
+  const options = [...savedCards, ...baseOptions.filter(opt => !savedCards.some(c => c.value === opt.value))];
+
+const handleAddNewCard = () => {
+  saveCard(); // зберігаємо поточну картку перед очищенням
+  reset({
+    paymentMethod: baseOptions[0],
+    cardDetails: { cardName: '', cardNumber: '', expireDate: '', cvc: '' },
+    saveCard: false,
+    orderNotes: watchedFields.orderNotes || '',
+  });
+  setValue('paymentMethod', baseOptions[0]);
+};
 
   return (
     <div className={styles.container}>
-      <form  className={styles.form}>
+      <form  className={styles.form} onBlur={saveCard}>
         <div className={styles.header}>
           <span className={styles.tableTitle}>Payment Information</span>
         </div> 
@@ -131,11 +206,12 @@ useEffect(() => {
               render={({ field }) => (
                 <Select
                   {...field}
-                  options={paymentOptions}
+                  options={options}
                   styles={customSelectStyles}
                   components={{ Option, SingleValue }}
                   placeholder="Select a payment method..."
                   isSearchable={false}
+                   onChange={handleCardSelect}
                 />
               )}
             />
@@ -250,7 +326,7 @@ useEffect(() => {
               )}
             />
             
-            <button type="button" className={styles.addCardButton}>
+            <button type="button" className={styles.addCardButton} onClick={handleAddNewCard}>
               <span className={styles.addCardIcon}>+</span>
               Add new card
             </button>

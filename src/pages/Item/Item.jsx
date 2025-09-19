@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from "./Item.module.css";
 import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
+import { useCart } from "@/context/CartContext";
+
 
 export default function Item() {
   const { id } = useParams();
@@ -12,7 +14,7 @@ export default function Item() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [relatedProducts, setRelatedProducts] = useState([]);
-  const [addToCart,setAddToCart] = useState(false); 
+  // const [addToCart,setAddToCart] = useState(false); 
 
 
  useEffect(() => {
@@ -108,32 +110,46 @@ const weight = product?.weight ?? null
     const base = (API_URL || '').replace(/\/+$/, '');
     imageUrl = `${base}${imageUrl}`;
   }
-const [cart, setCart] = useState([]);
+// const [cart, setCart] = useState([]);
+
+const { addItem } = useCart();
 
 const addToCartItem = () => {
   if (!product) return;
 
-  const item = {
+  addItem({
     id: product.id,
     name: product.productName,
     price: product.price,
     quantity: productCount,
     image: imageUrl || tomatoes_5,
-  };
-
-  setCart(prevCart => {
-    const existingItem = prevCart.find(p => p.id === product.id);
-    if (existingItem) {
-      return prevCart.map(p =>
-        p.id === product.id ? { ...p, quantity: p.quantity + productCount } : p
-      );
-    } else {
-      return [...prevCart, item];
-    }
   });
-
-  setAddToCart(true); 
 };
+
+// const addToCartItem = () => {
+//   if (!product) return;
+
+//   const item = {
+//     id: product.id,
+//     name: product.productName,
+//     price: product.price,
+//     quantity: productCount,
+//     image: imageUrl || tomatoes_5,
+//   };
+
+//   setCart(prevCart => {
+//     const existingItem = prevCart.find(p => p.id === product.id);
+//     if (existingItem) {
+//       return prevCart.map(p =>
+//         p.id === product.id ? { ...p, quantity: p.quantity + productCount } : p
+//       );
+//     } else {
+//       return [...prevCart, item];
+//     }
+//   });
+
+//   setAddToCart(true); 
+// };
 
   return (
     <div className={styles.container}>

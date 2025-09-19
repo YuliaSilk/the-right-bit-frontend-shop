@@ -20,38 +20,54 @@ const schema = yup.object().shape({
   postalCode: yup.string().required('Postal code is required'),
 });
 
-// const defaultValues = {
-//   firstName: '',
-//   lastName: '',
-//   email: '',
-//   phone: '',
-//   country: '',
-//   city: '',
-//   streetName: '',
-//   houseNumber: '',
-//   apartment: '',
-//   postalCode: '',
-// };
 
 export default function DeliveryInfo() {
-  const { formData, updateField } = useFormContext();
+//   const { formData, updateField } = useFormContext();
+const formContext = useFormContext() || {};
+const { formData = {}, updateField = () => {} } = formContext;
 
-  const { control, handleSubmit, watch,  formState: { errors } } = useForm({
-    resolver: yupResolver(schema),
-defaultValues: formData,   
+  const defaultValues = {
+    firstName: formData.deliveryInfo?.firstName || '',
+    lastName: formData.deliveryInfo?.lastName || '',
+    email: formData.deliveryInfo?.email || '',
+    phone: formData.deliveryInfo?.phone || '',
+    country: formData.deliveryInfo?.country || '',
+    city: formData.deliveryInfo?.city || '',
+    streetName: formData.deliveryInfo?.streetName || '',
+    houseNumber: formData.deliveryInfo?.houseNumber || '',
+    apartmentNumber: formData.deliveryInfo?.apartmentNumber || '',
+    postalCode: formData.deliveryInfo?.postalCode || '',
+  };
+
+
+const { control, handleSubmit, watch, formState: { errors } } = useForm({
+  resolver: yupResolver(schema),
+  defaultValues,
 });
 
 const watchedFields = watch ();
 useEffect(() => {
-    const handler = setTimeout(() => {
-      updateField('deliveryInfo', watchedFields);
-    }, 200);
-
-    return () => clearTimeout(handler);
+    updateField('deliveryInfo', watchedFields);
   }, [watchedFields, updateField]);
+// useEffect(() => {
+//   const handler = setTimeout(() => {
+//     updateField('deliveryInfo', watchedFields); // watchedFields — це простий об’єкт полів форми
+//   }, 200);
+
+//   return () => clearTimeout(handler);
+// }, [watchedFields, updateField]);
+// useEffect(() => {
+//     const handler = setTimeout(() => {
+//       updateField('deliveryInfo', watchedFields);
+//     }, 200);
+
+//     return () => clearTimeout(handler);
+//   }, [watchedFields, updateField]);
 const onSubmit = (data) => {
   console.log(data);
 }
+
+
   return (
     <div>
      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
