@@ -6,7 +6,9 @@
 }
 
 .left {
-    background: #6e6e6e;
+    background:url(../../assets/images/sign_up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     min-width: 50%;
 }
 

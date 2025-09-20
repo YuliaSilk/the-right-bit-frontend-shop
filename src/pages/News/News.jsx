@@ -33,14 +33,18 @@ export default function News() {
     },
   ];
 
-  return (
-    <div className={styles.wrapper}>
+  return (<>
+    <div className={styles.back}>
       <h1 className={styles.title}>News</h1>
+    </div>
+    <div className={styles.wrapper}>
       <div className={styles.list}>
         {newsData.map((item) => (
           <NewsCard key={item.id} {...item} />
         ))}
       </div>
     </div>
+  </>
+
   );
 }

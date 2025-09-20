@@ -6,7 +6,9 @@
 
 .left {
     min-width: 50%;
-    background: #6e6e6e;
+   background: url(../../assets/images/sign_up_success.png);
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .right {
