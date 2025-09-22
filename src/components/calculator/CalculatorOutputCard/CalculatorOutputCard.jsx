@@ -16,7 +16,7 @@ export default function CalculatorOutputCard({ bmiResult }) {
           <div className={styles.scaleIndexBMIContainer}>
             {/* <img src={scale} alt="scale of BMI index" /> */}
             <div className={styles.scaleIndexLabels}>
-              <div className={styles.bmiBar}>
+              {/* <div className={styles.bmiBar}>
                 {Array.from({ length: 13 }).map((_, i) => {
                   return (
                     <div className={styles.underWeightBar}></div>
@@ -36,7 +36,22 @@ export default function CalculatorOutputCard({ bmiResult }) {
                     <div className={styles.overWeightBar}></div>
                   )
                 })}
-              </div>
+              </div> */}
+              <div className={styles.bmiBar}>
+  {Array.from({ length: 13 }).map((_, i) => (
+    <div key={i} className={styles.underWeightBar}></div>
+  ))}
+</div>
+<div className={styles.bmiBar}>
+  {Array.from({ length: 13 }).map((_, i) => (
+    <div key={i} className={styles.healthyBar}></div>
+  ))}
+</div>
+<div className={styles.bmiBar}>
+  {Array.from({ length: 13 }).map((_, i) => (
+    <div key={i} className={styles.overWeightBar}></div>
+  ))}
+</div>
             </div>
 
             <div className={styles.scaleIndexLabels}>

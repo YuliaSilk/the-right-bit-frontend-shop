@@ -1,13 +1,44 @@
 import styles from './CatalogCard.module.css';
 import { Link } from 'react-router-dom';
+import { getProductImageUrl } from '@utils/getProductImage';
 
-const CatalogCard = ({ id, name, price, kcal, description, imageUrl }) => {
+const CatalogCard = ({ id, name, price, kcal, description, imageUrl, product }) => {
       // const { id, name, price, kcal, description } = product;
+      // Простіша логіка визначення зображення
+  let finalImageUrl;
   
+  console.log('CatalogCard props:', { id, name, product, imageUrl });
+  
+  if (imageUrl) {
+    // Пряме передавання imageUrl
+    finalImageUrl = imageUrl;
+    console.log('Using direct imageUrl:', finalImageUrl);
+  } else if (product) {
+    // Використовуємо утиліту для product
+    finalImageUrl = getProductImageUrl(product);
+    console.log('Using getProductImageUrl result:', finalImageUrl);
+  } else {
+    // Fallback
+    finalImageUrl = getProductImageUrl(null);
+    console.log('Using fallback image:', finalImageUrl);
+  }
+  // console.log('Final image URL:', imageUrl);
 
   return (
     <div className={styles.card}>
-      <img className={styles.image} src={imageUrl} alt={name} />
+       <img 
+        className={styles.image} 
+        src={finalImageUrl} 
+        alt={name || 'Product'}
+        onError={(e) => {
+          console.log('Image failed to load, using fallback');
+          e.target.src = getProductImageUrl(null);
+        }}
+        onLoad={() => {
+          console.log('Image loaded successfully:', finalImageUrl);
+        }}
+      />
+      {/* <img className={styles.image} src={imageUrl} alt={name} /> */}
 
       <div className={styles.content}>
         <div className={styles.header}>
