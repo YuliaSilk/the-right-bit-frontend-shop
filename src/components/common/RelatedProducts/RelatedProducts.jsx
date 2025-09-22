@@ -65,7 +65,8 @@ export default function RelatedProducts({ productId, title, limit = 4 }) {
   price={product.price} 
   kcal={product.kcal} 
   description={product.description} 
-  imageUrl={product.imageUrl}  />
+  imageUrl={product.imageUrl} 
+  product={product}  />
         ))}
       </div>
     </div>
