@@ -2,6 +2,9 @@ import styles from './CatalogCard.module.css';
 import { Link } from 'react-router-dom';
 
 const CatalogCard = ({ id, name, price, kcal, description, imageUrl }) => {
+      // const { id, name, price, kcal, description } = product;
+  
+
   return (
     <div className={styles.card}>
       <img className={styles.image} src={imageUrl} alt={name} />

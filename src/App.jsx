@@ -14,12 +14,14 @@ import {
   News,
   OurMission,
   BillingInfo,
+  SuccessPage
 } from '@pages';
 import ScrollToTop from '@components/utils/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import GoogleCallback from './context/GoogleCallback';
 import ProtectedRoute from './context/ProtectedRoute';
+// Removed duplicate import of SuccessPage
 
 function App() {
   return (
@@ -47,6 +49,7 @@ function App() {
             <Route path="/catalog/:id" element={<Item />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<BillingInfo />} />
+            <Route path="/order-success" element={<SuccessPage />} />
             <Route path="/calculator" element={<CalculatorBMI />} />
             <Route path="/news" element={<News />} />
             <Route path="/our-mission" element={<OurMission />} />

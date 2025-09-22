@@ -11,3 +11,4 @@ export { default as CalculatorBMI } from './CalculatorBMI/CalculatorBMI';
 export { default as News } from './News/News';
 export { default as OurMission } from './OurMission/OurMission';
 export { default as BillingInfo } from './BillingInfo/BillingInfo';
+export { default as SuccessPage } from './Success/Success';

@@ -1,7 +1,19 @@
  import styles from './CartItem.module.css';
+import { getProductImageUrl } from '@utils/getProductImage';
 
 export default function CartItem({ item, onQuantityChange, onRemove }) {
-  const {  image,  price, quantity,  weight } = item;
+  const {  price, quantity, weight } = item;
+  // const image = getProductImageUrl(item.images?.[0]);
+  // const item = {
+  //   id: product.id,
+  //   name: product.productName,
+  //   price: product.price,
+  //   quantity: productCount,
+  //   image: getStrapiImageUrl(product.images?.[0]) || tomatoes_5, // ✅ одразу нормальний URL
+  // };
+  const imageUrl = getProductImageUrl(item.image);
+  console.log("CartItem image:", item.image);
+
   const subtotal = (price * quantity).toFixed(2);
 
   const handleDecrement = () => {
@@ -17,12 +29,12 @@ export default function CartItem({ item, onQuantityChange, onRemove }) {
   return (
     <div className={styles.row}>
       <div className={styles.product}>
-        <div className={styles.imagePlaceholder} >
-            {image ? (
-            <span className={styles.emoji}>{image}</span>
-          ) : (
-            <div className={styles.imagePlaceholder} />
-          )}
+      <div className={styles.imagePlaceholder}>
+          <img
+            src={imageUrl || '/placeholder.png'}
+            alt={item.name}
+            style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "8px" }}
+          />
         </div>
         <div className={styles.productInner}>
           <div className={styles.id}>{item.id}</div>

@@ -5,9 +5,9 @@ import { useFormContext } from "@/hooks/useFormContext";
 import styles from './OrderSummary.module.css';
 
 export default function OrderSummary() {
-  const { items, clearCart } = useCart();
+  const { items } = useCart();
   const {register} = useForm();
-    const { formData, resetForm } = useFormContext();
+    const { formData } = useFormContext();
 
   const [loading, setLoading] = useState(false);
 
@@ -90,19 +90,18 @@ export default function OrderSummary() {
 
       const data = await res.json();
       console.log("Order success:", data);
-
-      // Очистка — викликаємо resetForm та, якщо є, clearCart
-      if (typeof resetForm === "function") resetForm();
-      if (typeof clearCart === "function") {
-        clearCart();
-      } else {
-        // якщо у тебе кошик зберігається в localStorage під 'cart' — можна очистити:
-        try { localStorage.removeItem("cart"); } catch { /* ignore */ }
-      }
+localStorage.setItem("lastOrder", JSON.stringify(data));
+      // // Очистка — викликаємо resetForm та, якщо є, clearCart
+      // if (typeof resetForm === "function") resetForm();
+      // if (typeof clearCart === "function") {
+      //   clearCart();
+      // } else {
+      //   // якщо у тебе кошик зберігається в localStorage під 'cart' — можна очистити:
+      //   try { localStorage.removeItem("cart"); } catch { /* ignore */ }
+      // }
 
       alert("Замовлення успішно створене!");
-      // за бажанням: редірект на сторінку підтвердження
-      window.location.href = "/order-success";
+      window.location.href = "/online-store-frontend/order-success";
     } catch (err) {
       console.error("Place order error:", err);
       alert("Помилка при створенні замовлення: " + err.message);

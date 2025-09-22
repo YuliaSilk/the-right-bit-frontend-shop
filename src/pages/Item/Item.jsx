@@ -2,13 +2,13 @@ import tomatoes_5 from "@assets/images/tomatoes_5.png";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from "./Item.module.css";
-import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
+// import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
 import { useCart } from "@/context/CartContext";
-
 
 export default function Item() {
   const { id } = useParams();
   const API_URL = import.meta.env.VITE_API_URL;
+  const { addItem } = useCart();
 
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -112,20 +112,6 @@ const weight = product?.weight ?? null
   }
 // const [cart, setCart] = useState([]);
 
-const { addItem } = useCart();
-
-const addToCartItem = () => {
-  if (!product) return;
-
-  addItem({
-    id: product.id,
-    name: product.productName,
-    price: product.price,
-    quantity: productCount,
-    image: imageUrl || tomatoes_5,
-  });
-};
-
 // const addToCartItem = () => {
 //   if (!product) return;
 
@@ -150,6 +136,19 @@ const addToCartItem = () => {
 
 //   setAddToCart(true); 
 // };
+const handleAddToCart = () => {
+    if (!product) return;
+
+    const item = {
+      id: product.id,
+      name: product.productName,
+      price: product.price,
+      quantity: productCount,
+      image: imageUrl || tomatoes_5,
+    };
+
+    addItem(item); // ✅ додаємо через контекст
+  };
 
   return (
     <div className={styles.container}>
@@ -196,7 +195,7 @@ const addToCartItem = () => {
                   </div>
                 </div>
                 <Link to='/cart'>
-                <button className={styles.addToCartButton} onClick={addToCartItem}>
+                <button className={styles.addToCartButton} onClick={handleAddToCart}>
                   <div className="material-symbols-outlined">shopping_bag</div>
                 </button>
                 </Link>
