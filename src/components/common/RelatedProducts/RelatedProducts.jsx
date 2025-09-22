@@ -47,7 +47,7 @@ export default function RelatedProducts({ productId, title, limit = 4 }) {
 
   if (loading) return <p>Завантаження...</p>;
 //   if (!products.length) return null;
-
+console.log('products Loved:', products);
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -61,7 +61,8 @@ export default function RelatedProducts({ productId, title, limit = 4 }) {
         {products.map((product) => (
           <CatalogCard key={product.id} 
   id={product.id} 
-  name={product.name} 
+  title={product.title}
+  name={product.productName} 
   price={product.price} 
   kcal={product.kcal} 
   description={product.description} 

@@ -10,10 +10,10 @@ const BASE_URL = import.meta.env.VITE_API_URL || "";
  * @returns {string} - готовий URL або запасне зображення
  */
 export function getProductImageUrl(input) {
-  console.log('getProductImageUrl input:', input); // Для дебагу
+  // console.log('getProductImageUrl input:', input); // Для дебагу
   
   if (!input) {
-    console.log('No input, returning fallback');
+    // console.log('No input, returning fallback');
     return tomatoes_5;
   }
 
@@ -54,20 +54,20 @@ export function getProductImageUrl(input) {
   if (imageUrl) {
     // Якщо URL вже повний (починається з http/https)
     if (imageUrl.startsWith("http")) {
-      console.log('Returning full URL:', imageUrl);
+      // console.log('Returning full URL:', imageUrl);
       return imageUrl;
     }
     
     // Якщо відносний URL (починається з /)
     if (imageUrl.startsWith("/")) {
       const fullUrl = `${BASE_URL}${imageUrl}`;
-      console.log('Returning relative URL as full:', fullUrl);
+      // console.log('Returning relative URL as full:', fullUrl);
       return fullUrl;
     }
     
     // Інші випадки
     const fullUrl = `${BASE_URL}/${imageUrl}`;
-    console.log('Returning constructed URL:', fullUrl);
+    // console.log('Returning constructed URL:', fullUrl);
     return fullUrl;
   }
 

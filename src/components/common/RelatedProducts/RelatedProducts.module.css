@@ -33,7 +33,7 @@ line-height: 28px;
 }
 
 .grid{
-    display: flex;
+display: flex;
 height: 408px;
 justify-content: space-between;
 align-items: flex-start;

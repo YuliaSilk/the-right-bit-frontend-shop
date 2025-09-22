@@ -2,25 +2,21 @@ import styles from './CatalogCard.module.css';
 import { Link } from 'react-router-dom';
 import { getProductImageUrl } from '@utils/getProductImage';
 
-const CatalogCard = ({ id, name, price, kcal, description, imageUrl, product }) => {
+const CatalogCard = ({ id, name, title, price, kcal, description, imageUrl, product, productName }) => {
       // const { id, name, price, kcal, description } = product;
-      // Простіша логіка визначення зображення
   let finalImageUrl;
   
-  console.log('CatalogCard props:', { id, name, product, imageUrl });
+  // console.log('CatalogCard props:', { id, name, product, imageUrl });
   
   if (imageUrl) {
-    // Пряме передавання imageUrl
     finalImageUrl = imageUrl;
-    console.log('Using direct imageUrl:', finalImageUrl);
+    // console.log('Using direct imageUrl:', finalImageUrl);
   } else if (product) {
-    // Використовуємо утиліту для product
     finalImageUrl = getProductImageUrl(product);
     console.log('Using getProductImageUrl result:', finalImageUrl);
   } else {
-    // Fallback
     finalImageUrl = getProductImageUrl(null);
-    console.log('Using fallback image:', finalImageUrl);
+    // console.log('Using fallback image:', finalImageUrl);
   }
   // console.log('Final image URL:', imageUrl);
 
@@ -42,7 +38,7 @@ const CatalogCard = ({ id, name, price, kcal, description, imageUrl, product }) 
 
       <div className={styles.content}>
         <div className={styles.header}>
-          <h3 className={styles.title}>{name}</h3>
+          <h3 className={styles.title}>{name || title || productName }</h3>
           <div className={styles.badge}>
             <svg
               width="18"
