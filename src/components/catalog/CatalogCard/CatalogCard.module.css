@@ -43,7 +43,7 @@
 
 .orderBtn {
   color: #232323;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: 17px;
   font-weight: 500;
   font-size: 18px;
