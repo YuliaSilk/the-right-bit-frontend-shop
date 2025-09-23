@@ -1,5 +1,6 @@
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
+import signUpsuccess from '@assets/svgs/signUp_success.svg'
 
 import { Link } from 'react-router-dom';
 
@@ -12,15 +13,19 @@ export default function RegistrationSuccess() {
         <div className={styles.right}>
           <div className={styles.inner}>
             <div className={styles.top}>
-              <svg
+              {/* <svg
                 width="139"
                 height="139"
                 viewBox="0 0 139 139"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <circle cx="69.5" cy="69.5" r="69.5" fill="#D9D9D9" />
-              </svg>
+                <circle cx="69.5" cy="69.5" r="69.5" fill="#7CB184" />
+              </svg> */}
+              <img
+              src={signUpsuccess}
+              alt='Account created successfully! Welcome to RightBite!'
+              />
               <p className={styles.title}>
                 Account created successfully! Welcome to RightBite!
               </p>

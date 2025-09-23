@@ -6,6 +6,9 @@
 
 .left {
   min-width: 50%;
+  background: url(../../assets/images/sign_in_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .right {

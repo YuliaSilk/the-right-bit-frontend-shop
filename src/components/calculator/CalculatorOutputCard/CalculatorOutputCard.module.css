@@ -36,7 +36,16 @@
   font-size: 64px;
   font-weight: 700;
 }
-
+.barLabel{
+  width: 77px;
+  height: 19px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
 .scaleIndexBMIContainer {
   display: flex;
   flex-direction: column;
