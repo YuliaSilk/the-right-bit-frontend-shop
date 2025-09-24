@@ -75,9 +75,9 @@ export default function Cart() {
       <path
        d="M15.375 5.25L8.625 12L15.375 18.75"
        stroke="black"
-       stroke-width="1.5"
-       stroke-miterlimit="10"
-       stroke-linecap="square"
+       strokeWidth="1.5"
+       strokeMiterlimit="10"
+       strokeLinecap="square"
       />
      </svg>
      <Link

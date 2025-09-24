@@ -60,9 +60,9 @@ export default function RelatedProducts({productId, title, limit = 4}) {
       <path
        d="M1.91797 15L10.0846 8L1.91797 1"
        stroke="#234D2E"
-       stroke-width="2"
-       stroke-linecap="round"
-       stroke-linejoin="round"
+       strokeWidth="2"
+       strokeLinecap="round"
+       strokeLinejoin="round"
       />
      </svg>{" "}
     </button>

@@ -1,139 +1,138 @@
 .tableTitle {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+ font-weight: 400;
+ font-size: 14px;
+ letter-spacing: 0.03em;
+ text-transform: uppercase;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  border-radius: 8px;
-  background: #FFF;
-  width: 840px;
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ border-radius: 8px;
+ background: #fff;
+ width: 840px;
 }
 
 .header {
-  padding: 14px 40px;
-  background: #d2e7d3;
-  border-radius: 8px 8px 0 0;
-  height: 60px;
+ padding: 14px 40px;
+ background: #d2e7d3;
+ border-radius: 8px 8px 0 0;
+ height: 60px;
 }
 
 .tableTitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
+ font-weight: 500;
+ font-size: 20px;
+ line-height: 150%;
+ text-transform: capitalize;
 }
 
 .gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 24px; 
-  padding: 40px;
-  border-radius: 0 0 8px 8px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 24px;
+ padding: 40px;
+ border-radius: 0 0 8px 8px;
 }
 
 .formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
 }
 
 .labelText {
-  color: #666;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px; 
-  letter-spacing: -0.315px;
+ color: #666;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 21px;
+ letter-spacing: -0.315px;
 }
 
 .labelTextReq {
-    color: #666;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px; 
-  letter-spacing: -0.315px;
-  align-self: flex-end;
+ color: #666;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 21px;
+ letter-spacing: -0.315px;
+ align-self: flex-end;
 }
 .required {
-  color: red;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: -0.315px;
+ color: red;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 21px;
+ letter-spacing: -0.315px;
 }
 
 .input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
 
-  color: #0F0F0F;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+ color: #0f0f0f;
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: normal;
 }
 
 .error {
-  color: red;
-  font-size: 12px;
-  margin-top: 4px;
+ color: red;
+ font-size: 12px;
+ margin-top: 4px;
 }
 
 .submitButton {
-  padding: 15px 30px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+ padding: 15px 30px;
+ background-color: #4caf50;
+ color: white;
+ border: none;
+ cursor: pointer;
 }
 
-
 .checkboxWrapper {
-  display: flex; 
-  align-items: center; 
-  gap: 12px; 
-  margin-top: 20px; 
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin-top: 20px;
 }
 
 .checkboxInput {
-  appearance: none; 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #ccc; 
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  position: relative;
+ appearance: none;
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ width: 24px;
+ height: 24px;
+ border: 2px solid #ccc;
+ border-radius: 4px;
+ cursor: pointer;
+ outline: none;
+ position: relative;
 }
 
-
 .checkboxInput:checked {
-  border-color: #4CAF50; 
-  background-color: #4CAF50; 
+ border-color: #4caf50;
+ background-color: #4caf50;
 }
 
 .checkboxInput:checked::before {
-  content: '✓'; 
-  color: white;
-  font-size: 16px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+ content: "✓";
+ color: white;
+ font-size: 16px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
 
 .checkboxLabel {
-  font-size: 16px;
-  color: #525252;
-  cursor: pointer;
+ font-size: 16px;
+ color: #525252;
+ cursor: pointer;
 }

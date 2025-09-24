@@ -3,11 +3,12 @@ import {useCart} from "@/context/CartContext";
 import {useForm} from "react-hook-form";
 import {useFormContext} from "@/hooks/useFormContext";
 import styles from "./OrderSummary.module.css";
+import toast from "react-hot-toast";
 
 export default function OrderSummary() {
- const {items} = useCart();
+ const {items, clearCart} = useCart();
  const {register} = useForm();
- const {formData} = useFormContext();
+ const {formData, resetForm} = useFormContext();
 
  const [loading, setLoading] = useState(false);
 
@@ -16,12 +17,12 @@ export default function OrderSummary() {
  const total = subtotal + shipping;
 
  const handlePlaceOrder = async () => {
-  if (!items || items.length === 0) {
-   alert("Кошик порожній — додайте товари перед оформленням замовлення.");
-   return;
-  }
+  // if (!items || items.length === 0) {
+  //  alert("Кошик порожній — додайте товари перед оформленням замовлення.");
+  //  return;
 
   const delivery = formData?.deliveryInfo ?? formData?.delivery ?? {};
+  const payment = formData?.paymentInfo ?? formData?.payment ?? {};
   const get = (o, ...keys) => {
    for (const k of keys) {
     if (o && o[k] !== undefined && o[k] !== null && o[k] !== "") return o[k];
@@ -41,9 +42,9 @@ export default function OrderSummary() {
 
   if (!firstname || !phoneNumber) {
    const missing = [];
-   if (!firstname) missing.push("ім'я");
-   if (!phoneNumber) missing.push("телефон");
-   alert(`Будь ласка, заповніть: ${missing.join(", ")}`);
+   if (!firstname) missing.push("name");
+   if (!phoneNumber) missing.push("phone number");
+   alert(`Please fill in ${missing.join(", ")}`);
    return;
   }
 
@@ -66,6 +67,12 @@ export default function OrderSummary() {
     comment: comment || "",
     deliveryMethod: "HOME_DELIVERY",
    },
+   paymentDetails: {
+    method: payment.paymentMethod?.value ?? "credit-card",
+    card: payment.cardDetails ?? null,
+    saveCard: payment.saveCard ?? false,
+    orderNotes: payment.orderNotes ?? "",
+   },
   };
 
   setLoading(true);
@@ -77,7 +84,6 @@ export default function OrderSummary() {
    });
 
    if (!res.ok) {
-    // намагаємось прочитати помилку з тіла відповіді
     let errText = `Request failed with status ${res.status}`;
     try {
      const errJson = await res.json();
@@ -92,20 +98,26 @@ export default function OrderSummary() {
    const data = await res.json();
    console.log("Order success:", data);
    localStorage.setItem("lastOrder", JSON.stringify(data));
-   // // Очистка — викликаємо resetForm та, якщо є, clearCart
-   // if (typeof resetForm === "function") resetForm();
-   // if (typeof clearCart === "function") {
-   //   clearCart();
-   // } else {
-   //   // якщо у тебе кошик зберігається в localStorage під 'cart' — можна очистити:
-   //   try { localStorage.removeItem("cart"); } catch { /* ignore */ }
-   // }
+   // Очистка — викликаємо resetForm та, якщо є, clearCart
+   //  if (typeof formData?.resetForm === "function") formData.resetForm();
+   if (typeof resetForm === "function") resetForm();
 
-   alert("Замовлення успішно створене!");
+   if (typeof clearCart === "function") {
+    clearCart();
+   } else {
+    // якщо у тебе кошик зберігається в localStorage під 'cart' — можна очистити:
+    try {
+     localStorage.removeItem("cart");
+    } catch {
+     /* ignore */
+    }
+   }
+
+   toast.success("The order has been successfully placed 🚀");
    window.location.href = "/online-store-frontend/order-success";
   } catch (err) {
    console.error("Place order error:", err);
-   alert("Помилка при створенні замовлення: " + err.message);
+   toast.error("Order error: " + err.message);
   } finally {
    setLoading(false);
   }
