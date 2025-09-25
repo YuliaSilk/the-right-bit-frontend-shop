@@ -1,31 +1,3 @@
-// import {createContext, useContext, useState} from "react";
-
-// export const FormContext = createContext();
-
-// export const FormProvider = ({children}) => {
-//  const [formData, setFormData] = useState({
-//   deliveryInfo: {},
-//   paymentInfo: {},
-//  });
-
-//  const updateField = (field, value) => {
-//   setFormData((prev) => ({...prev, [field]: value}));
-//  };
-
-//  const resetForm = () => {
-//   setFormData({
-//    deliveryInfo: {},
-//    paymentInfo: {},
-//    _resetSignal: Date.now(), // 🟢 головне — новий сигнал
-//   });
-//   localStorage.removeItem("formData");
-//  };
-
-//  return <FormContext.Provider value={{formData, updateField, resetForm}}>{children}</FormContext.Provider>;
-// };
-
-// export const useFormContext = () => useContext(FormContext);
-
 import {createContext, useContext, useState, useEffect} from "react";
 
 export const FormContext = createContext();

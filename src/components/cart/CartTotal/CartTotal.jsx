@@ -1,29 +1,43 @@
 import {useState} from "react";
-// import { useCart } from "@/context/CartContext";
 import {useNavigate} from "react-router-dom";
 import styles from "./CartTotal.module.css";
+import {useCart} from "@/context/CartContext";
 
-export default function CartTotal({subtotal, discount = 0, total, onApplyCoupon, appliedCoupon}) {
+export default function CartTotal() {
+ const {items, subtotal, discount, total, appliedCoupon, applyCoupon, clearCart} = useCart();
  const [couponCode, setCouponCode] = useState("");
  const [couponError, setCouponError] = useState("");
  const navigate = useNavigate();
 
- // const { saveCart } = useCart();
-
- const API_URL = import.meta.env.VITE_REACT_APP_API_URL || "";
- const TOKEN = import.meta.env.VITE_REACT_APP_TEST_TOKEN || "";
-
  const handleApplyCoupon = () => {
-  const success = onApplyCoupon(couponCode);
+  const success = applyCoupon(couponCode);
   if (success) {
    setCouponError("");
    setCouponCode("");
+   appliedCoupon({code: "DISCOUNT10", discount: 0.1, type: "percentage"});
   } else {
    setCouponError("Invalid coupon code");
   }
  };
 
  const handleCheckout = () => {
+  const order = {
+   id: order.id,
+   date: new Date().toISOString(),
+   items: items.map((item) => ({
+    ...item,
+    subtotal: item.price * item.quantity,
+   })),
+   subtotal,
+   discount,
+   total,
+   appliedCoupon,
+  };
+
+  localStorage.setItem("order", JSON.stringify(order));
+
+  clearCart();
+
   navigate("/checkout");
  };
 

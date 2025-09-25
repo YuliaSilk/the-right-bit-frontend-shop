@@ -18,17 +18,16 @@ export default function SuccessPage() {
 
    localStorage.removeItem("formData");
    localStorage.removeItem("cart");
-   localStorage.removeItem("lastOrder");
+   //  localStorage.removeItem("lastOrder");
   }
  }, []);
 
  if (!order) {
-  return <p>Замовлення не знайдено</p>;
+  return <p>The order is not found</p>;
  }
+ const subtotal = order.subtotal ?? 0;
+ const total = order.total ?? 0;
 
- const subtotal = order.items?.reduce((sum, item) => sum + item.priceSnapshot * item.quantity, 0) || 0;
- const shipping = 0;
- const total = order.totalPrice ?? subtotal + shipping;
  return (
   <section className={styles.section}>
    <div
@@ -44,7 +43,6 @@ export default function SuccessPage() {
      </div>
     </div>
    </div>
-   {/* <div className={styles.contentWrapper}></div> */}
    <div className={styles.container}>
     <div className={styles.breadcrumbs}>
      <svg
@@ -97,8 +95,8 @@ export default function SuccessPage() {
      <div className={styles.summary}>
       <div className={styles.summaryTable}>
        <div className={styles.summaryRowId}>
-        <span className={styles.summaryValueId}>#ID{order.id}</span>
-        <span className={styles.summaryLabelDate}>June 16, 2025</span>
+        <span className={styles.summaryValueId}>#ID{order.id ?? "0000"}</span>
+        <span className={styles.summaryLabelDate}> {order.date ? new Date(order.date).toLocaleDateString() : "—"}</span>
        </div>
 
        <div className={styles.summaryRow}>
@@ -124,7 +122,18 @@ export default function SuccessPage() {
       </div>
      </div>
     </div>
-
+    {order.items && order.items.length > 0 && (
+     <div className={styles.orderItems}>
+      <h3>Your Items:</h3>
+      <ul>
+       {order.items.map((item) => (
+        <li key={item.id}>
+         {item.name} x {item.quantity} — € {(item.price * item.quantity).toFixed(2)}
+        </li>
+       ))}
+      </ul>
+     </div>
+    )}
     <RelatedProducts
      title="You may also love"
      limit={4}

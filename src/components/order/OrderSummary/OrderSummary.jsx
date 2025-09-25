@@ -6,20 +6,22 @@ import styles from "./OrderSummary.module.css";
 import toast from "react-hot-toast";
 
 export default function OrderSummary() {
- const {items, clearCart} = useCart();
+ const {items, clearCart, subtotal, total, discount, appliedCoupon} = useCart();
  const {register} = useForm();
  const {formData, resetForm} = useFormContext();
 
  const [loading, setLoading] = useState(false);
 
- const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
- const shipping = 0;
- const total = subtotal + shipping;
+ //  const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+ //  const shipping = 0;
+ //  const discount = formData?.appliedCoupon?.discount || 0;
+ //  const total = subtotal - discount + shipping;
 
  const handlePlaceOrder = async () => {
-  // if (!items || items.length === 0) {
-  //  alert("Кошик порожній — додайте товари перед оформленням замовлення.");
-  //  return;
+  if (!items || items.length === 0) {
+   toast.error("The cart is empty. Add items before placing an order.");
+   return;
+  }
 
   const delivery = formData?.deliveryInfo ?? formData?.delivery ?? {};
   const payment = formData?.paymentInfo ?? formData?.payment ?? {};
@@ -44,7 +46,11 @@ export default function OrderSummary() {
    const missing = [];
    if (!firstname) missing.push("name");
    if (!phoneNumber) missing.push("phone number");
-   alert(`Please fill in ${missing.join(", ")}`);
+   toast.error(`Please fill in ${missing.join(", ")}`);
+   return;
+  }
+  if (!items || items.length === 0) {
+   toast.error("The cart is empty. Add items before placing an order.");
    return;
   }
 
@@ -73,6 +79,10 @@ export default function OrderSummary() {
     saveCard: payment.saveCard ?? false,
     orderNotes: payment.orderNotes ?? "",
    },
+   discount: discount,
+   totalPrice: total,
+   subtotal: subtotal,
+   //  appliedCoupon: appliedCoupon?.code ?? null,
   };
 
   setLoading(true);
@@ -98,14 +108,11 @@ export default function OrderSummary() {
    const data = await res.json();
    console.log("Order success:", data);
    localStorage.setItem("lastOrder", JSON.stringify(data));
-   // Очистка — викликаємо resetForm та, якщо є, clearCart
-   //  if (typeof formData?.resetForm === "function") formData.resetForm();
    if (typeof resetForm === "function") resetForm();
 
    if (typeof clearCart === "function") {
     clearCart();
    } else {
-    // якщо у тебе кошик зберігається в localStorage під 'cart' — можна очистити:
     try {
      localStorage.removeItem("cart");
     } catch {
@@ -137,8 +144,6 @@ export default function OrderSummary() {
       >
        <div className={styles.itemDetails}>
         <div className={styles.itemImageWrapper}>
-         {/* Placeholder for item image */}
-         {/* Use the actual image source from the item object when available */}
          <img
           src={item.image || "https://placehold.co/80x80/f0f0f0/888?text=Product"}
           alt={item.name}
@@ -164,6 +169,12 @@ export default function OrderSummary() {
       <span className={styles.summaryLabel}>Shipping:</span>
       <span className={styles.summaryValue}>Free</span>
      </div>
+     {appliedCoupon && discount > 0 && (
+      <div className={styles.summaryRow}>
+       <span>Discount ({appliedCoupon.code}):</span>
+       <span>- € {discount.toFixed(2)}</span>
+      </div>
+     )}
      <div className={styles.summaryDivider}></div>
      <div className={styles.summaryRow}>
       <span className={styles.summaryTotalLabel}>Total:</span>
@@ -194,9 +205,7 @@ export default function OrderSummary() {
       </label>
      </div>
     </div>
-    {/* <pre style={{background:"#f5f5f5", padding:"10px"}}>
-  {JSON.stringify(formData, null, 2)}
-</pre> */}
+
     <div>
      <button
       type="submit"
