@@ -1,50 +1,93 @@
-import styles from './News.module.css';
-import NewsCard from '@/components/news/NewCard/NewCard';
+import {useState} from "react";
+import styles from "./News.module.css";
+import NewsCard from "@/components/news/NewCard/NewCard";
+import articles from "@/data/articles.json";
 
 export default function News() {
-  const newsData = [
-    {
-      id: 1,
-      title: 'Which oil is best for cooking, frying or salads?',
-      description:
-        "Don't know which oil or fat to use in the kitchen? No wonder, the choice is really varied, and each type has its own characteristics. In this article we will advise you on how to use them and when to reach for canola oil, olive oil or coconut oil.",
-      date: 'Wednesday, 02.07.2025',
-      readTime: '14 min',
-      image: 'https://picsum.photos/448/288',
-    },
-    {
-      id: 2,
-      title: 'Fitness recipe: a salad inspired by the taste of a Big Mac',
-      description:
-        'Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.',
-      date: 'Tuesday, 01.07.2025',
-      readTime: '8 min',
-      image: 'https://picsum.photos/448/288',
-    },
-    {
-      id: 3,
-      title:
-        'One of the most popular products will help you live to 100 years old',
-      description:
-        'Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols...',
-      date: 'Monday, 30.06.2025',
-      readTime: '2 min',
-      image: 'https://picsum.photos/448/288',
-    },
-  ];
+ const [currentPage, setCurrentPage] = useState(1);
 
-  return (<>
-    <div className={styles.back}>
-      <h1 className={styles.title}>News</h1>
+ return (
+  <>
+   <div className={styles.back}>
+    <h1 className={styles.title}>News</h1>
+   </div>
+   <div className={styles.wrapper}>
+    <div className={styles.list}>
+     {articles.map((article) => (
+      <NewsCard
+       key={article.id}
+       title={article.title}
+       description={article.subTitle} // або використай інше поле
+       date={article.date}
+       readTime={article.readTime}
+       image={article.imageMain.url}
+       excerpt={article.excerpt}
+       article={article}
+      />
+     ))}
     </div>
-    <div className={styles.wrapper}>
-      <div className={styles.list}>
-        {newsData.map((item) => (
-          <NewsCard key={item.id} {...item} />
-        ))}
-      </div>
+    {/* Pagination */}
+    <div
+     style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "8px",
+     }}
+    >
+     <button
+      style={{
+       width: "32px",
+       height: "32px",
+       borderRadius: "50%",
+       border: "1px solid #ddd",
+       backgroundColor: "white",
+       cursor: "pointer",
+       display: "flex",
+       alignItems: "center",
+       justifyContent: "center",
+      }}
+     >
+      ←
+     </button>
+
+     {[1, 2, 3, 4, 5].map((num) => (
+      <button
+       key={num}
+       onClick={() => setCurrentPage(num)}
+       style={{
+        width: "32px",
+        height: "32px",
+        borderRadius: "50%",
+        border: currentPage === num ? "2px solid #2D5A3D" : "1px solid #ddd",
+        backgroundColor: currentPage === num ? "#2D5A3D" : "white",
+        color: currentPage === num ? "white" : "#333",
+        cursor: "pointer",
+        fontSize: "14px",
+        fontWeight: "500",
+       }}
+      >
+       {num}
+      </button>
+     ))}
+
+     <button
+      style={{
+       width: "32px",
+       height: "32px",
+       borderRadius: "50%",
+       border: "1px solid #ddd",
+       backgroundColor: "white",
+       cursor: "pointer",
+       display: "flex",
+       alignItems: "center",
+       justifyContent: "center",
+      }}
+     >
+      →
+     </button>
     </div>
+   </div>
   </>
-
-  );
+ );
 }

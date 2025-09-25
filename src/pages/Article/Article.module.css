@@ -1,0 +1,5 @@
+.container {
+ background-color: #f8f6f3;
+ min-height: 100vh;
+ font-family: system-ui, -apple-system, sans-serif;
+}

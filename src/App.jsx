@@ -12,6 +12,7 @@ import {
  Cart,
  CalculatorBMI,
  News,
+ Article,
  OurMission,
  BillingInfo,
  SuccessPage,
@@ -95,6 +96,10 @@ function App() {
        <Route
         path="/news"
         element={<News />}
+       />
+       <Route
+        path="/news/:slug"
+        element={<Article />}
        />
        <Route
         path="/our-mission"
