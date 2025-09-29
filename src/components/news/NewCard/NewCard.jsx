@@ -28,22 +28,7 @@ export default function NewsCard({title, description, date, readTime, image, exc
     <button className={styles.button}>
      <Link
       to={`/news/${article.slug}`}
-      style={{
-       backgroundColor: "#2D5A3D",
-       color: "white",
-       padding: "8px 16px",
-       borderRadius: "20px",
-       textDecoration: "none",
-       fontSize: "14px",
-       fontWeight: "500",
-       transition: "background-color 0.3s ease",
-      }}
-      onMouseEnter={(e) => {
-       e.target.style.backgroundColor = "#1e3d2a";
-      }}
-      onMouseLeave={(e) => {
-       e.target.style.backgroundColor = "#2D5A3D";
-      }}
+      className={styles.linkToArticle}
      >
       Read more
      </Link>

@@ -8,7 +8,7 @@
   "date": "Wednesday, 02.07.2025",
   "readTime": "14 min",
   "imageMain": {
-   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "url": "https://gymbeam.com/blog/wp-content/uploads/2025/06/SLANE_PROTEINOVE_PALACINKY_gymbeam-22_optimized_5000-1124x749.jpg",
    "alt": "Different types of oils"
   },
   "body": [
@@ -30,7 +30,7 @@
    },
    {
     "type": "image",
-    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "url": "https://media.istockphoto.com/id/1960152719/photo/various-vegetable-and-seed-oil-in-bottles-on-a-bright-background.jpg?s=612x612&w=0&k=20&c=aunny2o2Z6vsrLQGbN7o-RlFQicZUrlLDa-D_tvtI4s=",
     "alt": "Different oil bottles"
    },
    {
@@ -48,38 +48,6 @@
    {
     "type": "paragraph",
     "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
-   }
-  ],
-  "relatedArticles": [
-   {
-    "id": 2,
-    "slug": "fitness-recipe",
-    "title": "Fitness recipe: peppers stuffed with vegetables and mozzarella",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1596531100586-2a6c1e57c6a9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "alt": "Stuffed peppers"
-    },
-    "readingTime": "9 min"
-   },
-   {
-    "id": 3,
-    "slug": "mango-sticky-rice",
-    "title": "Fitness recipe: Mango and sticky rice",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1598514930263-125032890533?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "alt": "Mango sticky rice"
-    },
-    "readingTime": "4 min"
-   },
-   {
-    "id": 4,
-    "slug": "fajitas-recipe",
-    "title": "Fitness recipe: Fajitas with chicken",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1563273183-113c2c1a0112?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "alt": "Fajitas with chicken"
-    },
-    "readingTime": "5 min"
    }
   ]
  },
@@ -116,38 +84,6 @@
    {
     "type": "paragraph",
     "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
-   }
-  ],
-  "relatedArticles": [
-   {
-    "id": 1,
-    "slug": "which-oil-is-best-for-cooking",
-    "title": "Which oil is best for cooking, frying or salads?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
-     "alt": "Different types of oils"
-    },
-    "readingTime": "14 min"
-   },
-   {
-    "id": 3,
-    "slug": "one-of-most-popular-products-popcorn",
-    "title": "One of the most popular products will help you live to 100 years old",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
-     "alt": "Popcorn"
-    },
-    "readingTime": "2 min"
-   },
-   {
-    "id": 5,
-    "slug": "fitness-recipe-peppers-with-chicken",
-    "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
-     "alt": "Stuffed peppers"
-    },
-    "readingTime": "2 min"
    }
   ]
  },
@@ -194,38 +130,6 @@
     "type": "paragraph",
     "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
    }
-  ],
-  "relatedArticles": [
-   {
-    "id": 1,
-    "slug": "which-oil-is-best-for-cooking",
-    "title": "Which oil is best for cooking, frying or salads?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
-     "alt": "Different types of oils"
-    },
-    "readingTime": "14 min"
-   },
-   {
-    "id": 4,
-    "slug": "caloric-deficit-vs-intermittent-fasting",
-    "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Scales and measuring tape"
-    },
-    "readingTime": "6 min"
-   },
-   {
-    "id": 6,
-    "slug": "burning-fat-does-not-mean-losing-weight",
-    "title": "Burning fat does not mean losing weight. How to achieve real results?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Running shoes"
-    },
-    "readingTime": "6 min"
-   }
   ]
  },
  {
@@ -266,38 +170,6 @@
     "type": "paragraph",
     "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
    }
-  ],
-  "relatedArticles": [
-   {
-    "id": 1,
-    "slug": "which-oil-is-best-for-cooking",
-    "title": "Which oil is best for cooking, frying or salads?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
-     "alt": "Different types of oils"
-    },
-    "readingTime": "14 min"
-   },
-   {
-    "id": 3,
-    "slug": "one-of-most-popular-products-popcorn",
-    "title": "One of the most popular products will help you live to 100 years old",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
-     "alt": "Popcorn"
-    },
-    "readingTime": "2 min"
-   },
-   {
-    "id": 6,
-    "slug": "burning-fat-does-not-mean-losing-weight",
-    "title": "Burning fat does not mean losing weight. How to achieve real results?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Running shoes"
-    },
-    "readingTime": "6 min"
-   }
   ]
  },
  {
@@ -332,38 +204,6 @@
    {
     "type": "paragraph",
     "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
-   }
-  ],
-  "relatedArticles": [
-   {
-    "id": 2,
-    "slug": "fitness-recipe-big-mac-salad",
-    "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
-     "alt": "Big Mac Salad"
-    },
-    "readingTime": "8 min"
-   },
-   {
-    "id": 4,
-    "slug": "caloric-deficit-vs-intermittent-fasting",
-    "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Scales and measuring tape"
-    },
-    "readingTime": "6 min"
-   },
-   {
-    "id": 6,
-    "slug": "burning-fat-does-not-mean-losing-weight",
-    "title": "Burning fat does not mean losing weight. How to achieve real results?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Running shoes"
-    },
-    "readingTime": "6 min"
    }
   ]
  },
@@ -405,37 +245,2241 @@
     "type": "paragraph",
     "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
    }
-  ],
-  "relatedArticles": [
+  ]
+ },
+ {
+  "id": 7,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
    {
-    "id": 1,
-    "slug": "which-oil-is-best-for-cooking",
-    "title": "Which oil is best for cooking, frying or salads?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
-     "alt": "Different types of oils"
-    },
-    "readingTime": "14 min"
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
    },
    {
-    "id": 2,
-    "slug": "fitness-recipe-big-mac-salad",
-    "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
-     "alt": "Big Mac Salad"
-    },
-    "readingTime": "8 min"
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
    },
    {
-    "id": 4,
-    "slug": "caloric-deficit-vs-intermittent-fasting",
-    "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
-    "image": {
-     "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
-     "alt": "Scales and measuring tape"
-    },
-    "readingTime": "6 min"
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 8,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 9,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+
+ {
+  "id": 13,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 14,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 15,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 20,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 21,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+
+ {
+  "id": 25,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 26,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 27,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 32,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 33,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 34,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+
+ {
+  "id": 37,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 38,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 39,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 44,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 45,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+
+ {
+  "id": 49,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 50,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 51,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 53,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "slug": "which-oil-is-best",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "subTitle": "Why does the right choice of fat matter?",
+  "excerpt": "You may be familiar with the situation where you stand in front of a row of dozens of oils in a supermarket and feel helpless. You may have originally wanted something for cooking, you suddenly hesitate because there is so much to choose from, ranging from olive oil to coconut oil to avocado oil. This guide will give you a better overview and help you choose the right oil.",
+  "date": "Wednesday, 02.07.2025",
+  "readTime": "14 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1621259278016-cf3a0c567840?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+   "alt": "Different types of oils"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When choosing fat for the kitchen, it's not just about how it tastes. Some are good for you, some are not. When some oils are heated, the fats break down into harmful substances. That's why it's so important to choose the right fat for a certain application. This guide will give you an overview of the most popular types of oil and fat to help you choose what you need for your next shopping trip."
+   },
+   {
+    "type": "heading",
+    "text": "Why does the right choice of fat matter?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Oils and fats are an integral part of our cooking. We use them for cooking, frying, baking, frying and they are a source of energy. It is however important to note that different types of fats have different properties and it is important to know which is best for which use."
+   },
+   {
+    "type": "paragraph",
+    "text": "Some fats are more stable and less likely to break down at high temperatures. These are ideal for frying. Others, on the other hand, are more sensitive and are best used in salads or for low-heat cooking. Choosing the right fat can make a big difference to the quality of your dish. It is therefore important to know which fats are best for which applications."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1579737402809-77567086026a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Different oil bottles"
+   },
+   {
+    "type": "heading",
+    "text": "How to properly store fats and oils?"
+   },
+   {
+    "type": "paragraph",
+    "text": "Proper storage is crucial to preserving the quality, taste, and nutritional properties of your fats and oils. Light, heat, and air can cause them to go rancid. To prevent rancidity, you should store your fats and oils in a dark and cool place such as a pantry or kitchen cupboard. Avoid storing them near the stove or in direct sunlight. Make sure the container is tightly closed to keep out air."
+   },
+   {
+    "type": "paragraph",
+    "text": "Cold-pressed oils should be stored in the refrigerator after opening to preserve their properties. Refined oils are more resistant to spoilage, but should still be stored in a cool and dark place."
+   },
+   {
+    "type": "paragraph",
+    "text": "Do you have ghee or butter at home? Of course, classic butter must be stored in the fridge. Ghee, on the other hand, is shelf-stable and can be stored at room temperature as long as it is well sealed. Whatever fat or oil you store, always pay attention to the expiry date and if you notice a change in smell or taste, you'd better throw it away."
+   }
+  ]
+ },
+
+ {
+  "id": 56,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "subTitle": "The perfect combination of crunchy vegetables, potatoes, meat and dressing.",
+  "excerpt": "Everyone loves burgers. So today we decided to create a salad inspired by the legendary Big Mac. The combination of crunchy vegetables, potatoes, meat and dressing is simply sensational.",
+  "date": "Tuesday, 01.07.2025",
+  "readTime": "8 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This salad is a great alternative to the classic burger. It's packed with flavor and is a healthy way to get your fix of a burger without the guilt."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "1 head iceberg lettuce, chopped\n1 pound ground beef, cooked and crumbled\n1/2 cup chopped onion\n1/2 cup chopped dill pickles\n1/2 cup shredded cheddar cheese\n1/4 cup of your favorite thousand island dressing"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "In a large bowl, combine the lettuce, beef, onion, pickles, and cheese. Add the dressing and toss to combine. Serve immediately. Enjoy!"
+   }
+  ]
+ },
+
+ {
+  "id": 57,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "subTitle": "Air-popped popcorn contains a lot of fiber.",
+  "excerpt": "Air-popped popcorn contains a lot of fiber, complex carbohydrates, and more polyphenols than many vegetables.",
+  "date": "Monday, 30.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop",
+   "alt": "Popcorn"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "Popcorn, when prepared correctly, is a very healthy snack. It's a whole grain, which is a key component of a healthy diet. Whole grains provide fiber, vitamins, and minerals. Air-popped popcorn is low in calories and fat, making it an excellent choice for a snack."
+   },
+   {
+    "type": "heading",
+    "text": "Health benefits of popcorn"
+   },
+   {
+    "type": "paragraph",
+    "text": "Popcorn is a great source of fiber. A high-fiber diet can help to lower cholesterol, control blood sugar levels, and promote bowel health. Popcorn also contains antioxidants called polyphenols. These compounds help to protect your body's cells from damage caused by free radicals."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1627993214589-923f66810c9d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Popcorn kernels"
+   },
+   {
+    "type": "heading",
+    "text": "How to eat popcorn healthily?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To get the most out of your popcorn, you should prepare it without a lot of added fat or sugar. Air-popped popcorn is the healthiest option. You can also use a small amount of olive oil or coconut oil to pop your kernels. Avoid adding large amounts of butter, salt, or sugar."
+   },
+   {
+    "type": "paragraph",
+    "text": "You can also add some spices to your popcorn to make it more flavorful. Try adding chili powder, garlic powder, or nutritional yeast for a cheesy flavor."
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "subTitle": "The truth about the most popular weight loss methods.",
+  "excerpt": "Caloric deficit is a prerequisite for successful weight loss. Recently, however, intermittent fasting has been gaining popularity. Which approach is more effective and which is worth choosing to lose weight?",
+  "date": "Thursday, 12.06.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "For many, losing weight is a journey, and with so many paths to choose from, it can be hard to know which one is the right one. Two of the most talked-about methods are caloric deficit and intermittent fasting. Let's break down each approach to help you decide which is better for you."
+   },
+   {
+    "type": "heading",
+    "text": "Caloric Deficit"
+   },
+   {
+    "type": "paragraph",
+    "text": "A caloric deficit is when you consume fewer calories than your body burns. It is the fundamental principle of weight loss. Regardless of the diet you follow, if you want to lose weight, you must be in a caloric deficit. It is a simple equation: calories in vs. calories out. To achieve a caloric deficit, you can either eat less, increase your physical activity, or a combination of both."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1549429302-d9e0e560e213?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Healthy food"
+   },
+   {
+    "type": "heading",
+    "text": "Intermittent Fasting"
+   },
+   {
+    "type": "paragraph",
+    "text": "Intermittent fasting is an eating pattern that cycles between periods of fasting and eating. It doesn't tell you what to eat, but rather when to eat. Popular methods include the 16/8 method (fasting for 16 hours and eating during an 8-hour window) and the 5:2 diet (eating normally for 5 days and restricting calories for 2 days). The theory is that it helps you consume fewer calories overall and can improve metabolic health."
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "subTitle": "Learn how to achieve real results in your fitness journey.",
+  "excerpt": "Some of us think that the amount of calories burned that a smartwatch shows us means that the calories have removed some fat from our thighs or belly. However, burning calories does not automatically mean that those calories come from body fat.",
+  "date": "Wednesday, 21.05.2025",
+  "readTime": "6 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "When we work out, our bodies use energy in the form of calories. This energy comes from various sources, including carbohydrates, protein, and fat. The amount of fat your body burns during a workout depends on several factors, including the intensity and duration of your exercise."
+   },
+   {
+    "type": "heading",
+    "text": "The myth of 'spot reduction'"
+   },
+   {
+    "type": "paragraph",
+    "text": "Many people believe that they can target a specific area of their body, like their belly or thighs, to lose fat. This is a common misconception known as 'spot reduction.' In reality, your body loses fat proportionally from all over, and you can't choose where to lose it from."
+   },
+   {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "alt": "Person running"
+   },
+   {
+    "type": "heading",
+    "text": "How to achieve real results?"
+   },
+   {
+    "type": "paragraph",
+    "text": "To lose body fat, you need to create a caloric deficit. This means that you need to burn more calories than you consume. You can do this by combining a healthy diet with regular exercise. Both strength training and cardio are important for fat loss. Strength training helps to build muscle, which increases your metabolism, and cardio helps to burn calories."
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "slug": "fitness-recipe-peppers-with-chicken",
+  "title": "Fitness recipe: peppers stuffed with chicken and quinoa",
+  "subTitle": "Quick and simple recipe for a flavorful meal.",
+  "excerpt": "If you like meat and roasted vegetables, you're in for quite a treat today. Stuffed peppers are perfect for anyone who loves quick and simple recipes full of flavor.",
+  "date": "Tuesday, 17.06.2025",
+  "readTime": "2 min",
+  "imageMain": {
+   "url": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&h=250&fit=crop",
+   "alt": "Stuffed peppers"
+  },
+  "body": [
+   {
+    "type": "paragraph",
+    "text": "This recipe is a great way to get a healthy and delicious meal on the table in no time. The combination of tender chicken, nutritious quinoa, and roasted vegetables makes for a satisfying and flavorful dish."
+   },
+   {
+    "type": "heading",
+    "text": "Ingredients"
+   },
+   {
+    "type": "paragraph",
+    "text": "4 bell peppers, any color\n1 pound boneless, skinless chicken breast, cooked and shredded\n1 cup cooked quinoa\n1/2 cup chopped onion\n1/2 cup shredded cheese\n1 can diced tomatoes, drained\nSpices to taste"
+   },
+   {
+    "type": "heading",
+    "text": "Instructions"
+   },
+   {
+    "type": "paragraph",
+    "text": "Preheat oven to 375°F (190°C). Cut the tops off the peppers and remove the seeds and membranes. In a large bowl, combine the cooked chicken, quinoa, onion, cheese, tomatoes, and spices. Stuff the peppers with the mixture and place them in a baking dish. Bake for 25-30 minutes, or until the peppers are tender. Enjoy!"
    }
   ]
  }
