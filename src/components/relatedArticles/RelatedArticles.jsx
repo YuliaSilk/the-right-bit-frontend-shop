@@ -1,9 +1,45 @@
 import data from "../../data/articles.json";
 import {Link} from "react-router-dom";
 import styles from "./RelatedArticles.module.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const RelatedArticles = () => {
- const relatedArticles = data.slice(0, 3);
+ const relatedArticles = data.slice(0, 12);
+
+ const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 500,
+  pauseOnHover: true,
+  pauseOnFocus: true,
+  pauseOnDotsHover: true,
+  appendDots: (dots) => (
+   <div>
+    <ul style={{margin: "0px", display: "flex"}}> {dots} </ul>
+   </div>
+  ),
+  customPaging: () => (
+   <button
+    style={{
+     width: "10px",
+     height: "10px",
+     borderRadius: "50%",
+     background: "#2D6B41",
+
+     border: "none",
+     cursor: "pointer",
+    }}
+   ></button>
+  ),
+ };
+
  return (
   <div className={styles.relatedArticlesCont}>
    <div className={styles.titleCont}>
@@ -36,10 +72,13 @@ const RelatedArticles = () => {
     </div>
    </div>
 
-   <div className={styles.itemsContainer}>
-    <ul className={styles.itemsList}>
+   <div className={styles.sliderContainer}>
+    <Slider
+     {...settings}
+     className={styles.slideWrapper}
+    >
      {relatedArticles.map((article) => (
-      <li
+      <div
        key={article.id}
        className={styles.item}
       >
@@ -54,9 +93,9 @@ const RelatedArticles = () => {
          <p className={styles.readingTime}>{article.readTime}</p>
         </div>
        </Link>
-      </li>
+      </div>
      ))}
-    </ul>
+    </Slider>
    </div>
   </div>
  );
