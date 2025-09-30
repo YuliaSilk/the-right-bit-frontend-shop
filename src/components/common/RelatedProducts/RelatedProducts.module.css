@@ -1,0 +1,40 @@
+.wrapper {
+ margin: 40px 0;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ margin-bottom: 76px;
+}
+
+.header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.title {
+ color: #202020;
+ font-family: Urbanist;
+ font-size: 50px;
+ font-weight: 300;
+}
+
+.showMoreBtn {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ color: #234d2e;
+ cursor: pointer;
+ font-size: 24px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 28px;
+}
+
+.grid {
+ display: flex;
+ height: 408px;
+ justify-content: space-between;
+ align-items: flex-start;
+ align-self: stretch;
+}

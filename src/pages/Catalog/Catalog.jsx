@@ -9,6 +9,7 @@ import CatalogCard from '@components/catalog/CatalogCard/CatalogCard';
 import CatalogCategories from '@components/catalog/CatalogCategories/CatalogCategories';
 import CatalogFilters from '@components/catalog/CatalogFilters/CatalogFilters';
 import CatalogSidebar from '@components/catalog/CatalogSidebar/CatalogSidebar';
+import { getProductImageUrl } from '@utils/getProductImage';
 
 export default function Catalog() {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -147,9 +148,9 @@ useEffect(() => {
             <div className={styles.innerCards}>
               {!isLoading && !errorMessage && products.length > 0 && (
                 products.map((item, index) => {
-                  const imageUrl = item.images?.[0]?.url
-                    ? `${API_URL.replace(/\/+$/, '')}${item.images[0].url}`
-                    : '';
+                  // const imageUrl = item.images?.[0]?.url
+                  //   ? `${API_URL.replace(/\/+$/, '')}${item.images[0].url}`
+                  //   : '';
 
                   return (
                     <CatalogCard
@@ -159,7 +160,7 @@ useEffect(() => {
                       price={item.price}
                       kcal={item.kcal || item.calories || 0}
                       description={item.description || ''}
-                      imageUrl={imageUrl}
+                      imageUrl={getProductImageUrl(item)}
                     />
                   );
                 })

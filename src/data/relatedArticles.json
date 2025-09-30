@@ -1,0 +1,123 @@
+[
+ {
+  "id": 1,
+  "slug": "which-oil-is-best-for-cooking",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "image": {
+   "url": "https://gymbeam.com/blog/wp-content/uploads/2025/06/SLANE_PROTEINOVE_PALACINKY_gymbeam-22_optimized_5000-1124x749.jpg",
+   "alt": "Different types of oils"
+  },
+  "readingTime": "14 min"
+ },
+ {
+  "id": 2,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "readingTime": "8 min"
+ },
+ {
+  "id": 3,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "readingTime": "6 min"
+ },
+
+ {
+  "id": 4,
+  "slug": "fitness-recipe-big-mac-salad",
+  "title": "Fitness recipe: a salad inspired by the taste of a Big Mac",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=250&fit=crop",
+   "alt": "Big Mac Salad"
+  },
+  "readingTime": "8 min"
+ },
+ {
+  "id": 5,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "readingTime": "6 min"
+ },
+ {
+  "id": 6,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "image": {
+   "url": "https://www.helpguide.org/wp-content/uploads/2023/02/Weight-Loss-1.jpeg",
+   "alt": "Running shoes"
+  },
+  "readingTime": "6 min"
+ },
+ {
+  "id": 7,
+  "slug": "which-oil-is-best-for-cooking",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
+   "alt": "Different types of oils"
+  },
+  "readingTime": "14 min"
+ },
+ {
+  "id": 8,
+  "slug": "one-of-most-popular-products-popcorn",
+  "title": "One of the most popular products will help you live to 100 years old",
+  "image": {
+   "url": "https://i.insider.com/66796b9850b021b5cae8a69a?width=700",
+   "alt": "Popcorn"
+  },
+  "readingTime": "2 min"
+ },
+ {
+  "id": 9,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Running shoes"
+  },
+  "readingTime": "6 min"
+ },
+ {
+  "id": 10,
+  "slug": "which-oil-is-best-for-cooking",
+  "title": "Which oil is best for cooking, frying or salads?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=250&fit=crop",
+   "alt": "Different types of oils"
+  },
+  "readingTime": "14 min"
+ },
+ {
+  "id": 11,
+  "slug": "caloric-deficit-vs-intermittent-fasting",
+  "title": "Caloric deficit or intermittent fasting: which is better for weight loss?",
+  "image": {
+   "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop",
+   "alt": "Scales and measuring tape"
+  },
+  "readingTime": "6 min"
+ },
+ {
+  "id": 12,
+  "slug": "burning-fat-does-not-mean-losing-weight",
+  "title": "Burning fat does not mean losing weight. How to achieve real results?",
+  "image": {
+   "url": "https://www.helpguide.org/wp-content/uploads/2023/02/Weight-Loss-1.jpeg",
+   "alt": "Running shoes"
+  },
+  "readingTime": "6 min"
+ }
+]
