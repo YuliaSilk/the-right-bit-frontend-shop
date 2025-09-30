@@ -5,12 +5,20 @@ import searchIcon from '@/assets/icons/search.png';
 import userIcon from '@/assets/icons/profile.png';
 import cartIcon from '@/assets/icons/cart.png';
 
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
+import { useState } from 'react';
+
 
 const Header = () => {
   const { isAuthenticated } = useAuth();
-
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+  const handleSearch = (e) => {
+    if (query.trim()) {
+      navigate(`/search?query=${encodeURIComponent(query)}`);
+    }
+  };
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -44,10 +52,15 @@ const Header = () => {
             <div className={styles.searchBox}>
               <input
                 type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder="What are you looking for?"
                 className={styles.searchInput}
               />
-              <button className={styles.searchButton}>
+              <button
+                type='submit'
+                onClick={(e) => handleSearch()}
+                className={styles.searchButton}>
                 <img src={searchIcon} alt="Search" />
               </button>
             </div>
