@@ -3,6 +3,7 @@ import styles from "./Article.module.css";
 import articles from "@/data/articles.json";
 import {Link, useParams} from "react-router-dom";
 import RelatedArticles from "../../components/relatedArticles/RelatedArticles";
+import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 
 const Article = () => {
  const {slug} = useParams();
@@ -13,84 +14,29 @@ const Article = () => {
  const {title, imageMain, excerpt, date, readTime, body} = article;
 
  return (
-  <>
+  <section className={styles.section}>
    <div className={styles.container}>
-    <div
-     style={{
-      maxWidth: "800px",
-      margin: "0 auto",
-      padding: "40px 24px",
-     }}
-    >
-     {/* Back Button */}
-     <div>
-      <button className={styles.backButton}>
-       <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-       >
-        <path
-         d="M15.375 5.25L8.625 12L15.375 18.75"
-         stroke="black"
-         strokeWidth="1.5"
-         strokeMiterlimit="10"
-         strokeLinecap="square"
-        />
-       </svg>
-       <Link
-        className={styles.breadcrumbs}
-        to="/news"
-       >
-        News
-       </Link>
-      </button>
-     </div>
+    <Breadcrumbs
+     backTitle="News"
+     backPath="/news"
+    />
+    <div className={styles.content}>
+     <h1 className={styles.title}>{title}</h1>
 
-     {/* Article Header */}
-     <h1
-      style={{
-       fontSize: "36px",
-       fontWeight: "bold",
-       color: "#2D5A3D",
-       marginBottom: "16px",
-       lineHeight: "1.3",
-      }}
-     >
-      {title}
-     </h1>
-
-     <div
-      style={{
-       display: "flex",
-       gap: "16px",
-       marginBottom: "32px",
-       fontSize: "14px",
-       color: "#666",
-      }}
-     >
+     <div className={styles.data}>
       <span>{date}</span>
       <span>Reading time: {readTime}</span>
       {/* {author && <span>By {author}</span>} */}
      </div>
      <div>
-      {/* Featured Image */}
       {imageMain && (
        <img
         src={imageMain.url}
         alt={imageMain.alt || title}
-        style={{
-         width: "100%",
-         height: "400px",
-         objectFit: "cover",
-         borderRadius: "12px",
-         marginBottom: "32px",
-        }}
+        className={styles.image}
        />
       )}
-      <p>{excerpt}</p>
+      <p className={styles.paragraph}>{excerpt}</p>
       {body &&
        body.map((block, index) => {
         if (block.type === "image") {
@@ -102,7 +48,7 @@ const Article = () => {
            <img
             src={block.url}
             alt={block.alt || title}
-            className="w-full rounded-xl shadow-md"
+            className={styles.image}
            />
           </div>
          );
@@ -111,7 +57,7 @@ const Article = () => {
          return (
           <h4
            key={index}
-           className="text-2xl font-semibold text-green-800 mt-8 mb-4"
+           className={styles.heading}
           >
            {block.subtitle}
           </h4>
@@ -121,7 +67,7 @@ const Article = () => {
          return (
           <p
            key={index}
-           className="mb-4 text-gray-700 leading-relaxed"
+           className={styles.paragraph}
           >
            {block.text}
           </p>
@@ -133,7 +79,7 @@ const Article = () => {
     </div>
    </div>
    <RelatedArticles />
-  </>
+  </section>
  );
 };
 

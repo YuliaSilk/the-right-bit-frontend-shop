@@ -7,6 +7,7 @@ import CartItem from "@/components/cart/CartItem/CartItem";
 import CartTotal from "@/components/cart/CartTotal/CartTotal";
 
 import bannerImage from "@/assets/images/banner_cart.webp";
+import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 
 export default function Cart() {
  const API_URL = import.meta.env.VITE_API_URL;
@@ -64,29 +65,10 @@ export default function Cart() {
     />
    </div>
    <div className={styles.container}>
-    <div className={styles.breadcrumbs}>
-     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-     >
-      <path
-       d="M15.375 5.25L8.625 12L15.375 18.75"
-       stroke="black"
-       strokeWidth="1.5"
-       strokeMiterlimit="10"
-       strokeLinecap="square"
-      />
-     </svg>
-     <Link
-      className={styles.link}
-      to="/catalog"
-     >
-      Catalog
-     </Link>
-    </div>
+    <Breadcrumbs
+     backTitle="Catalog"
+     backPath="/catalog"
+    />
     <h1 className={styles.title}>My Shopping Cart</h1>
 
     <div className={styles.innerWrapper}>

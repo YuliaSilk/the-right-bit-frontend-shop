@@ -4,7 +4,7 @@ import {Link, useParams} from "react-router-dom";
 import styles from "./Item.module.css";
 // import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
 import {useCart} from "@/context/CartContext";
-
+import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 export default function Item() {
  const {id} = useParams();
  const API_URL = import.meta.env.VITE_API_URL;
@@ -141,18 +141,22 @@ export default function Item() {
    description: product.description,
   };
 
-  addItem(item); // ✅ додаємо через контекст
+  addItem(item);
  };
 
  return (
   <div className={styles.container}>
-   <Link
+   <Breadcrumbs
+    backTitle="Catalog"
+    backPath="/catalog"
+   />
+   {/* <Link
     to="/catalog"
     className={styles.navigation}
    >
     <span className="material-symbols-outlined">chevron_left</span>
     <span>Catalog</span>
-   </Link>
+   </Link> */}
 
    {isLoading && <div style={{padding: "2rem"}}>Loading...</div>}
 

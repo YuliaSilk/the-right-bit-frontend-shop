@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import NewsLetter from "@/components/home/NewsLetter/NewsLetter";
 import RelatedProducts from "../../components/common/RelatedProducts/RelatedProducts";
+import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 
 export default function SuccessPage() {
  const [order, setOrder] = useState(null);
@@ -44,29 +45,7 @@ export default function SuccessPage() {
     </div>
    </div>
    <div className={styles.container}>
-    <div className={styles.breadcrumbs}>
-     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-     >
-      <path
-       d="M15.375 5.25L8.625 12L15.375 18.75"
-       stroke="black"
-       strokeWidth="1.5"
-       strokeMiterlimit="10"
-       strokeLinecap="square"
-      />
-     </svg>
-     <Link
-      className={styles.link}
-      to="/catalog"
-     >
-      Catalog
-     </Link>
-    </div>
+    <Breadcrumbs items={[{title: "Catalog", path: "/catalog"}]} />
     <div className={styles.inner}>
      <img
       src={groupIcon}
