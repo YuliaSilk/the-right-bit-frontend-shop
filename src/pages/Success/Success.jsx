@@ -7,27 +7,57 @@ import {Link} from "react-router-dom";
 import NewsLetter from "@/components/home/NewsLetter/NewsLetter";
 import RelatedProducts from "../../components/common/RelatedProducts/RelatedProducts";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
-
+import {getDeliveryRangeString} from "../../utils/generateDeliveryDate";
 export default function SuccessPage() {
  const [order, setOrder] = useState(null);
+ const [loading, setLoading] = useState(true);
+ const DELIVERY_RANGE = getDeliveryRangeString(3, 5); // Доставка через 3-5 днів
 
  useEffect(() => {
   const saved = localStorage.getItem("lastOrder");
   if (saved) {
-   const parsed = JSON.parse(saved);
-   setOrder(parsed);
+   try {
+    const parsed = JSON.parse(saved);
+    console.log("Loaded order:", parsed);
+    setOrder(parsed);
 
-   localStorage.removeItem("formData");
-   localStorage.removeItem("cart");
-   //  localStorage.removeItem("lastOrder");
+    //    localStorage.removeItem("formData");
+    //    localStorage.removeItem("cart");
+    //  localStorage.removeItem("lastOrder");
+   } catch (error) {
+    console.error("Failed to load order:", error);
+   }
   }
+  setLoading(false);
+
+  localStorage.removeItem("formData");
  }, []);
 
+ if (loading) {
+  return (
+   <div className={styles.section}>
+    <div className={styles.container}>
+     <p>Loading order information...</p>
+    </div>
+   </div>
+  );
+ }
+
  if (!order) {
-  return <p>The order is not found</p>;
+  return (
+   <div className={styles.section}>
+    <div className={styles.container}>
+     <p>Order not found. Please check your order history or contact support.</p>
+     <Link to="/catalog">Return to Catalog</Link>
+    </div>
+   </div>
+  );
  }
  const subtotal = order.subtotal ?? 0;
  const total = order.total ?? 0;
+ const discount = order.discount ?? 0;
+ const orderId = order.id ?? order.orderId ?? "N/A";
+ const orderDate = order.date ? new Date(order.date).toLocaleDateString() : "—";
 
  return (
   <section className={styles.section}>
@@ -67,15 +97,15 @@ export default function SuccessPage() {
        className={styles.iconBox}
       ></img>
       <div className={styles.estimateText}>
-       <p className={styles.date}>Estimated delivery : June 19 - 21</p>
+       <p className={styles.date}>Estimated delivery: {DELIVERY_RANGE}</p>
        <p className={styles.estText}>We’re packing your order with care using recyckable materials</p>
       </div>
      </div>
      <div className={styles.summary}>
       <div className={styles.summaryTable}>
        <div className={styles.summaryRowId}>
-        <span className={styles.summaryValueId}>#ID{order.id ?? "0000"}</span>
-        <span className={styles.summaryLabelDate}> {order.date ? new Date(order.date).toLocaleDateString() : "—"}</span>
+        <span className={styles.summaryValueId}>#ID{orderId}</span>
+        <span className={styles.summaryLabelDate}> {orderDate}</span>
        </div>
 
        <div className={styles.summaryRow}>
@@ -89,7 +119,15 @@ export default function SuccessPage() {
         <span className={styles.summaryValue}>Free</span>
        </div>
        <div className={styles.summaryDivider}></div>
-
+       {order.appliedCoupon && discount > 0 && (
+        <>
+         <div className={styles.summaryRow}>
+          <span className={styles.summaryLabel}>Discount ({order.appliedCoupon.code}):</span>
+          <span className={styles.summaryValue}>-€ {discount.toFixed(2)}</span>
+         </div>
+         <div className={styles.summaryDivider}></div>
+        </>
+       )}
        <div className={styles.summaryRow}>
         <span className={styles.summaryTotalLabel}>Total:</span>
         <span className={styles.summaryTotalValue}>€ {total.toFixed(2)}</span>
@@ -97,7 +135,12 @@ export default function SuccessPage() {
       </div>
       <div className={styles.buttonWrapper}>
        <button className={styles.buttonTrack}>Track Delivery</button>
-       <button className={styles.buttonView}>View Order</button>
+       <Link
+        to="/profile/orders"
+        className={styles.buttonView}
+       >
+        <button className={styles.buttonView}>View Order</button>
+       </Link>
       </div>
      </div>
     </div>
