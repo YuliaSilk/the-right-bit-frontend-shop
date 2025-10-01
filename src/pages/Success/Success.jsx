@@ -8,10 +8,12 @@ import NewsLetter from "@/components/home/NewsLetter/NewsLetter";
 import RelatedProducts from "../../components/common/RelatedProducts/RelatedProducts";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 import {getDeliveryRangeString} from "../../utils/generateDeliveryDate";
+import OrderConfirmationModal from "../../components/order/OrderConfirmationModal/OrderConfirmationModal";
 export default function SuccessPage() {
  const [order, setOrder] = useState(null);
  const [loading, setLoading] = useState(true);
- const DELIVERY_RANGE = getDeliveryRangeString(3, 5); // Доставка через 3-5 днів
+ const [isModalOpen, setIsModalOpen] = useState(false);
+ const DELIVERY_RANGE = getDeliveryRangeString(3, 5);
 
  useEffect(() => {
   const saved = localStorage.getItem("lastOrder");
@@ -21,6 +23,10 @@ export default function SuccessPage() {
     console.log("Loaded order:", parsed);
     setOrder(parsed);
 
+    // const user = localStorage.getItem("user");
+    // if (!user) {
+    //  setIsModalOpen(true);
+    // }
     //    localStorage.removeItem("formData");
     //    localStorage.removeItem("cart");
     //  localStorage.removeItem("lastOrder");
@@ -75,7 +81,10 @@ export default function SuccessPage() {
     </div>
    </div>
    <div className={styles.container}>
-    <Breadcrumbs items={[{title: "Catalog", path: "/catalog"}]} />
+    <Breadcrumbs
+     backTitle="Catalog"
+     backPath="/catalog"
+    />
     <div className={styles.inner}>
      <img
       src={groupIcon}
@@ -135,27 +144,29 @@ export default function SuccessPage() {
       </div>
       <div className={styles.buttonWrapper}>
        <button className={styles.buttonTrack}>Track Delivery</button>
-       <Link
-        to="/profile/orders"
+
+       <button
         className={styles.buttonView}
+        onClick={() => {
+         const user = localStorage.getItem("user");
+         if (user) {
+          window.location.href = `/profile/orders/${orderId}`;
+         } else {
+          setIsModalOpen(true);
+         }
+        }}
        >
-        <button className={styles.buttonView}>View Order</button>
-       </Link>
+        View Order
+       </button>
       </div>
      </div>
     </div>
-    {order.items && order.items.length > 0 && (
-     <div className={styles.orderItems}>
-      <h3>Your Items:</h3>
-      <ul>
-       {order.items.map((item) => (
-        <li key={item.id}>
-         {item.name} x {item.quantity} — € {(item.price * item.quantity).toFixed(2)}
-        </li>
-       ))}
-      </ul>
-     </div>
-    )}
+    <OrderConfirmationModal
+     isOpen={isModalOpen}
+     onClose={() => setIsModalOpen(false)}
+     orderData={order}
+    />
+
     <RelatedProducts
      title="You may also love"
      limit={4}

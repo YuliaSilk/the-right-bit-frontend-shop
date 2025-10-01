@@ -38,6 +38,7 @@ export default function BillingInfo() {
         {title: "Shopping Cart", path: "/cart"},
         {title: "Billing Information"},
        ]}
+       hideCurrent
       />
 
       <h1 className={styles.title}>Billing Information</h1>

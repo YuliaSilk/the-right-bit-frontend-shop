@@ -17,8 +17,8 @@ const Article = () => {
   <section className={styles.section}>
    <div className={styles.container}>
     <Breadcrumbs
-     backTitle="News"
-     backPath="/news"
+     items={[{title: "News", path: "/news"}, {title: "article"}]}
+     hideCurrent
     />
     <div className={styles.content}>
      <h1 className={styles.title}>{title}</h1>
