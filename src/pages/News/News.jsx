@@ -7,6 +7,22 @@ import Pagination from "../../components/common/Pagination/Pagination";
 export default function News() {
  const [currentPage, setCurrentPage] = useState(1);
 
+ 
+  return (<>
+    <div className={styles.back}>
+      <h1 className={styles.title}>News</h1>
+    </div>
+    <div className={styles.wrapper}>
+      <div className={styles.list}>
+        {newsData.map((item) => (
+          <NewsCard key={item.id} {...item} />
+        ))}
+      </div>
+    </div>
+  </>
+
+  );
+
  const ItemsPerRage = 6;
  const totalPages = Math.ceil(articles.length / ItemsPerRage);
  const startIndexPage = (currentPage - 1) * ItemsPerRage;
@@ -40,4 +56,5 @@ export default function News() {
    </div>
   </>
  );
+
 }
