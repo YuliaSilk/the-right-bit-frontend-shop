@@ -40,7 +40,6 @@ export default function Cart() {
   loadCartItems();
  }, [items, addItem, API_URL]);
 
- // const [couponCode, setCouponCode] = useState('');
  const [appliedCoupon, setAppliedCoupon] = useState(null);
 
  const handleApplyCoupon = (code) => {
@@ -66,8 +65,8 @@ export default function Cart() {
    </div>
    <div className={styles.container}>
     <Breadcrumbs
-     backTitle="Catalog"
-     backPath="/catalog"
+     items={[{title: "Catalog", path: "/catalog"}, {title: "Shopping Cart"}]}
+     hideCurrent
     />
     <h1 className={styles.title}>My Shopping Cart</h1>
 

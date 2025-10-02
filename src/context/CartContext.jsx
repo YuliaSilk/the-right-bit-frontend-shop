@@ -58,7 +58,13 @@ export const CartProvider = ({children}) => {
   setItems((prev) => prev.filter((p) => p.id !== id));
  };
 
- const clearCart = () => setItems([]);
+ const clearCart = () => {
+  setItems([]);
+  setAppliedCoupon(null);
+  setDiscount(0);
+  localStorage.removeItem("cart");
+  localStorage.removeItem("appliedCoupon");
+ };
 
  const recalcDiscount = (coupon, currentItems = items) => {
   const currentSubtotal = currentItems.reduce((sum, item) => sum + item.price * item.quantity, 0);

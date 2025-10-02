@@ -4,25 +4,42 @@ import styles from "./CartTotal.module.css";
 import {useCart} from "@/context/CartContext";
 
 export default function CartTotal() {
- const {items, subtotal, discount, total, appliedCoupon, applyCoupon, clearCart} = useCart();
+ const {items, subtotal, discount, total, appliedCoupon, applyCoupon} = useCart();
  const [couponCode, setCouponCode] = useState("");
  const [couponError, setCouponError] = useState("");
  const navigate = useNavigate();
+ //  const orderId = Date.now().toString();
 
+ //  const handleApplyCoupon = () => {
+ //   const success = applyCoupon(couponCode);
+ //   if (success) {
+ //    setCouponError("");
+ //    setCouponCode("");
+ //    appliedCoupon({code: "DISCOUNT10", discount: 0.1, type: "percentage"});
+ //   } else {
+ //    setCouponError("Invalid coupon code");
+ //   }
+ //  };
  const handleApplyCoupon = () => {
   const success = applyCoupon(couponCode);
   if (success) {
    setCouponError("");
    setCouponCode("");
-   appliedCoupon({code: "DISCOUNT10", discount: 0.1, type: "percentage"});
+   // Не потрібно викликати appliedCoupon - це вже зробив applyCoupon()
   } else {
    setCouponError("Invalid coupon code");
   }
  };
-
  const handleCheckout = () => {
+  if (items.length === 0) {
+   return; // Не дозволяємо checkout з порожньою корзиною
+  }
+
+  // Генеруємо унікальний ID для замовлення
+  const orderId = `ORDER-${Date.now()}`;
+
   const order = {
-   id: order.id,
+   id: orderId,
    date: new Date().toISOString(),
    items: items.map((item) => ({
     ...item,
@@ -34,12 +51,32 @@ export default function CartTotal() {
    appliedCoupon,
   };
 
+  // Зберігаємо замовлення в localStorage
   localStorage.setItem("order", JSON.stringify(order));
 
-  clearCart();
-
+  // НЕ викликаємо clearCart() тут! Корзина буде очищена після успішного замовлення в OrderSummary
   navigate("/checkout");
  };
+ //  const handleCheckout = () => {
+ //   const order = {
+ //    id: orderId,
+ //    date: new Date().toISOString(),
+ //    items: items.map((item) => ({
+ //     ...item,
+ //     subtotal: item.price * item.quantity,
+ //    })),
+ //    subtotal,
+ //    discount,
+ //    total,
+ //    appliedCoupon,
+ //   };
+
+ //   localStorage.setItem("order", JSON.stringify(order));
+
+ //   clearCart();
+
+ //   navigate("/checkout");
+ //  };
 
  return (
   <div className={styles.cartTotalContainer}>

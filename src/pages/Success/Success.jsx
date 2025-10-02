@@ -7,27 +7,63 @@ import {Link} from "react-router-dom";
 import NewsLetter from "@/components/home/NewsLetter/NewsLetter";
 import RelatedProducts from "../../components/common/RelatedProducts/RelatedProducts";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
-
+import {getDeliveryRangeString} from "../../utils/generateDeliveryDate";
+import OrderConfirmationModal from "../../components/order/OrderConfirmationModal/OrderConfirmationModal";
 export default function SuccessPage() {
  const [order, setOrder] = useState(null);
+ const [loading, setLoading] = useState(true);
+ const [isModalOpen, setIsModalOpen] = useState(false);
+ const DELIVERY_RANGE = getDeliveryRangeString(3, 5);
 
  useEffect(() => {
   const saved = localStorage.getItem("lastOrder");
   if (saved) {
-   const parsed = JSON.parse(saved);
-   setOrder(parsed);
+   try {
+    const parsed = JSON.parse(saved);
+    console.log("Loaded order:", parsed);
+    setOrder(parsed);
 
-   localStorage.removeItem("formData");
-   localStorage.removeItem("cart");
-   //  localStorage.removeItem("lastOrder");
+    // const user = localStorage.getItem("user");
+    // if (!user) {
+    //  setIsModalOpen(true);
+    // }
+    //    localStorage.removeItem("formData");
+    //    localStorage.removeItem("cart");
+    //  localStorage.removeItem("lastOrder");
+   } catch (error) {
+    console.error("Failed to load order:", error);
+   }
   }
+  setLoading(false);
+
+  localStorage.removeItem("formData");
  }, []);
 
+ if (loading) {
+  return (
+   <div className={styles.section}>
+    <div className={styles.container}>
+     <p>Loading order information...</p>
+    </div>
+   </div>
+  );
+ }
+
  if (!order) {
-  return <p>The order is not found</p>;
+  return (
+   <div className={styles.section}>
+    <div className={styles.container}>
+     <p>Order not found. Please check your order history or contact support.</p>
+     <Link to="/catalog">Return to Catalog</Link>
+    </div>
+   </div>
+  );
  }
  const subtotal = order.subtotal ?? 0;
  const total = order.total ?? 0;
+ const discount = order.discount ?? 0;
+ const orderId = order.id ?? order.orderId ?? "N/A";
+ const orderDate = order.date ? new Date(order.date).toLocaleDateString() : "—";
 
  return (
   <section className={styles.section}>
@@ -45,7 +81,10 @@ export default function SuccessPage() {
     </div>
    </div>
    <div className={styles.container}>
-    <Breadcrumbs items={[{title: "Catalog", path: "/catalog"}]} />
+    <Breadcrumbs
+     items={[{title: "Catalog", path: "/catalog"}, {title: "Success"}]}
+     hideCurrent
+    />
     <div className={styles.inner}>
      <img
       src={groupIcon}
@@ -67,15 +106,15 @@ export default function SuccessPage() {
        className={styles.iconBox}
       ></img>
       <div className={styles.estimateText}>
-       <p className={styles.date}>Estimated delivery : June 19 - 21</p>
+       <p className={styles.date}>Estimated delivery: {DELIVERY_RANGE}</p>
        <p className={styles.estText}>We’re packing your order with care using recyckable materials</p>
       </div>
      </div>
      <div className={styles.summary}>
       <div className={styles.summaryTable}>
        <div className={styles.summaryRowId}>
-        <span className={styles.summaryValueId}>#ID{order.id ?? "0000"}</span>
-        <span className={styles.summaryLabelDate}> {order.date ? new Date(order.date).toLocaleDateString() : "—"}</span>
+        <span className={styles.summaryValueId}>#ID{orderId}</span>
+        <span className={styles.summaryLabelDate}> {orderDate}</span>
        </div>
 
        <div className={styles.summaryRow}>
@@ -89,7 +128,15 @@ export default function SuccessPage() {
         <span className={styles.summaryValue}>Free</span>
        </div>
        <div className={styles.summaryDivider}></div>
-
+       {order.appliedCoupon && discount > 0 && (
+        <>
+         <div className={styles.summaryRow}>
+          <span className={styles.summaryLabel}>Discount ({order.appliedCoupon.code}):</span>
+          <span className={styles.summaryValue}>-€ {discount.toFixed(2)}</span>
+         </div>
+         <div className={styles.summaryDivider}></div>
+        </>
+       )}
        <div className={styles.summaryRow}>
         <span className={styles.summaryTotalLabel}>Total:</span>
         <span className={styles.summaryTotalValue}>€ {total.toFixed(2)}</span>
@@ -97,22 +144,29 @@ export default function SuccessPage() {
       </div>
       <div className={styles.buttonWrapper}>
        <button className={styles.buttonTrack}>Track Delivery</button>
-       <button className={styles.buttonView}>View Order</button>
+
+       <button
+        className={styles.buttonView}
+        onClick={() => {
+         const user = localStorage.getItem("user");
+         if (user) {
+          window.location.href = `/profile/orders/${orderId}`;
+         } else {
+          setIsModalOpen(true);
+         }
+        }}
+       >
+        View Order
+       </button>
       </div>
      </div>
     </div>
-    {order.items && order.items.length > 0 && (
-     <div className={styles.orderItems}>
-      <h3>Your Items:</h3>
-      <ul>
-       {order.items.map((item) => (
-        <li key={item.id}>
-         {item.name} x {item.quantity} — € {(item.price * item.quantity).toFixed(2)}
-        </li>
-       ))}
-      </ul>
-     </div>
-    )}
+    <OrderConfirmationModal
+     isOpen={isModalOpen}
+     onClose={() => setIsModalOpen(false)}
+     orderData={order}
+    />
+
     <RelatedProducts
      title="You may also love"
      limit={4}

@@ -28,16 +28,13 @@ export default function BillingInfo() {
     </div>
     <div className={styles.contentWrapper}>
      <div className={styles.container}>
-      {/* <Breadcrumbs
-          backTitle="Checkout"
-          backPath="/checkout"
-         /> */}
       <Breadcrumbs
        items={[
         {title: "Catalog", path: "/catalog"},
         {title: "Shopping Cart", path: "/cart"},
         {title: "Billing Information"},
        ]}
+       hideCurrent
       />
 
       <h1 className={styles.title}>Billing Information</h1>
