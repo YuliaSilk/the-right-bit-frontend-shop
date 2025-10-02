@@ -40,7 +40,6 @@ export default function Cart() {
   loadCartItems();
  }, [items, addItem, API_URL]);
 
- // const [couponCode, setCouponCode] = useState('');
  const [appliedCoupon, setAppliedCoupon] = useState(null);
 
  const handleApplyCoupon = (code) => {

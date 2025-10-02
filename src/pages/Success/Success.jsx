@@ -82,8 +82,8 @@ export default function SuccessPage() {
    </div>
    <div className={styles.container}>
     <Breadcrumbs
-     backTitle="Catalog"
-     backPath="/catalog"
+     items={[{title: "Catalog", path: "/catalog"}, {title: "Success"}]}
+     hideCurrent
     />
     <div className={styles.inner}>
      <img

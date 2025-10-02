@@ -26,7 +26,6 @@ const Article = () => {
      <div className={styles.data}>
       <span>{date}</span>
       <span>Reading time: {readTime}</span>
-      {/* {author && <span>By {author}</span>} */}
      </div>
      <div>
       {imageMain && (

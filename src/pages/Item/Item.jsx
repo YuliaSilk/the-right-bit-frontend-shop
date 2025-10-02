@@ -14,7 +14,6 @@ export default function Item() {
  const [isLoading, setIsLoading] = useState(false);
  const [errorMessage, setErrorMessage] = useState("");
  const [relatedProducts, setRelatedProducts] = useState([]);
- // const [addToCart,setAddToCart] = useState(false);
 
  useEffect(() => {
   if (!id) return;
@@ -102,32 +101,7 @@ export default function Item() {
   const base = (API_URL || "").replace(/\/+$/, "");
   imageUrl = `${base}${imageUrl}`;
  }
- // const [cart, setCart] = useState([]);
 
- // const addToCartItem = () => {
- //   if (!product) return;
-
- //   const item = {
- //     id: product.id,
- //     name: product.productName,
- //     price: product.price,
- //     quantity: productCount,
- //     image: imageUrl || tomatoes_5,
- //   };
-
- //   setCart(prevCart => {
- //     const existingItem = prevCart.find(p => p.id === product.id);
- //     if (existingItem) {
- //       return prevCart.map(p =>
- //         p.id === product.id ? { ...p, quantity: p.quantity + productCount } : p
- //       );
- //     } else {
- //       return [...prevCart, item];
- //     }
- //   });
-
- //   setAddToCart(true);
- // };
  const handleAddToCart = () => {
   if (!product) return;
 
@@ -150,13 +124,6 @@ export default function Item() {
     items={[{title: "Catalog", path: "/catalog"}, {title: "Item"}]}
     hideCurrent
    />
-   {/* <Link
-    to="/catalog"
-    className={styles.navigation}
-   >
-    <span className="material-symbols-outlined">chevron_left</span>
-    <span>Catalog</span>
-   </Link> */}
 
    {isLoading && <div style={{padding: "2rem"}}>Loading...</div>}
 
