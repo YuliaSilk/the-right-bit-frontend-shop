@@ -5,6 +5,7 @@ import styles from "./Item.module.css";
 // import CatalogCard from "../../components/catalog/CatalogCard/CatalogCard";
 import {useCart} from "@/context/CartContext";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
+import RelatedProducts from "../../components/common/RelatedProducts/RelatedProducts";
 export default function Item() {
  const {id} = useParams();
  const API_URL = import.meta.env.VITE_API_URL;
@@ -120,143 +121,122 @@ export default function Item() {
 
  return (
   <div className={styles.container}>
-   <Breadcrumbs
-    items={[{title: "Catalog", path: "/catalog"}, {title: "Item"}]}
-    hideCurrent
-   />
+   <div className={styles.content}>
+    <Breadcrumbs
+     items={[{title: "Catalog", path: "/catalog"}, {title: "Item"}]}
+     hideCurrent
+    />
 
-   {isLoading && <div style={{padding: "2rem"}}>Loading...</div>}
+    {isLoading && <div style={{padding: "2rem"}}>Loading...</div>}
 
-   {!isLoading && errorMessage && <div style={{padding: "2rem", color: "#c62828"}}>{errorMessage}</div>}
-
-   {!isLoading && !errorMessage && (
-    <div className={styles.shortInfoContainer}>
-     <div className={styles.productImage}>
-      <img
-       src={imageUrl || tomatoes_5}
-       alt={name}
-      />
-     </div>
-     <div className={styles.detailsBlock}>
-      <div className={styles.briefPanel}>
-       <h3 className={styles.productName}>{name}</h3>
-       <div className={styles.productNumber}>{productNumber}</div>
-       {price != null && <span className={styles.actualPrice}>{`€ ${price}`}</span>}
-       <div className={styles.prices}>
-        <div className={styles.actionButtons}>
-         <div className={styles.productAmount}>
-          <div
-           className={styles.changeProductAmountIcon}
-           onClick={decrementProductCount}
-          >
-           -
+    {!isLoading && errorMessage && <div style={{padding: "2rem", color: "#c62828"}}>{errorMessage}</div>}
+    <div className={styles.content}></div>
+    {!isLoading && !errorMessage && (
+     <div className={styles.shortInfoContainer}>
+      <div className={styles.productImage}>
+       <img
+        src={imageUrl || tomatoes_5}
+        alt={name}
+        className={styles.image}
+       />
+      </div>
+      <div className={styles.detailsBlock}>
+       <div className={styles.briefPanel}>
+        <h3 className={styles.productName}>{name}</h3>
+        <div className={styles.productNumber}>{productNumber}</div>
+        {price != null && <span className={styles.actualPrice}>{`€ ${price}`}</span>}
+        <div className={styles.prices}>
+         <div className={styles.actionButtons}>
+          <div className={styles.productAmount}>
+           <div
+            className={styles.changeProductAmountIcon}
+            onClick={decrementProductCount}
+           >
+            -
+           </div>
+           <div>{productCount}</div>
+           <div
+            className={styles.changeProductAmountIcon}
+            onClick={incrementProductCount}
+           >
+            +
+           </div>
           </div>
-          <div>{productCount}</div>
-          <div
-           className={styles.changeProductAmountIcon}
-           onClick={incrementProductCount}
-          >
-           +
+          <Link to="/cart">
+           <button
+            className={styles.addToCartButton}
+            onClick={handleAddToCart}
+           >
+            <div className="material-symbols-outlined">shopping_bag</div>
+           </button>
+          </Link>
+         </div>
+        </div>
+       </div>
+       <div className={styles.detailedInfo}>
+        <div className={styles.infoBlock}>
+         <h3>Description</h3>
+         <p>{description}</p>
+        </div>
+        <div className={styles.infoBlock}>
+         <h3>General Information</h3>
+         <div className={styles.infoTextBlock}>
+          <div>
+           <span className={styles.textDescription}>Product name: </span>
+           <span>{name}</span>
+          </div>
+          <div>
+           <span className={styles.textDescription}>Brand: </span>
+           <span className={styles.textUnderlined}>{brandName}</span>
+          </div>
+          <div>
+           <span className={styles.textDescription}>Category: </span>
+           <span className={styles.textUnderlined}>{categoryName}</span>
           </div>
          </div>
-         <Link to="/cart">
-          <button
-           className={styles.addToCartButton}
-           onClick={handleAddToCart}
-          >
-           <div className="material-symbols-outlined">shopping_bag</div>
-          </button>
-         </Link>
         </div>
-       </div>
-      </div>
-      <div className={styles.detailedInfo}>
-       <div className={styles.infoBlock}>
-        <h3>Description</h3>
-        <p>{description}</p>
-       </div>
-       <div className={styles.infoBlock}>
-        <h3>General Information</h3>
-        <div>
-         <span>Product name: </span>
-         <span>{name}</span>
-        </div>
-        <div>
-         <span>Brand: </span>
-         <span className={styles.textUnderlined}>{brandName}</span>
-        </div>
-        <div>
-         <span>Category: </span>
-         <span className={styles.textUnderlined}>{categoryName}</span>
-        </div>
-       </div>
-       <div className={styles.infoBlock}>
-        <h3>Nutrition Value</h3>
-        <div className={styles.nutritionRow}>
-         <div className={styles.nutritionClauseIcon}>
-          <span className="material-symbols-outlined">check</span>
+        <div className={styles.infoBlock}>
+         <h3>Nutrition Value</h3>
+         <div className={styles.nutritionRow}>
+          <div className={styles.nutritionClauseIcon}>
+           <span className="material-symbols-outlined">check</span>
+          </div>
+          <span>{`Protein : ${protein ?? "-"} g`}</span>
          </div>
-         <span>{`Protein : ${protein ?? "-"} g`}</span>
-        </div>
-        <div className={styles.nutritionRow}>
-         <div className={styles.nutritionClauseIcon}>
-          <span className="material-symbols-outlined">check</span>
+         <div className={styles.nutritionRow}>
+          <div className={styles.nutritionClauseIcon}>
+           <span className="material-symbols-outlined">check</span>
+          </div>
+          <span>{`Fat : ${fat ?? "-"} g`}</span>
          </div>
-         <span>{`Fat : ${fat ?? "-"} g`}</span>
-        </div>
-        <div className={styles.nutritionRow}>
-         <div className={styles.nutritionClauseIcon}>
-          <span className="material-symbols-outlined">check</span>
+         <div className={styles.nutritionRow}>
+          <div className={styles.nutritionClauseIcon}>
+           <span className="material-symbols-outlined">check</span>
+          </div>
+          <span>{`Carbohydrates : ${carbs ?? "-"} g`}</span>
          </div>
-         <span>{`Carbohydrates : ${carbs ?? "-"} g`}</span>
-        </div>
-        <div className={styles.nutritionRow}>
-         <div className={styles.nutritionClauseIcon}>
-          <span className="material-symbols-outlined">check</span>
+         <div className={styles.nutritionRow}>
+          <div className={styles.nutritionClauseIcon}>
+           <span className="material-symbols-outlined">check</span>
+          </div>
+          <span>{`Vitamins (per 100g) : Vitamin C, Vitamin A`}</span>
          </div>
-         <span>{`Vitamins (per 100g) : Vitamin C, Vitamin A`}</span>
         </div>
        </div>
       </div>
      </div>
+    )}
+    <div className={styles.relatedProducts}>
+     <RelatedProducts
+      title="Similar products"
+      limit={4}
+     />
     </div>
-   )}
-
-   {/* Recommendation sections removed until wired to real data */}
-   <div className={styles.detailsBlock}>
-    <div className={styles.shortInfoContainer}>
-     <h3 className={styles.productName}>Similar Products</h3>
-     <button className={styles.btn_showMore}>
-      <h4>Show More</h4>
-      <span className="material-symbols-outlined">arrow_right</span>
-     </button>
-    </div>
-    <div>
-     <div>
-      <img
-       src={imageUrl}
-       alt={name}
-      />
-      <div>
-       <div className={styles.detailsBlock}>
-        <h2> {name}</h2>
-        <p> </p>
-       </div>
-       <div className={styles.btn_price}>
-        <span className={styles.actualPrice}>{`€ ${price}`}</span>
-       </div>
-       <p>{description}</p>
-       <Link
-        to={`/catalog/${id}`}
-        className={styles.orderBtn}
-       >
-        <div className={styles.nutritionRow}>
-         <h2>Order now</h2>
-         <span className="material-symbols-outlined"> arrow_right</span>
-        </div>
-       </Link>
-      </div>
-     </div>
+    <div className={styles.relatedProducts}>
+     <RelatedProducts
+      title="You might also like"
+      limit={4}
+     />
     </div>
    </div>
   </div>

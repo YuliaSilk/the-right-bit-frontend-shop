@@ -1,212 +1,251 @@
 .container {
-  padding: 2rem 3rem;
-  background-color: #F9F1EB;
+ padding: 2rem 3rem;
+ background-color: #f9f1eb;
+ /* max-width: 1320px;
+ margin: 0 auto; */
 }
-
+.content {
+ max-width: 1320px;
+ margin: 0 auto;
+}
 .productImage {
-  width: 650px;
-  height: 650px;
-  flex: 1;
-  grid-area: 1 / 1 / 6 / 2;
-  border: 1px solid #234d2e;
-  border-radius: 30px;
+ width: 100%;
+ max-width: 646px;
+ height: 650px;
+
+ border: 1px solid #234d2e;
+ border-radius: 30px;
 }
 
-.productImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.image {
+ border-radius: 30px;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
 }
 
 .shortInfoContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  gap: 2rem;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ margin-bottom: 40px;
+ gap: 24px;
 }
 
 .detailsBlock {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 8px;
+ width: 100%;
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 8px;
 }
 
 .briefPanel {
-  flex: 1;
-  border: 1px solid #234d2e;
-  border-radius: 30px;
-  padding: 1rem 1.2rem;
+ flex: 1;
+ border: 1px solid #234d2e;
+ border-radius: 30px;
+ padding: 24px;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
 }
 
-/* .productType {
-} */
-
 .productName {
-  padding: 0.5rem 0;
-  font-size: 2rem;
+ padding: 0.5rem 0;
+ font-size: 2rem;
 }
 
 .productNumber {
-  color: #525252;
+ color: #525252;
 }
 
 .actualPrice {
-  font-size: 2rem;
-  color: #3f3f3f;
+ font-size: 2rem;
+ color: #3f3f3f;
 }
 
 .prices {
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ justify-content: end;
 }
 
 .oldPriceContainer {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 .oldPrice {
-  padding-right: 0.5rem;
-  font-size: 1.6rem;
-  color: #b3b3b3;
-  text-decoration: line-through;
+ padding-right: 0.5rem;
+ font-size: 1.6rem;
+ color: #b3b3b3;
+ text-decoration: line-through;
 }
 
 .discountBadge {
-  height: 40px;
-  width: 100px;
-  text-align: center;
-  line-height: 40px;
-  background-color: #def2d6;
-  border-radius: 30px;
+ height: 40px;
+ width: 100px;
+ text-align: center;
+ line-height: 40px;
+ background-color: #def2d6;
+ border-radius: 30px;
 }
 
 .actionButtons {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+ display: flex;
+ justify-content: space-between;
+ gap: 24px;
+ align-self: flex-end;
 }
 
 .productAmount {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 125px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  background-color: #7cb184;
-  border-radius: 30px;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ width: 125px;
+ height: 50px;
+ line-height: 50px;
+ text-align: center;
+ background-color: #7cb184;
+ border-radius: 30px;
 }
 
 .changeProductAmountIcon {
-  font-size: 24px;
-  height: 35px;
-  width: 35px;
-  line-height: 35px;
-  background-color: #def2d6;
-  border-radius: 30px;
-  cursor: pointer;
+ font-size: 24px;
+ height: 35px;
+ width: 35px;
+ line-height: 35px;
+ background-color: #def2d6;
+ border-radius: 30px;
+ cursor: pointer;
 }
 
 .addToCartButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  background-color: #234d2e;
-  color: white;
-  border-radius: 30px;
-  cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 52px;
+ height: 52px;
+ background-color: #234d2e;
+ color: white;
+ border-radius: 30px;
+ cursor: pointer;
 }
-.btn_showMore{
-  border-radius: 28px solid #BDBDBD;
-  height: 52px;
-  width: 236px;
-  color: #575757;
-  display: flex;
-  padding: 14.71px 60.71px;
+
+.btn_showMore {
+ border-radius: 28px solid #bdbdbd;
+ height: 52px;
+ width: 236px;
+ color: #575757;
+ display: flex;
+ padding: 14.71px 60.71px;
 }
-.btn_showMore span{
-  color: #575757;
+
+.btn_showMore span {
+ color: #575757;
 }
 
 .detailedInfo {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-  border: 1px solid #234d2e;
-  border-radius: 30px;
-  padding: 1rem 1.2rem;
+ flex: 3;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 1rem;
+ border: 1px solid #234d2e;
+ border-radius: 30px;
+ padding: 1rem 1.2rem;
 
-  h3 {
-    font-size: 24px;
-    font-weight: 500;
-  }
+ h3 {
+  font-size: 24px;
+  font-weight: 500;
+ }
+}
+.infoTextBlock {
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+
+.textDescription {
+ color: #202020;
+ font-family: Quicksand;
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 600;
+ line-height: 131.25%;
 }
 
 .nutritionRow {
-  display: flex;
-  gap: 0.5rem;
-  margin: 1rem 0;
+ display: flex;
+ gap: 0.5rem;
+ margin: 1rem 0;
+ margin-bottom: 12px;
 }
 
 .nutritionClauseIcon {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #234d2e;
-  color: #ffff;
-  border-radius: 30px;
+ width: 20px;
+ height: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #234d2e;
+ color: #ffff;
+ border-radius: 30px;
 }
 
 .otherItemsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
 }
 
 .itemsShowcaseContainer {
-  padding: 1rem 1.5rem;
-  border: 1px solid #234d2e;
-  border-radius: 30px;
+ padding: 1rem 1.5rem;
+ border: 1px solid #234d2e;
+ border-radius: 30px;
 }
 
 .similarProductListHeader {
-  display: flex;
-  justify-content: space-between;
+ display: flex;
+ justify-content: space-between;
 }
 
 .productListTitle {
-  font-size: 2rem;
+ font-size: 2rem;
 }
 
 .showMoreButton {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 3rem;
-  border: 1px solid #bdbdbd;
-  border-radius: 30px;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.5rem 3rem;
+ border: 1px solid #bdbdbd;
+ border-radius: 30px;
 }
 
 .otherProductCard {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+ padding: 2rem 0;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
 }
 
 .textUnderlined {
-  text-decoration: underline;
+ text-decoration: underline;
+}
+
+/* other products */
+.relatedProducts {
+ width: 100%;
+ height: auto;
+ flex-shrink: 0;
+ border-radius: 30px;
+ border: 1px solid var(--accent-color, #234d2e);
+ background: var(--background, #f9f1eb);
+ padding: 20px;
+ margin-bottom: 24px;
+ &:last-child {
+  margin-bottom: 0;
+ }
 }

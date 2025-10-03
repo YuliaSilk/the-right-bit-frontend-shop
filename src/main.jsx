@@ -14,7 +14,9 @@ createRoot(document.getElementById("root")).render(
  <StrictMode>
   <FormProvider>
    <CartProvider>
-    <App />
+    <FormProvider>
+     <App />
+    </FormProvider>
    </CartProvider>
   </FormProvider>
  </StrictMode>
