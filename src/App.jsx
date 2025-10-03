@@ -24,8 +24,6 @@ import GoogleCallback from "./context/GoogleCallback";
 import ProtectedRoute from "./context/ProtectedRoute";
 import {Toaster} from "react-hot-toast";
 
-// Removed duplicate import of SuccessPage
-
 function App() {
  return (
   <Router basename="/online-store-frontend/">

@@ -37,8 +37,6 @@ export function getProductImageUrl(input) {
   imageUrl = input.url;
  }
 
- console.log("Extracted imageUrl:", imageUrl);
-
  if (imageUrl) {
   if (imageUrl.startsWith("http")) {
    return imageUrl;

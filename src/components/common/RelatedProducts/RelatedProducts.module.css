@@ -87,10 +87,6 @@
  }
 }
 
-.home .grid {
- justify-content: center;
-}
-
 /* Варіант для Item page */
 .item .wrapper {
  border: 1px solid #234d2e;
