@@ -51,6 +51,5 @@ export function getProductImageUrl(input) {
   return fullUrl;
  }
 
- // console.log('No URL found, returning fallback');
  return tomatoes_5;
 }
