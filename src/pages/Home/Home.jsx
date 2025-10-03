@@ -15,15 +15,12 @@ export default function Home() {
     limit={4}
     variant="home"
    />
-   {/* <BestProducts /> */}
    <StartWith />
    <RelatedProducts
     title="Fresh Organic Supply Direct From Farmer to Home"
     limit={8}
     variant="home"
    />
-
-   {/* <FarmToHome /> */}
    <PostArticle />
    <NewsLetter />
   </>
