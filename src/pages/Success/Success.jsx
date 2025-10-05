@@ -20,16 +20,8 @@ export default function SuccessPage() {
   if (saved) {
    try {
     const parsed = JSON.parse(saved);
-    console.log("Loaded order:", parsed);
+    // console.log("Loaded order:", parsed);
     setOrder(parsed);
-
-    // const user = localStorage.getItem("user");
-    // if (!user) {
-    //  setIsModalOpen(true);
-    // }
-    //    localStorage.removeItem("formData");
-    //    localStorage.removeItem("cart");
-    //  localStorage.removeItem("lastOrder");
    } catch (error) {
     console.error("Failed to load order:", error);
    }
