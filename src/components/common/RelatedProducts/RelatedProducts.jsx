@@ -13,16 +13,13 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
    try {
     let data = [];
     if (productId) {
-     // fetch related products
      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/catalog/${productId}/related`, {
       signal: controller.signal,
      });
      data = await res.json();
     } else {
-     // fetch all catalog products
      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/catalog`, {signal: controller.signal});
      const allProducts = await res.json();
-     // shuffle and take first `limit`
      data = allProducts.sort(() => 0.5 - Math.random()).slice(0, limit);
     }
 
@@ -42,8 +39,7 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
  }, [productId, limit]);
 
  if (loading) return <p>Завантаження...</p>;
- //   if (!products.length) return null;
- console.log("products Loved:", products);
+ //  console.log("products Loved:", products);
  return (
   <div className={`${styles.block} ${styles[variant]}`}>
    <div className={styles.wrapper}>
