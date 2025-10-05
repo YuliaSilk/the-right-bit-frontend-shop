@@ -90,7 +90,7 @@ export default function SuccessPage() {
      </p>
     </div>
 
-    <div className={styles.estimate}>
+    <div className={`${styles.estimate} ${discount > 0 ? styles.withDiscount : ""}`}>
      <div className={styles.estimateTextWrapper}>
       <img
        src={iconBox}
