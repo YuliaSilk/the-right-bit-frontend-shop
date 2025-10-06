@@ -45,24 +45,23 @@ export default function OrderSummary() {
    toast.error(`Please fill in ${missing.join(", ")}`);
    return;
   }
-
   const payload = {
    items: items.map((item) => ({
     productId: item.productId ?? item.id,
     quantity: item.quantity ?? 1,
-    productName: item.name ?? item.productName ?? "",
+    productName: item.name ?? item.productName,
     priceSnapshot: item.price ?? 0,
    })),
    deliveryDetails: {
-    firstname,
-    lastname,
-    phoneNumber,
-    houseNumber,
-    streetName,
-    city,
-    country,
-    zipCode,
-    comment: comment || "",
+    firstname: (firstname || "").slice(0, 15),
+    lastname: (lastname || "").slice(0, 15),
+    phoneNumber: (phoneNumber || "").slice(0, 15),
+    houseNumber: (houseNumber || "").slice(0, 15),
+    streetName: (streetName || "").slice(0, 15),
+    city: (city || "").slice(0, 15),
+    country: (country || "").slice(0, 15),
+    zipCode: (zipCode || "").slice(0, 15),
+    comment: (comment || "").slice(0, 15),
     deliveryMethod: "HOME_DELIVERY",
    },
    paymentDetails: {
@@ -76,6 +75,36 @@ export default function OrderSummary() {
    subtotal: subtotal,
    appliedCoupon: appliedCoupon?.code ?? null,
   };
+  //   const payload = {
+  //    items: items.map((item) => ({
+  //     productId: item.productId ?? item.id,
+  //     quantity: item.quantity ?? 1,
+  //     productName: item.name ?? item.productName ?? "",
+  //     priceSnapshot: item.price ?? 0,
+  //    })),
+  //    deliveryDetails: {
+  //     firstname,
+  //     lastname,
+  //     phoneNumber,
+  //     houseNumber,
+  //     streetName,
+  //     city,
+  //     country,
+  //     zipCode,
+  //     comment: comment || "",
+  //     deliveryMethod: "HOME_DELIVERY",
+  //    },
+  //    paymentDetails: {
+  //     method: payment.paymentMethod?.value ?? "credit-card",
+  //     card: payment.cardDetails ?? null,
+  //     saveCard: payment.saveCard ?? false,
+  //     orderNotes: payment.orderNotes ?? "",
+  //    },
+  //    discount: discount,
+  //    totalPrice: total,
+  //    subtotal: subtotal,
+  //    appliedCoupon: appliedCoupon?.code ?? null,
+  //   };
 
   setLoading(true);
   try {
