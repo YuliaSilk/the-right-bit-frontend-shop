@@ -15,7 +15,7 @@ export default function Footer() {
         <nav className={styles.navColumns}>
           <div className={styles.logoContainer}>
             <a href="#">
-              <img src={logo} alt="Logotype RightBite" />
+              <img src={logo} alt="Logotype RightBite" width={120} height={40} />
             </a>
           </div>
           <div className={styles.navColumn}>
@@ -88,13 +88,13 @@ export default function Footer() {
         <div className={styles.bottomSection}>
           <div className={styles.socials}>
             <a href="#">
-              <img src={instagramIcon} alt="Instagram" />
+              <img src={instagramIcon} alt="Instagram" width={24} height={24} />
             </a>
             <a href="#">
-              <img src={facebookIcon} alt="Facebook" />
+              <img src={facebookIcon} alt="Facebook" width={24} height={24} />
             </a>
             <a href="#">
-              <img src={twitterIcon} alt="Twitter" />
+              <img src={twitterIcon} alt="Twitter" width={24} height={24} />
             </a>
           </div>
 
@@ -104,10 +104,10 @@ export default function Footer() {
 
           <div className={styles.payment}>
             <a href="#">
-              <img src={masterCardIcon} alt="MasterCard" />
+              <img src={masterCardIcon} alt="MasterCard" width={40} height={24} />
             </a>
             <a href="#">
-              <img src={visaIcon} alt="Visa" />
+              <img src={visaIcon} alt="Visa" width={40} height={24} />
             </a>
           </div>
         </div>
