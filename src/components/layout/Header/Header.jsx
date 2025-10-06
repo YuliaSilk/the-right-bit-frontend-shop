@@ -12,13 +12,45 @@ import { useState } from 'react';
 
 const Header = () => {
   const { isAuthenticated } = useAuth();
+
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
-  const handleSearch = (e) => {
-    if (query.trim()) {
-      navigate(`/search?query=${encodeURIComponent(query)}`);
+ const handleSearch = async (e) => { 
+    
+    if (e && e.preventDefault) { 
+        e.preventDefault();
     }
-  };
+    
+    if (query.trim() === "") { 
+        console.log("Порожній пошуковий запит");
+        return;
+    }
+
+    try {
+        const res = await fetch(`${VITE_API_URL}/api/v1/search`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                keyword: query 
+            }),
+        }); 
+
+        if (res.ok) {
+            const data = await res.json(); 
+            navigate('/search-results', { state: { results: data, searchKeyword: query } });
+        } else {
+            console.error(`Помилка запиту: ${res.status} ${res.statusText}`);
+        }
+        
+    } catch(error) { 
+        console.error("Помилка під час виконання fetch-запиту:", error);
+    }
+};
+
+
+ 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
