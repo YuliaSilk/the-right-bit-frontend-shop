@@ -77,7 +77,8 @@ export default function DeliveryInfo() {
  const onSubmit = (data) => {
   console.log("Delivery submitted", data);
  };
-
+ //  const apartmentNumber = (get(delivery, "apartmentNumber") || "").slice(0, 15);
+ //  const comment = (get(delivery, "comment") || "").slice(0, 15);
  return (
   <div>
    <form
@@ -133,11 +134,13 @@ export default function DeliveryInfo() {
          ) : (
           <input
            {...rest}
-           value={value}
+           //    value={value}
            onChange={onChange}
            className={styles.input}
            id={field.name}
            autoComplete="off"
+           value={value || ""}
+           maxLength={15}
           />
          )
         }
