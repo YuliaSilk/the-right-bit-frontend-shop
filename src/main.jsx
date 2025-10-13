@@ -8,7 +8,6 @@ import "./styles/index.css";
 import App from "./App.jsx";
 import {FormProvider} from "./context/FormContext.jsx";
 import {CartProvider} from "./context/CartContext.jsx";
-// import { useFormContext } from "./hooks/useFormContext";
 
 createRoot(document.getElementById("root")).render(
  <StrictMode>
