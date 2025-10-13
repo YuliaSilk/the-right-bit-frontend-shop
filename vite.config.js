@@ -8,13 +8,9 @@ import svgr from "vite-plugin-svgr";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default defineConfig(({mode}) => {
- /* global process */
- const isVercel = !!process.env.VERCEL;
- const isProd = mode === "production";
-
+export default defineConfig(() => {
  return {
-  base: isProd && isVercel ? "/" : "/online-store-frontend/",
+  base: "/",
   plugins: [react(), svgr()],
   resolve: {
    alias: {
