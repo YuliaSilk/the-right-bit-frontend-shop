@@ -140,7 +140,7 @@ export default function OrderSummary({onPaymentChange}) {
    }
 
    toast.success("The order has been successfully placed 🚀");
-   window.location.href = "/online-store-frontend/order-success";
+   window.location.href = "/order-success";
   } catch (err) {
    console.error("Place order error:", err);
    toast.error("Order error: " + err.message);
