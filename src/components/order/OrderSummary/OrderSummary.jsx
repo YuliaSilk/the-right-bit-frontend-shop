@@ -1,16 +1,23 @@
 import {useState} from "react";
 import {useCart} from "@/context/CartContext";
-import {useForm} from "react-hook-form";
+// import {useForm} from "react-hook-form";
 import {useFormContext} from "@/hooks/useFormContext";
 import styles from "./OrderSummary.module.css";
 import toast from "react-hot-toast";
 
-export default function OrderSummary() {
+export default function OrderSummary({onPaymentChange}) {
  const {items, clearCart, subtotal, total, discount, appliedCoupon} = useCart();
- const {register} = useForm();
+ //  const {register} = useForm();
  const {formData, resetForm} = useFormContext();
+ const [paymentMethod, setPaymentMethod] = useState("cash");
 
  const [loading, setLoading] = useState(false);
+
+ const handlePaymentMethodChange = (e) => {
+  const value = e.target.value;
+  setPaymentMethod(value);
+  onPaymentChange?.(value);
+ };
 
  const handlePlaceOrder = async () => {
   if (!items || items.length === 0) {
@@ -75,36 +82,6 @@ export default function OrderSummary() {
    subtotal: subtotal,
    appliedCoupon: appliedCoupon?.code ?? null,
   };
-  //   const payload = {
-  //    items: items.map((item) => ({
-  //     productId: item.productId ?? item.id,
-  //     quantity: item.quantity ?? 1,
-  //     productName: item.name ?? item.productName ?? "",
-  //     priceSnapshot: item.price ?? 0,
-  //    })),
-  //    deliveryDetails: {
-  //     firstname,
-  //     lastname,
-  //     phoneNumber,
-  //     houseNumber,
-  //     streetName,
-  //     city,
-  //     country,
-  //     zipCode,
-  //     comment: comment || "",
-  //     deliveryMethod: "HOME_DELIVERY",
-  //    },
-  //    paymentDetails: {
-  //     method: payment.paymentMethod?.value ?? "credit-card",
-  //     card: payment.cardDetails ?? null,
-  //     saveCard: payment.saveCard ?? false,
-  //     orderNotes: payment.orderNotes ?? "",
-  //    },
-  //    discount: discount,
-  //    totalPrice: total,
-  //    subtotal: subtotal,
-  //    appliedCoupon: appliedCoupon?.code ?? null,
-  //   };
 
   setLoading(true);
   try {
@@ -231,8 +208,10 @@ export default function OrderSummary() {
        <input
         type="radio"
         value="creditCard"
-        {...register("paymentMethod")}
+        // {...register("paymentMethod")}
         className={styles.radioInput}
+        checked={paymentMethod === "creditCard"}
+        onChange={handlePaymentMethodChange}
        />
        Credit Card
       </label>
@@ -240,7 +219,9 @@ export default function OrderSummary() {
        <input
         type="radio"
         value="cash"
-        {...register("paymentMethod")}
+        checked={paymentMethod === "cash"}
+        onChange={handlePaymentMethodChange}
+        // {...register("paymentMethod")}
         className={styles.radioInput}
        />
        Cash on Delivery

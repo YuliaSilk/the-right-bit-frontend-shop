@@ -13,41 +13,7 @@ const Header = () => {
  const {isAuthenticated} = useAuth();
  const {searchTerm, setSearchTerm} = useSearch();
 
- //  const [_, setQuery] = useState("");
- //  const navigate = useNavigate();
  const VITE_API_URL = import.meta.env.VITE_API_URL;
- //
- //  const handleSearch = async (e) => {
- //   if (e && e.preventDefault) {
- //    e.preventDefault();
- //   }
-
- //   if (query.trim() === "") {
- //    console.log("Порожній пошуковий запит");
- //    return;
- //   }
-
- //   try {
- //    const res = await fetch(`${VITE_API_URL}/api/v1/search`, {
- //     method: "POST",
- //     headers: {
- //      "Content-Type": "application/json",
- //     },
- //     body: JSON.stringify({
- //      keyword: query,
- //     }),
- //    });
-
- //    if (res.ok) {
- //     const data = await res.json();
- //     navigate("/search-results", {state: {results: data, searchKeyword: query}});
- //    } else {
- //     console.error(`Помилка запиту: ${res.status} ${res.statusText}`);
- //    }
- //   } catch (error) {
- //    console.error("Помилка під час виконання fetch-запиту:", error);
- //   }
- //  };
 
  return (
   <header className={styles.header}>

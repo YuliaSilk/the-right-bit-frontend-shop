@@ -4,9 +4,11 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import styles from "./DeliveryInfo.module.css";
 import {useFormContext} from "@/hooks/useFormContext";
-import Cleave from "cleave.js/react";
-import "cleave.js/dist/addons/cleave-phone.ua";
+// import Cleave from "cleave.js/react";
+// import "cleave.js/dist/addons/cleave-phone.ua";
 import {useWatch} from "react-hook-form";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
 
 const schema = yup.object().shape({
  firstName: yup.string().required("First name is required"),
@@ -23,7 +25,6 @@ const schema = yup.object().shape({
 
 export default function DeliveryInfo() {
  const {formData, updateField} = useFormContext();
- //  const formContext = useFormContext() || {};
 
  const defaultValues = useMemo(() => {
   return {
@@ -39,19 +40,6 @@ export default function DeliveryInfo() {
    postalCode: formData.deliveryInfo?.postalCode || "",
   };
  }, [formData.deliveryInfo]);
-
- //  const defaultValues = {
- //   firstName: formData.deliveryInfo?.firstName || "",
- //   lastName: formData.deliveryInfo?.lastName || "",
- //   email: formData.deliveryInfo?.email || "",
- //   phone: formData.deliveryInfo?.phone || "",
- //   country: formData.deliveryInfo?.country || "",
- //   city: formData.deliveryInfo?.city || "",
- //   streetName: formData.deliveryInfo?.streetName || "",
- //   houseNumber: formData.deliveryInfo?.houseNumber || "",
- //   apartment: formData.deliveryInfo?.apartmentNumber || "",
- //   postalCode: formData.deliveryInfo?.postalCode || "",
- //  };
 
  const {
   control,
@@ -77,8 +65,7 @@ export default function DeliveryInfo() {
  const onSubmit = (data) => {
   console.log("Delivery submitted", data);
  };
- //  const apartmentNumber = (get(delivery, "apartmentNumber") || "").slice(0, 15);
- //  const comment = (get(delivery, "comment") || "").slice(0, 15);
+
  return (
   <div>
    <form
@@ -116,31 +103,27 @@ export default function DeliveryInfo() {
        <Controller
         name={field.name}
         control={control}
-        render={({field: {onChange, value, ...rest}}) =>
+        render={({field: {onChange, value}}) =>
          field.isPhone ? (
-          <Cleave
-           {...rest}
-           className={styles.input}
+          <PhoneInput
+           country={"ua"} // початковий прапорець
            value={value}
-           onChange={onChange}
-           options={{
-            phone: true,
-            phoneRegionCode: "ua",
-            prefix: "+380",
-            noImmediatePrefix: false,
-            rawValueTrimPrefix: false,
-           }}
+           onChange={(phone) => onChange("+" + phone)}
+           enableSearch={true}
+           inputClass={styles.input}
+           buttonClass={styles.phoneButton}
+           dropdownClass={styles.dropdown}
+           placeholder="Enter phone number"
           />
          ) : (
           <input
-           {...rest}
            //    value={value}
            onChange={onChange}
            className={styles.input}
            id={field.name}
            autoComplete="off"
            value={value || ""}
-           maxLength={15}
+           maxLength={50}
           />
          )
         }

@@ -13,10 +13,6 @@ export default function OrderConfirmationModal({isOpen, onClose, orderData}) {
   setCopied(true);
   setTimeout(() => setCopied(false), 2000);
  };
- //  const handleGoToSuccess = () => {
- //   onClose();
- //   navigate("/order-success");
- //  };
 
  const handleGoToCatalog = () => {
   onClose();
@@ -137,24 +133,13 @@ export default function OrderConfirmationModal({isOpen, onClose, orderData}) {
        </svg>
       )}
      </button>
-     {/* <button
-      className={styles.primaryButton}
-      onClick={handleGoToSuccess}
-     >
-      View Order
-     </button> */}
+
      <button
       className={styles.secondaryButton}
       onClick={handleGoToCatalog}
      >
       Continue Shopping
      </button>
-     {/* <button
-      className={styles.button}
-      onClick={onClose}
-     >
-      Close
-     </button> */}
     </div>
    </div>
   </div>
