@@ -11,6 +11,7 @@ import CatalogFilters from "@components/catalog/CatalogFilters/CatalogFilters";
 import CatalogSidebar from "@components/catalog/CatalogSidebar/CatalogSidebar";
 import {getProductImageUrl} from "@utils/getProductImage";
 import Pagination from "../../components/common/Pagination/Pagination";
+import {useSearch} from "../../context/SearchContext";
 
 export default function Catalog() {
  const API_URL = import.meta.env.VITE_API_URL;
@@ -26,14 +27,11 @@ export default function Catalog() {
  const [aZ, setAZ] = useState("");
  const [page, setPage] = useState(1);
  const [_, setSize] = useState(12);
+ const {searchTerm} = useSearch();
+ const [filteredProducts, setFilteredProducts] = useState([]);
 
  const size = 12;
 
- const totalProducts = products.length;
- const totalPages = Math.ceil(totalProducts / size);
-
- // Відсікаємо товари для поточної сторінки
- const paginatedProducts = products.slice((page - 1) * size, page * size);
  useEffect(() => {
   const controller = new AbortController();
 
@@ -86,25 +84,24 @@ export default function Catalog() {
   return () => controller.abort();
  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
 
+ //  const filteredProducts = products.filter((product) =>
+ //   product.productName.toLowerCase().includes(searchQuery.toLowerCase())
+ //  );
+
+ useEffect(() => {
+  const result = products.filter((p) => p.productName?.toLowerCase().includes(searchTerm.toLowerCase()));
+  setFilteredProducts(result);
+ }, [searchTerm, products]);
+
+ const totalProducts = filteredProducts.length;
+ const totalPages = Math.ceil(totalProducts / size);
+ const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
+
  return (
   <>
    <Banner />
    <div className={styles.top}>
     <h2 className={styles.title}>Catalog</h2>
-    {/* <div className={styles.topRight}>
-       <a
-        className={styles.topLink}
-        href="#"
-       >
-        Delivery Information
-       </a>
-       <a
-        className={styles.topLink}
-        href="#"
-       >
-        Payment Methods
-       </a>
-      </div> */}
    </div>
    <CatalogCategories />
 

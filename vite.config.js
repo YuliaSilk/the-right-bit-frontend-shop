@@ -14,7 +14,8 @@ export default defineConfig(({mode}) => {
  const isProd = mode === "production";
 
  return {
-  base: isProd && isVercel ? "/" : "/online-store-frontend/",
+  //   base: isProd && isVercel ? "/" : "/online-store-frontend/",
+  base: isProd && isVercel ? "/" : "/",
   plugins: [react(), svgr()],
   resolve: {
    alias: {
