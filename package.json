@@ -17,7 +17,6 @@
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "cleave.js": "^1.6.0",
-    "jquery": "^3.7.1",
     "jwt-decode": "^4.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
