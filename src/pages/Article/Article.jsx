@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Article.module.css";
 import articles from "@/data/articles.json";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import RelatedArticles from "../../components/relatedArticles/RelatedArticles";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 

@@ -14,7 +14,7 @@ export default function Item() {
  const [product, setProduct] = useState(null);
  const [isLoading, setIsLoading] = useState(false);
  const [errorMessage, setErrorMessage] = useState("");
- const [relatedProducts, setRelatedProducts] = useState([]);
+ const [_, setRelatedProducts] = useState([]);
 
  useEffect(() => {
   if (!id) return;
@@ -39,7 +39,7 @@ export default function Item() {
       const text = await response.text();
       payload = text ? {message: text} : null;
      }
-    } catch (_) {
+    } catch {
      payload = null;
     }
 
@@ -93,7 +93,7 @@ export default function Item() {
  const brandName = product?.brand?.brandName || "";
  const categoryName =
   Array.isArray(product?.categories) && product.categories[0]?.categoryName ? product.categories[0].categoryName : "";
- const weight = product?.weight ?? null;
+ //  const weight = product?.weight ?? null;
  const protein = product?.protein ?? null;
  const fat = product?.fat ?? null;
  const carbs = product?.carbs ?? null;
