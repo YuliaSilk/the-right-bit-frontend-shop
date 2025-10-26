@@ -1,6 +1,5 @@
 import styles from "./NewCard.module.css";
 import {Link} from "react-router-dom";
-// import articles from "@/data/articles.json";
 
 export default function NewsCard({title, description, date, readTime, image, excerpt, article}) {
  return (
