@@ -1,126 +1,126 @@
 .container {
-  background-color: #F9F1EB;
-  color: #484848;
-}
-
-.banner{
-  background: url(../../assets/images/71a4ca034f23b11dc0eb83092b7a620b05768418.jpg);
-  color: #ffffff;
-  padding: 36.5px ;
-  width:max-content;
-  height:max-content;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.banner h1{
-  background-color: #364B3AB2 ;
- padding: 36.5px 50.5px ;
- text-align: center;
-}
-.mainContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 60px;
-}
-
-.infoContainer {
-  display: flex;
-  gap: 24px;
-}
-
-.header {
-  color: #202020;
-  font-size: 36px;
-}
-
-.infoText {
-  font-size: 20px;
-}
-
-.grayBox {
-  height: 100px;
-  width: 100%;
-  background-color: #5a5a5a;
-}
-
-.calculatorContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.calculatorCardsContainer {
-  display: flex;
-  justify-content: space-around;
-}
-
-
-.resultExplanations {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #7CB184;
-  padding: 3rem;
-  margin-bottom: 60px;
-  gap: 24px;
-}
-
-.whiteBlock {
-  min-width: 600px;
-  height: 350px;
-  background-color: #ffffff;
-}
-
-.itemsShowcaseContainer {
-  padding: 1rem 0;
-}
-
-.productListTitle {
-  color: #202020;
-  font-size: 2rem;
-}
-
-.similarProductListHeader {
-  display: flex;
-  justify-content: space-between;
-}
-
-.showMoreButton {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 3rem;
-  border: 1px solid #bdbdbd;
-  border-radius: 30px;
-}
-
-.itemsShowcaseContainer {
-  padding: 0 60px 60px;
-}
-
-.otherProductCard {
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.image {
-  width: 536px;
-  height: 317px;
-  object-fit: cover;
+ background-color: #f9f1eb;
+ color: #484848;
 }
 
 .banner {
-  height: 233px;
-  width: 100%;
-  object-fit: cover;
+ background: url(../../assets/images/71a4ca034f23b11dc0eb83092b7a620b05768418.jpg);
+ color: #ffffff;
+ padding: 36.5px;
+ width: max-content;
+ height: max-content;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+}
+.banner h1 {
+ background-color: #364b3ab2;
+ padding: 36.5px 50.5px;
+ text-align: center;
+}
+.mainContainer {
+ display: flex;
+ flex-direction: column;
+ gap: 80px;
+ padding: 60px;
+}
+
+.infoContainer {
+ display: flex;
+ gap: 24px;
+}
+
+.header {
+ color: #202020;
+ font-size: 36px;
+}
+
+.infoText {
+ font-size: 20px;
+}
+
+.grayBox {
+ height: 100px;
+ width: 100%;
+ background-color: #5a5a5a;
+}
+
+.calculatorContainer {
+ display: flex;
+ flex-direction: column;
+ gap: 36px;
+}
+
+.calculatorCardsContainer {
+ display: flex;
+ justify-content: space-around;
+}
+
+.resultExplanations {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ background-color: #7cb184;
+ padding: 3rem;
+ margin-bottom: 60px;
+ gap: 24px;
+}
+
+.whiteBlock {
+ min-width: 600px;
+ height: 350px;
+ background-color: #ffffff;
+}
+
+.itemsShowcaseContainer {
+ padding: 1rem 0;
+}
+
+.productListTitle {
+ color: #202020;
+ font-size: 2rem;
+}
+
+.similarProductListHeader {
+ display: flex;
+ justify-content: space-between;
+ margin: 0 auto;
+}
+
+.showMoreButton {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.5rem 3rem;
+ border: 1px solid #bdbdbd;
+ border-radius: 30px;
+}
+
+.itemsShowcaseContainer {
+ padding: 0 60px 60px;
+}
+
+.otherProductCard {
+ padding: 2rem 0;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+.image {
+ width: 536px;
+ height: 317px;
+ object-fit: cover;
+}
+
+.banner {
+ height: 233px;
+ width: 100%;
+ object-fit: cover;
 }
 
 .whatYourBMIResultsMeansImage {
-  width: 536px;
-  height: 378px;
-  object-fit: cover;
+ width: 536px;
+ height: 378px;
+ object-fit: cover;
 }
