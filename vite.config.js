@@ -1,4 +1,3 @@
-/* eslint-env node */
 import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -21,6 +20,12 @@ export default defineConfig({
    "@context": path.resolve(__dirname, "./src/context"),
    "@utils": path.resolve(__dirname, "./src/utils"),
   },
+ },
+ server: {
+  historyApiFallback: true,
+ },
+ preview: {
+  historyApiFallback: true,
  },
  build: {
   rollupOptions: {
