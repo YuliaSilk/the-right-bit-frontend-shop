@@ -104,7 +104,7 @@ function App() {
         element={<OurMission />}
        />
       </Route>
-      <Route
+      {/* <Route
        path="*"
        element={
         <Navigate
@@ -112,7 +112,7 @@ function App() {
          replace
         />
        }
-      />
+      /> */}
      </Routes>
     </Suspense>
     <Toaster
