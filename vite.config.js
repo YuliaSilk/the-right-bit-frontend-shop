@@ -21,12 +21,12 @@ export default defineConfig({
    "@utils": path.resolve(__dirname, "./src/utils"),
   },
  },
- server: {
-  historyApiFallback: true,
- },
- preview: {
-  historyApiFallback: true,
- },
+ //  server: {
+ //   historyApiFallback: true,
+ //  },
+ //  preview: {
+ //   historyApiFallback: true,
+ //  },
  build: {
   rollupOptions: {
    output: {
