@@ -9,8 +9,11 @@ import RelatedProducts from "../../components/common/RelatedProducts/RelatedProd
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 import {getDeliveryRangeString} from "../../utils/generateDeliveryDate";
 import OrderConfirmationModal from "../../components/order/OrderConfirmationModal/OrderConfirmationModal";
+import {useNavigate} from "react-router-dom";
+
 export default function SuccessPage() {
  const [order, setOrder] = useState(null);
+ const navigate = useNavigate();
  const [loading, setLoading] = useState(true);
  const [isModalOpen, setIsModalOpen] = useState(false);
  const DELIVERY_RANGE = getDeliveryRangeString(3, 5);
@@ -142,7 +145,7 @@ export default function SuccessPage() {
         onClick={() => {
          const user = localStorage.getItem("user");
          if (user) {
-          window.location.href = `/profile/orders/${orderId}`;
+          navigate(`/profile/orders/${orderId}`);
          } else {
           setIsModalOpen(true);
          }

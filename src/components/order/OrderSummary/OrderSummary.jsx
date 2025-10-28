@@ -4,13 +4,14 @@ import {useCart} from "@/context/CartContext";
 import {useFormContext} from "@/hooks/useFormContext";
 import styles from "./OrderSummary.module.css";
 import toast from "react-hot-toast";
+import {useNavigate} from "react-router-dom";
 
 export default function OrderSummary({onPaymentChange}) {
  const {items, clearCart, subtotal, total, discount, appliedCoupon} = useCart();
  //  const {register} = useForm();
  const {formData, resetForm} = useFormContext();
  const [paymentMethod, setPaymentMethod] = useState("cash");
-
+ const navigate = useNavigate();
  const [loading, setLoading] = useState(false);
 
  const handlePaymentMethodChange = (e) => {
@@ -140,7 +141,7 @@ export default function OrderSummary({onPaymentChange}) {
    }
 
    toast.success("The order has been successfully placed 🚀");
-   window.location.href = "/order-success";
+   navigate("/order-success");
   } catch (err) {
    console.error("Place order error:", err);
    toast.error("Order error: " + err.message);
