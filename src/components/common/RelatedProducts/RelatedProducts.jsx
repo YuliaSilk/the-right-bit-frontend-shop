@@ -41,7 +41,7 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
  if (loading) return <p>Завантаження...</p>;
  //  console.log("products Loved:", products);
  return (
-  <section className={`${styles.block} ${styles[variant]}`}>
+  <div className={`${styles.block} ${styles[variant]}`}>
    <div className={styles.wrapper}>
     <div className={styles.header}>
      <h3 className={styles.title}>{title}</h3>
@@ -81,6 +81,6 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
      ))}
     </div>
    </div>
-  </section>
+  </div>
  );
 }

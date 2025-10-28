@@ -230,12 +230,14 @@ export default function Item() {
      <RelatedProducts
       title="Similar products"
       limit={4}
+      variant="item"
      />
     </div>
     <div className={styles.relatedProducts}>
      <RelatedProducts
       title="You might also like"
       limit={4}
+      variant="item"
      />
     </div>
    </div>
