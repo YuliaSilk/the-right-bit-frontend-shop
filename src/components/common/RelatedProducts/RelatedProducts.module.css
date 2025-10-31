@@ -41,17 +41,17 @@
 }
 
 .grid {
- display: flex;
- flex-wrap: wrap;
- gap: 32px;
- /* height: 408px; */
- height: auto;
- justify-content: space-between;
- align-items: flex-start;
- align-self: stretch;
+ display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: auto;
+gap: 32px;
+height: auto;
+align-items: start;
+align-self: stretch;
+justify-content: space-between;
+
 }
 
-/* Варіант для Home page */
 .home .wrapper {
  padding-top: 60px;
  padding-bottom: 193px;
@@ -62,8 +62,9 @@
 .home .grid {
  height: auto;
  width: 100%;
- display: flex;
+ display: grid;
  justify-content: space-between;
+ align-items: start;
 }
 
 .home .showMoreBtn {
@@ -104,4 +105,13 @@
  border: 1px solid #234d2e;
  padding: 12px 24px;
  border-radius: 20px;
+}
+
+@media(max-width:768px) {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+}
 }

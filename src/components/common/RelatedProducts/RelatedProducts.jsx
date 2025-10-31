@@ -61,7 +61,7 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
         strokeLinecap="round"
         strokeLinejoin="round"
        />
-      </svg>{" "}
+      </svg>
      </button>
     </div>
     <div className={styles.grid}>

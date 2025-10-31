@@ -81,3 +81,9 @@
  flex-direction: row;
  gap: 24px;
 }
+@media(max-width:768px){
+  .articleList{
+    display: flex;
+    flex-direction: column;
+  }
+}
