@@ -26,7 +26,7 @@ const RegistrationSuccess = lazy(() => import("./pages/RegistrationSuccess/Regis
 
 function App() {
  return (
-  <Router >
+  <Router>
    <AuthProvider>
     <ScrollToTop />
     <Suspense fallback={<div>Loading...</div>}>
