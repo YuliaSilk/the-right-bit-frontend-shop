@@ -9,7 +9,7 @@ import WholeGrainsIcon from '../../../assets/svgs/WholeGrains.svg';
 import MilkProductsIcon from '../../../assets/svgs/MilkProducts.svg';
 import LowFatProductsIcon from '../../../assets/svgs/LowFatProducts.svg';
 import PreMeatsIcon from '../../../assets/svgs/PreMeats.svg';
-import NutsAndPasteIcon from '../../../assets/svgs/Nuts&paste.svg';
+import NutsAndPasteIcon from '../../../assets/svgs/Nuts&Paste.svg';
 import SnacksIcon from '../../../assets/svgs/Snacks.svg';
 import OilsIcon from '../../../assets/svgs/Oils.svg';
 import DessertsIcon from '../../../assets/svgs/Desserts.svg';

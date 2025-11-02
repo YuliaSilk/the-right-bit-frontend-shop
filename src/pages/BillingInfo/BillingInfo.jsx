@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {FormProvider} from "@/context/FormContext";
 
 import DeliveryInfo from "../../components/order/DeliveryInfo/DeliveryInfo";
@@ -10,6 +10,8 @@ import {Link} from "react-router-dom";
 import Breadcrumbs from "../../components/common/Breadcrumbs/Breadcrumbs";
 
 export default function BillingInfo() {
+ const [paymentMethod, setPaymentMethod] = useState("cash");
+
  return (
   <FormProvider>
    <section className={styles.section}>
@@ -41,9 +43,9 @@ export default function BillingInfo() {
       <div className={styles.innerWrapper}>
        <div className={styles.infoWrapper}>
         <DeliveryInfo />
-        <PaymentForm />
+        {paymentMethod === "creditCard" && <PaymentForm />}
        </div>
-       <OrderSummary />
+       <OrderSummary onPaymentChange={setPaymentMethod} />
       </div>
      </div>
     </div>
