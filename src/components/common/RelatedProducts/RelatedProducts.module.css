@@ -1,6 +1,7 @@
 .block {
  /* background-color: #fffaf0; */
  width: 1380px;
+ margin: 0 auto;
 }
 
 .wrapper {
@@ -40,6 +41,18 @@
  line-height: 28px;
 }
 
+.showLessBtn {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ color: #234d2e;
+ cursor: pointer;
+ font-size: 24px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 28px;
+}
+
 .grid {
  display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -51,6 +64,8 @@ align-self: stretch;
 justify-content: space-between;
 
 }
+
+/* Варіант для Home page */
 
 .home .wrapper {
  padding-top: 60px;
@@ -83,35 +98,83 @@ justify-content: space-between;
  color: #f9f1eb;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
-
- &:hover {
-  background-color: var(--accent-color-hover);
- }
 }
 
+.home .showMoreBtn:hover {
+ background-color: var(--accent-color-hover);
+}
+
+.home .showLessBtn {
+ position: absolute;
+ right: 0;
+ bottom: 56px;
+ cursor: pointer;
+ display: flex;
+ width: 312px;
+ height: 52px;
+ padding: 12px 74px;
+ justify-content: flex-end;
+ align-items: center;
+ gap: 10px;
+ border-radius: 32px;
+ color: #f9f1eb;
+ background-color: var(--accent-color);
+ transition: all 0.2s ease;
+}
+
+.home .showLessBtn:hover {
+ background-color: var(--accent-color-hover);
+}
 /* Варіант для Item page */
+
+.item .block {
+ width: 1200px;
+}
 .item .wrapper {
- border: 1px solid #234d2e;
  border-radius: 30px;
- padding: 28px;
+ margin: 0;
+ max-width: 1280px;
+ width: 100%;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ margin-bottom: 76px;
+
+ padding: 0;
 }
 
 .item .title {
  font-size: 40px;
 }
 
+.item .grid {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 30px;
+ height: auto;
+ align-items: flex-start;
+ align-self: stretch;
+}
+
 .item .showMoreBtn {
  background: transparent;
- border: 1px solid #234d2e;
+ border: 1px solid #bdbdbd;
  padding: 12px 24px;
  border-radius: 20px;
 }
 
-@media(max-width:768px) {
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: auto;
-  gap: 16px;
+.item .showMoreBtn:hover {
+ border-color: #234d2e;
 }
+
+.item .showLessBtn {
+ background: transparent;
+ border: 1px solid #bdbdbd;
+ padding: 12px 24px;
+ border-radius: 20px;
+}
+
+.item .showLessBtn:hover {
+ border-color: #234d2e;
 }

@@ -104,6 +104,15 @@ function App() {
         element={<OurMission />}
        />
       </Route>
+      {/* <Route
+       path="*"
+       element={
+        <Navigate
+         to="/"
+         replace
+        />
+       }
+      /> */}
      </Routes>
     </Suspense>
     <Toaster
