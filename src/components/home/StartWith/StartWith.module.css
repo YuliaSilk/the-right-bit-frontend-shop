@@ -86,3 +86,8 @@
   align-items: end;
   justify-items: end;
 }
+@media (max-width:768px) {
+  .container{
+ flex-wrap: wrap;
+  }
+}
