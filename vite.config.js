@@ -10,12 +10,20 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(({mode}) => {
  /* global process */
- const isVercel = !!process.env.VERCEL;
  const isProd = mode === "production";
+ const isVercel = !!process.env.VERCEL;
+ const isNetlify = !!process.env.NETLIFY;
+
+ // 🔹 Базовий шлях для кожної платформи:
+ let base = "/";
+ if (isProd) {
+   if (isVercel) base = "/";
+   else if (isNetlify) base = "/";
+   else base = "/online-store-frontend/"; // для локального або GitHub Pages
+ }
 
  return {
-  //   base: isProd && isVercel ? "/" : "/online-store-frontend/",
-  base: isProd && isVercel ? "/" : "/",
+  base,
   plugins: [react(), svgr()],
   resolve: {
    alias: {
