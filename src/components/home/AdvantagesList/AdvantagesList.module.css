@@ -35,3 +35,9 @@
  color: #000;
  margin-top: 8px;
 }
+@media(max-width:768px) {
+  .innerAdvantages{
+    display: flex;
+    flex-direction: column;
+  }
+}
