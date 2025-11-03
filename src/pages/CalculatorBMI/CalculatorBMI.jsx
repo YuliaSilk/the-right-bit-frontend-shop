@@ -87,7 +87,7 @@ export default function CalculatorBMI() {
      className={styles.whatYourBMIResultsMeansImage}
     ></img>
    </div>
-   <div>
+   <div className={styles.similarProductList}>
     {bmiResult && (
      <div className={styles.itemsShowcaseContainer}>
       <div className={styles.similarProductListHeader}>
@@ -98,7 +98,7 @@ export default function CalculatorBMI() {
        </button>
       </div>
       <div className={styles.otherProductCard}>
-       {bmiResult?.items?.map((item) => (
+       {bmiResult?.items?.slice(0, 4).map((item) => (
         <CatalogCard
          key={item.id}
          id={item.id}
@@ -119,10 +119,12 @@ export default function CalculatorBMI() {
      <div className={styles.otherProductCard}></div>
     </div> */}
    </div>
-   <div className={styles.similarProductListHeader}>
+   <div className={styles.relatedProducts}>
     <RelatedProducts
      productId={null}
      title={"Our Bestsellers"}
+     limit={4}
+     variant={"bmi"}
     />
    </div>
    <NewsLetter />
