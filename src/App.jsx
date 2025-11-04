@@ -26,7 +26,7 @@ const RegistrationSuccess = lazy(() => import("./pages/RegistrationSuccess/Regis
 
 function App() {
  return (
-  <Router >
+  <Router>
    <AuthProvider>
     <ScrollToTop />
     <Suspense fallback={<div>Loading...</div>}>
@@ -104,6 +104,15 @@ function App() {
         element={<OurMission />}
        />
       </Route>
+      {/* <Route
+       path="*"
+       element={
+        <Navigate
+         to="/"
+         replace
+        />
+       }
+      /> */}
      </Routes>
     </Suspense>
     <Toaster

@@ -151,3 +151,17 @@
  background-color: #234d2e;
  opacity: 0.7;
 }
+
+.customBullet {
+ width: 10px;
+ height: 10px;
+ background-color: #2d6b41;
+ opacity: 0.5;
+ border-radius: 50%;
+ margin: 0 4px;
+ cursor: pointer;
+}
+
+.customBulletActive {
+ opacity: 1;
+}

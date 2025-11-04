@@ -70,6 +70,7 @@ export default function Catalog() {
     }
 
     const data = await response.json();
+    console.log("Catalog response:", data);
     const items = Array.isArray(data) ? data : data.content || [];
     setProducts(items);
    } catch (error) {

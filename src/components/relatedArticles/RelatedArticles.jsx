@@ -1,44 +1,44 @@
 import data from "../../data/articles.json";
 import {Link} from "react-router-dom";
 import styles from "./RelatedArticles.module.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Autoplay, Pagination} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 const RelatedArticles = () => {
  const relatedArticles = data.slice(0, 12);
 
- const settings = {
-  dots: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  speed: 500,
-  pauseOnHover: true,
-  pauseOnFocus: true,
-  pauseOnDotsHover: true,
-  appendDots: (dots) => (
-   <div>
-    <ul style={{margin: "0px", display: "flex"}}> {dots} </ul>
-   </div>
-  ),
-  customPaging: () => (
-   <button
-    style={{
-     width: "10px",
-     height: "10px",
-     borderRadius: "50%",
-     background: "#2D6B41",
+ //  const settings = {
+ //   dots: true,
+ //   infinite: true,
+ //   slidesToShow: 3,
+ //   slidesToScroll: 1,
+ //   arrows: false,
+ //   autoplay: true,
+ //   autoplaySpeed: 3000,
+ //   speed: 500,
+ //   pauseOnHover: true,
+ //   pauseOnFocus: true,
+ //   pauseOnDotsHover: true,
+ //   appendDots: (dots) => (
+ //    <div>
+ //     <ul style={{margin: "0px", display: "flex"}}> {dots} </ul>
+ //    </div>
+ //   ),
+ //   customPaging: () => (
+ //    <button
+ //     style={{
+ //      width: "10px",
+ //      height: "10px",
+ //      borderRadius: "50%",
+ //      background: "#2D6B41",
 
-     border: "none",
-     cursor: "pointer",
-    }}
-   ></button>
-  ),
- };
+ //      border: "none",
+ //      cursor: "pointer",
+ //     }}
+ //    ></button>
+ //   ),
+ //  };
 
  return (
   <div className={styles.relatedArticlesCont}>
@@ -73,12 +73,29 @@ const RelatedArticles = () => {
    </div>
 
    <div className={styles.sliderContainer}>
-    <Slider
-     {...settings}
-     className={styles.slideWrapper}
+    <Swiper
+     modules={[Autoplay, Pagination]}
+     spaceBetween={20}
+     slidesPerView={3}
+     loop={true}
+     pagination={{
+      clickable: true,
+      bulletClass: styles.customBullet,
+      bulletActiveClass: styles.customBulletActive,
+     }}
+     autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+     }}
+     speed={500}
+     breakpoints={{
+      0: {slidesPerView: 1},
+      768: {slidesPerView: 2},
+      1024: {slidesPerView: 3},
+     }}
     >
      {relatedArticles.map((article) => (
-      <div
+      <SwiperSlide
        key={article.id}
        className={styles.item}
       >
@@ -93,9 +110,9 @@ const RelatedArticles = () => {
          <p className={styles.readingTime}>{article.readTime}</p>
         </div>
        </Link>
-      </div>
+      </SwiperSlide>
      ))}
-    </Slider>
+    </Swiper>
    </div>
   </div>
  );
