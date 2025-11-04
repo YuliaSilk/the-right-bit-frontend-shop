@@ -132,17 +132,7 @@ export default function CalculatorBMI() {
       </div>
       {(hasMoreItems || canShowLess) && (
        <div className={styles.buttonGroup}>
-        {/* {hasMoreItems && (
-         <button
-          className={styles.showMoreButtonBottom}
-          onClick={handleShowMore}
-         >
-          <span>
-           Load More ({visibleItems} / {bmiResult.items.length})
-          </span>
-          <span className="material-symbols-outlined">expand_more</span>
-         </button>
-        )} */}
+     
 
         {canShowLess && (
          <button
@@ -159,9 +149,7 @@ export default function CalculatorBMI() {
     )}
    </div>
    <div>
-    {/* <div className={styles.itemsShowcaseContainer}>
-     <div className={styles.otherProductCard}></div>
-    </div> */}
+   
    </div>
    <div className={styles.relatedProducts}>
     <RelatedProducts
