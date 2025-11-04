@@ -5,7 +5,6 @@ import rectangle from "@assets/images/bb37277abecb9af9c52234bf2a0fa4a9a41901b8.p
 import CalculatorInputCard from "../../components/calculator/CalculatorInputCard/CalculatorInputCard";
 import CalculatorOutputCard from "../../components/calculator/CalculatorOutputCard/CalculatorOutputCard";
 import CatalogCard from "@components/catalog/CatalogCard/CatalogCard";
-// import { mockCard } from "@mocks/mockCard";
 import picture from "@assets/images/d4ca643f8d5d6cff2455a63f5c5d898ea1516b3b.png";
 import RelatedProducts from "@components/common/RelatedProducts/RelatedProducts";
 
