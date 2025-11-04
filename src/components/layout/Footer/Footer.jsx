@@ -6,31 +6,34 @@ import facebookIcon from '@assets/social-icons/facebook.png';
 import twitterIcon from '@assets/social-icons/twitter.png';
 import visaIcon from '@assets/social-icons/visa.png';
 import masterCardIcon from '@assets/social-icons/mastercard.png';
+import CatalogCategories from '../../catalog/CatalogCategories/CatalogCategories'
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
+
   return (
     <footer className={styles.footer}>
       <div className={styles.fullWidthLine}></div>
       <div className={styles.container}>
         <nav className={styles.navColumns}>
           <div className={styles.logoContainer}>
-            <a href="#">
+            <a href="/">
               <img src={logo} alt="Logotype RightBite" width={120} height={40} />
             </a>
           </div>
           <div className={styles.navColumn}>
             <ul className={styles.navList}>
               <li>
-                <a href="#">Catalog</a>
+                <a href="/catalog">Catalog</a>
               </li>
               <li>
-                <a href="#">BMI Calculator</a>
+                <a href="/calculator">BMI Calculator</a>
               </li>
               <li>
-                <a href="#">Our Mission</a>
+                <a href="/our-mission">Our Mission</a>
               </li>
               <li>
-                <a href="#">Healthy News</a>
+                <a href="/news">Healthy News</a>
               </li>
             </ul>
           </div>
@@ -41,45 +44,45 @@ export default function Footer() {
                 <a href="#">BASKET</a>
               </li>
               <li>
-                <a href="#">PROFILE</a>
+                <a href="/profile">PROFILE</a>
               </li>
               <li>
                 <a href="#">BLOG</a>
               </li>
               <li>
-                <a href="#">NEWS</a>
+                <a href="/news">NEWS</a>
               </li>
             </ul>
           </div>
           <div className={styles.navColumn}>
             <ul className={styles.navList}>
               <li>
-                <a href="#">FRUITS</a>
+                <Link to ="/catalog?category=Fruits">FRUITS</Link>
               </li>
               <li>
-                <a href="#">VEGETABLES</a>
+                <Link to="/catalog?category=Vegetables">VEGETABLES</Link>
               </li>
               <li>
-                <a href="#">MEAT</a>
+                <Link to="/catalog?category=Meat and Poultry">MEAT</Link>
               </li>
               <li>
-                <a href="#">FISH </a>
+                <Link to="/catalog?category=Fish and Seafood">FISH </Link>
               </li>
             </ul>
           </div>
           <div className={styles.navColumn}>
             <ul className={styles.navList}>
               <li>
-                <a href="#">GROCERIES </a>
+                <Link to="/catalog?category=Groceries">GROCERIES </Link>
               </li>
               <li>
-                <a href="#">DESSERTS </a>
+                <Link to="/catalog?category=Desserts">DESSERTS </Link>
               </li>
               <li>
-                <a href="#">DRINKS</a>
+                <Link to="/catalog?category=Drinks">DRINKS</Link>
               </li>
               <li>
-                <a href="#">CRAFT CHEESE</a>
+                <Link to="/catalog?category=Dairy Products">CRAFT CHEESE</Link>
               </li>
             </ul>
           </div>
@@ -87,13 +90,13 @@ export default function Footer() {
 
         <div className={styles.bottomSection}>
           <div className={styles.socials}>
-            <a href="#">
+            <a href="https://www.instagram.com">
               <img src={instagramIcon} alt="Instagram" width={24} height={24} />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com">
               <img src={facebookIcon} alt="Facebook" width={24} height={24} />
             </a>
-            <a href="#">
+            <a href="https://www.x.com">
               <img src={twitterIcon} alt="Twitter" width={24} height={24} />
             </a>
           </div>
