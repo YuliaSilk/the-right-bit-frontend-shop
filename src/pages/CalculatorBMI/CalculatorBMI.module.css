@@ -57,6 +57,8 @@
 }
 
 .resultExplanations {
+ width: 144opx;
+ padding: 0 60px;
  display: flex;
  justify-content: space-around;
  align-items: center;

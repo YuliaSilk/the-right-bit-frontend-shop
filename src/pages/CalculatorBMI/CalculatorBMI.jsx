@@ -10,11 +10,26 @@ import RelatedProducts from "@components/common/RelatedProducts/RelatedProducts"
 
 export default function CalculatorBMI() {
  const [bmiResult, setBmiResult] = useState(null);
+ const [visibleItems, setVisibleItems] = useState(4);
 
  const handleCalculate = (result) => {
   setBmiResult(result);
  };
- console.log("BMI result items:", bmiResult?.items);
+ //  console.log("BMI result items:", bmiResult?.items);
+ const handleShowMore = () => {
+  setVisibleItems((prev) => Math.min(prev + 4, bmiResult?.items?.length || 0));
+ };
+
+ const handleShowLess = () => {
+  setVisibleItems(4);
+  document.querySelector(`.${styles.similarProductList}`)?.scrollIntoView({
+   behavior: "smooth",
+   block: "start",
+  });
+ };
+
+ const hasMoreItems = visibleItems < (bmiResult?.items?.length || 0);
+ const canShowLess = visibleItems > 4;
 
  return (
   <div className={styles.container}>
@@ -91,13 +106,18 @@ export default function CalculatorBMI() {
      <div className={styles.itemsShowcaseContainer}>
       <div className={styles.similarProductListHeader}>
        <h3 className={styles.productListTitle}>Personalized recomendations</h3>
-       <button className={styles.showMoreButton}>
-        Show More
-        <span className="material-symbols-outlined">east</span>
-       </button>
+       {hasMoreItems && (
+        <button
+         className={styles.showMoreButton}
+         onClick={handleShowMore}
+        >
+         Show More
+         <span className="material-symbols-outlined">east</span>
+        </button>
+       )}
       </div>
       <div className={styles.otherProductCard}>
-       {bmiResult?.items?.slice(0, 4).map((item) => (
+       {bmiResult?.items?.slice(0, visibleItems).map((item) => (
         <CatalogCard
          key={item.id}
          id={item.id}
@@ -110,13 +130,26 @@ export default function CalculatorBMI() {
         />
        ))}
       </div>
+      {(hasMoreItems || canShowLess) && (
+       <div className={styles.buttonGroup}>
+     
+
+        {canShowLess && (
+         <button
+          className={styles.showLessButton}
+          onClick={handleShowLess}
+         >
+          <span>Show Less</span>
+          <span className="material-symbols-outlined">expand_less</span>
+         </button>
+        )}
+       </div>
+      )}
      </div>
     )}
    </div>
    <div>
-    {/* <div className={styles.itemsShowcaseContainer}>
-     <div className={styles.otherProductCard}></div>
-    </div> */}
+   
    </div>
    <div className={styles.relatedProducts}>
     <RelatedProducts
