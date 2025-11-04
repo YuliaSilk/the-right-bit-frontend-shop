@@ -5,7 +5,6 @@ import rectangle from "@assets/images/bb37277abecb9af9c52234bf2a0fa4a9a41901b8.p
 import CalculatorInputCard from "../../components/calculator/CalculatorInputCard/CalculatorInputCard";
 import CalculatorOutputCard from "../../components/calculator/CalculatorOutputCard/CalculatorOutputCard";
 import CatalogCard from "@components/catalog/CatalogCard/CatalogCard";
-// import { mockCard } from "@mocks/mockCard";
 import picture from "@assets/images/d4ca643f8d5d6cff2455a63f5c5d898ea1516b3b.png";
 import RelatedProducts from "@components/common/RelatedProducts/RelatedProducts";
 
@@ -87,7 +86,7 @@ export default function CalculatorBMI() {
      className={styles.whatYourBMIResultsMeansImage}
     ></img>
    </div>
-   <div>
+   <div className={styles.similarProductList}>
     {bmiResult && (
      <div className={styles.itemsShowcaseContainer}>
       <div className={styles.similarProductListHeader}>
@@ -98,7 +97,7 @@ export default function CalculatorBMI() {
        </button>
       </div>
       <div className={styles.otherProductCard}>
-       {bmiResult?.items?.map((item) => (
+       {bmiResult?.items?.slice(0, 4).map((item) => (
         <CatalogCard
          key={item.id}
          id={item.id}
@@ -119,10 +118,12 @@ export default function CalculatorBMI() {
      <div className={styles.otherProductCard}></div>
     </div> */}
    </div>
-   <div className={styles.similarProductListHeader}>
+   <div className={styles.relatedProducts}>
     <RelatedProducts
      productId={null}
      title={"Our Bestsellers"}
+     limit={4}
+     variant={"bmi"}
     />
    </div>
    <NewsLetter />

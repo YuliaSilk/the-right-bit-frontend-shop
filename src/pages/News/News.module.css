@@ -1,5 +1,6 @@
 .wrapper {
- max-width: 1320px;
+ max-width: 1440px;
+ padding: 0 60px;
  margin: 0 auto;
 }
 .back {
