@@ -100,7 +100,7 @@ export default function Login() {
                 />
               </div>
               <a href="#" className={styles.link}>
-                Forget your password
+                Forgot your password
               </a>
             </div>
 
