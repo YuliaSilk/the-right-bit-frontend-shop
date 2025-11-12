@@ -111,14 +111,6 @@ export default function CatalogSidebar({
  priceTo,
  onPriceChange,
 }) {
- //  const [selectedOptions, setSelectedOptions] = useState([]);
-
- //  const handleCheckboxChange = (option) => {
- //   setSelectedOptions((prevSelected) =>
- //    prevSelected.includes(option) ? prevSelected.filter((item) => item !== option) : [...prevSelected, option]
- //   );
- //  };
-
  return (
   <aside className={styles.sidebar}>
    <h3 className={styles.title}>Category</h3>

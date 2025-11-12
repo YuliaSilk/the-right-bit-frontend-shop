@@ -93,11 +93,13 @@
  width: 312px;
  height: 52px;
  padding: 12px 74px;
- justify-content: flex-end;
+ justify-content: center;
  align-items: center;
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
@@ -120,12 +122,18 @@
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
 
 .home .showLessBtn:hover {
  background-color: var(--accent-color-hover);
+}
+
+.home .arrow {
+ display: none;
 }
 /* Варіант для Item page */
 
