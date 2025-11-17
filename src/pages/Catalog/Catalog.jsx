@@ -27,18 +27,25 @@ export default function Catalog() {
  const [aZ, setAZ] = useState("");
  const [page, setPage] = useState(1);
  const [size, setSize] = useState(12);
- const {searchTerm} = useSearch();
+ const {searchTerm, setSearchTerm} = useSearch();
  const [filteredProducts, setFilteredProducts] = useState([]);
- const [totalItems, setTotalItems] = useState(0);
+ const [_, setTotalItems] = useState(0);
 
  //  const size = 12;
  // read category from URL once (optional, if you use ?category=)
+ //  useEffect(() => {
+ //   const params = new URLSearchParams(window.location.search);
+ //   const categoryFromUrl = params.get("category");
+ //   if (categoryFromUrl) {
+ //    setSelectedCategory(decodeURIComponent(categoryFromUrl));
+ //    setPage(1);
+ //   }
+ //  }, []);
  useEffect(() => {
   const params = new URLSearchParams(window.location.search);
-  const categoryFromUrl = params.get("category");
-  if (categoryFromUrl) {
-   setSelectedCategory(decodeURIComponent(categoryFromUrl));
-   setPage(1);
+  const searchFromUrl = params.get("search");
+  if (searchFromUrl) {
+   setSearchTerm(searchFromUrl); // ← оновлюємо глобальний контекст
   }
  }, []);
 
@@ -109,77 +116,14 @@ export default function Catalog() {
   loadProducts();
   return () => controller.abort();
  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
- //  useEffect(() => {
- //   const controller = new AbortController();
 
- //   const loadProducts = async () => {
- //    setIsLoading(true);
- //    setErrorMessage("");
- //    try {
- //     const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
- //     const url = hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`;
- //     const options = hasFilters
- //      ? {
- //         method: "POST",
- //         headers: {"Content-Type": "application/json", accept: "application/json"},
- //         body: JSON.stringify({
- //          categoryName: selectedCategory || undefined,
- //          brand: selectedBrands[0] || undefined,
- //          priceFrom: priceFrom ?? undefined,
- //          priceTo: priceTo ?? undefined,
- //          sortBy: sortBy || undefined,
- //          aZ: aZ || undefined,
- //          page: page - 1,
- //          size,
- //         }),
- //         signal: controller.signal,
- //        }
- //      : {
- //         method: "GET",
- //         headers: {accept: "application/json"},
- //         signal: controller.signal,
- //        };
-
- //     const response = await fetch(url, options);
-
- //     if (!response.ok) {
- //      throw new Error(`Request failed with status ${response.status}`);
- //     }
-
- //     const data = await response.json();
- //     console.log("Catalog response:", data);
- //     const items = Array.isArray(data) ? data : data.content || [];
- //     setProducts(items);
- //    } catch (error) {
- //     if (error.name !== "AbortError") setErrorMessage(error.message || "Network error");
- //    } finally {
- //     setIsLoading(false);
- //    }
- //   };
-
- //   loadProducts();
-
- //   return () => controller.abort();
- //  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
-
- //  const filteredProducts = products.filter((product) =>
- //   product.productName.toLowerCase().includes(searchQuery.toLowerCase())
- //  );
- // search-term client filtering (applies on already fetched page)
  useEffect(() => {
   const term = (searchTerm || "").toLowerCase();
   const result = products.filter((p) => p.productName?.toLowerCase().includes(term));
   setFilteredProducts(result);
  }, [searchTerm, products]);
 
- //  useEffect(() => {
- //   const result = products.filter((p) => p.productName?.toLowerCase().includes(searchTerm.toLowerCase()));
- //   setFilteredProducts(result);
- //  }, [searchTerm, products]);
-
- //  const totalProducts = filteredProducts.length;
-
- const totalProducts = totalItems ?? filteredProducts.length;
+ const totalProducts = filteredProducts.length;
  const totalPages = Math.ceil(totalProducts / size);
  const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
  console.log("selectedCategory:", selectedCategory);
@@ -251,7 +195,7 @@ export default function Catalog() {
       <div className={styles.innerCards}>
        {!isLoading &&
         !errorMessage &&
-        products.length > 0 &&
+        filteredProducts.length > 0 &&
         paginatedProducts.map((item, index) => {
          return (
           <CatalogCard
