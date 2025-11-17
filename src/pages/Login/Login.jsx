@@ -74,6 +74,36 @@ export default function Login() {
        />
       </div>
 
+
+            <div className={styles.email}>
+              <div className={styles.flex}>
+                <h4 className={styles.paragraphe}>Password</h4>
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className={styles.togglePasswordButton}
+                >
+                  <img
+                    src={staticEyeOffIcon}
+                    alt={passwordShown ? 'Hide password' : 'Show password'}
+                    className={styles.togglePasswordIcon}
+                  />
+                  {passwordShown ? 'Hide' : 'Show'}{' '}
+                </button>
+              </div>
+              <div className={styles.passwordInputWrapper}>
+                <input
+                  type={passwordShown ? 'text' : 'password'}
+                  className={styles.input}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+              <a href="#" className={styles.link}>
+                Forgot your password
+              </a>
+            </div>
       <div className={styles.email}>
        <div className={styles.flex}>
         <h4 className={styles.paragraphe}>Password</h4>
@@ -106,6 +136,7 @@ export default function Login() {
         Forget your password
        </a>
       </div>
+
 
       {error && <p style={{color: "red"}}>{error}</p>}
 

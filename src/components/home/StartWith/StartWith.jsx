@@ -20,11 +20,11 @@ export default function StartWith() {
               Discover your Body Mass Index (BMI) effortlessly and get personalized food suggestions based on your results. Whether you’re aiming to maintain your current weight, lose a few pounds, or simply feel more balanced, our smart recommendations will guide you to the right organic and nutrient-rich choices. Start your wellness journey today—because eating well starts with understanding your body.
               </p>
             </div>
-            <div className={styles.btnConteiner}>
-              <Button className={styles.checkbtn}>
+            <Button className={styles.checkbtn}>
+              <div className={styles.btnConteiner}>
                 <Link to='/calculator'>Check Now</Link>
-              </Button>
-            </div>
+            </div> 
+            </Button>
           </div>
         </div>
 

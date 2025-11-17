@@ -6,6 +6,7 @@ import facebookIcon from "@assets/social-icons/facebook.png";
 import twitterIcon from "@assets/social-icons/twitter.png";
 import visaIcon from "@assets/social-icons/visa.png";
 import masterCardIcon from "@assets/social-icons/mastercard.png";
+import {Link} from "react-router-dom";
 
 export default function Footer() {
  return (
@@ -14,7 +15,7 @@ export default function Footer() {
    <div className={styles.container}>
     <nav className={styles.navColumns}>
      <div className={styles.logoContainer}>
-      <a href="#">
+      <a href="/">
        <img
         src={logo}
         alt="Logotype RightBite"
@@ -43,13 +44,13 @@ export default function Footer() {
      <div className={styles.navColumn}>
       <ul className={styles.navList}>
        <li>
-        <a href="/cart">BASKET</a>
+        <a href="#">BASKET</a>
        </li>
        <li>
         <a href="/profile">PROFILE</a>
        </li>
        <li>
-        <a href="/news">BLOG</a>
+        <a href="#">BLOG</a>
        </li>
        <li>
         <a href="/news">NEWS</a>
@@ -59,32 +60,32 @@ export default function Footer() {
      <div className={styles.navColumn}>
       <ul className={styles.navList}>
        <li>
-        <a href="/catalog?category/fruits">FRUITS</a>
+        <Link to="/catalog?category=Fruits">FRUITS</Link>
        </li>
        <li>
-        <a href="/catalog?category/vegetables">VEGETABLES</a>
+        <Link to="/catalog?category=Vegetables">VEGETABLES</Link>
        </li>
        <li>
-        <a href="/catalog?category/meat">MEAT</a>
+        <Link to="/catalog?category=Meat and Poultry">MEAT</Link>
        </li>
        <li>
-        <a href="/catalog?category/fish">FISH </a>
+        <Link to="/catalog?category=Fish and Seafood">FISH </Link>
        </li>
       </ul>
      </div>
      <div className={styles.navColumn}>
       <ul className={styles.navList}>
        <li>
-        <a href="/catalog?category/groceries">GROCERIES </a>
+        <Link to="/catalog?category=Groceries">GROCERIES </Link>
        </li>
        <li>
-        <a href="/catalog?category/desserts">DESSERTS </a>
+        <Link to="/catalog?category=Desserts">DESSERTS </Link>
        </li>
        <li>
-        <a href="/catalog?category/drinks">DRINKS</a>
+        <Link to="/catalog?category=Drinks">DRINKS</Link>
        </li>
        <li>
-        <a href="/catalog?category/cheese">CRAFT CHEESE</a>
+        <Link to="/catalog?category=Dairy Products">CRAFT CHEESE</Link>
        </li>
       </ul>
      </div>
@@ -92,7 +93,7 @@ export default function Footer() {
 
     <div className={styles.bottomSection}>
      <div className={styles.socials}>
-      <a href="#">
+      <a href="https://www.instagram.com">
        <img
         src={instagramIcon}
         alt="Instagram"
@@ -100,7 +101,7 @@ export default function Footer() {
         height={24}
        />
       </a>
-      <a href="#">
+      <a href="https://www.facebook.com">
        <img
         src={facebookIcon}
         alt="Facebook"
@@ -108,7 +109,7 @@ export default function Footer() {
         height={24}
        />
       </a>
-      <a href="#">
+      <a href="https://www.x.com">
        <img
         src={twitterIcon}
         alt="Twitter"

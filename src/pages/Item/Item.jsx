@@ -201,7 +201,7 @@ export default function Item() {
           <div className={styles.nutritionClauseIcon}>
            <span className="material-symbols-outlined">check</span>
           </div>
-          <span>{`Protein : ${protein ?? "-"} g`}</span>
+          <span>{`Proteins : ${protein ?? "-"} g`}</span>
          </div>
          <div className={styles.nutritionRow}>
           <div className={styles.nutritionClauseIcon}>
