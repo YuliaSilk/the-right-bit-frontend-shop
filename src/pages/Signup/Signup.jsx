@@ -6,16 +6,25 @@ import GoogleIcon from "@assets/icons/google-colored.svg?react";
 
 export default function Signup() {
   const API_URL =
+
     import.meta.env.VITE_API_URL || "https://right-bite-store.onrender.com";
   const navigate = useNavigate();
 
   // 1️⃣ Коли користувач повернувся після Google
   useEffect(() => {
+
+    import.meta.env.VITE_API_URL || 'https://right-bite-store.onrender.com';
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // 1️⃣ Перевіряємо, чи користувач повернувся з Google із токенами
+
     const params = new URLSearchParams(window.location.search);
     const accessToken = params.get("access_token");
     const refreshToken = params.get("refresh_token");
 
     if (accessToken && refreshToken) {
+
       localStorage.setItem("access_token", accessToken);
       localStorage.setItem("refresh_token", refreshToken);
 
@@ -72,6 +81,20 @@ export default function Signup() {
   // 5️⃣ Викликати getProtectedData() після входу можна будь-де:
   // useEffect(() => { getProtectedData(); }, []);
 
+      // Зберігаємо токени
+      localStorage.setItem("access_token", accessToken);
+      localStorage.setItem("refresh_token", refreshToken);
+      navigate("/"); // редірект на головну або профіль
+    }
+  }, [navigate]);
+
+  // 2️⃣ Функція для старту Google OAuth
+  const handleGoogleLogin = () => {
+    const redirectUri = `${window.location.origin}/auth/callback`;
+    window.location.href = `${API_URL}/api/v1/auth/google?redirect_uri=${encodeURIComponent(redirectUri)}`;
+  };
+
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.left}></div>
@@ -84,8 +107,16 @@ export default function Signup() {
           </h1>
 
           <form className={styles.form}>
+
             <a className={styles.socialBtn} onClick={handleGoogleLogin}>
               <GoogleIcon className={styles.socialIcon} />
+
+            <a
+              className={styles.socialBtn}
+              onClick={handleGoogleLogin}
+            >
+               <GoogleIcon className={styles.socialIcon} />
+
               Sign up with Google
             </a>
 
