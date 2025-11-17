@@ -26,21 +26,40 @@ export default function Catalog() {
  const [sortBy, setSortBy] = useState("");
  const [aZ, setAZ] = useState("");
  const [page, setPage] = useState(1);
- const [_, setSize] = useState(12);
+ const [size, setSize] = useState(12);
  const {searchTerm} = useSearch();
  const [filteredProducts, setFilteredProducts] = useState([]);
+ const [totalItems, setTotalItems] = useState(0);
 
- const size = 12;
+ //  const size = 12;
+ // read category from URL once (optional, if you use ?category=)
+ useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  const categoryFromUrl = params.get("category");
+  if (categoryFromUrl) {
+   setSelectedCategory(decodeURIComponent(categoryFromUrl));
+   setPage(1);
+  }
+ }, []);
 
+ // handler from CatalogCategories (we'll pass it down)
+ const handleCategorySelect = (name) => {
+  setSelectedCategory(name);
+  setPage(1);
+  // update URL without reload (optional)
+  const params = new URLSearchParams(window.location.search);
+  params.set("category", name);
+  window.history.replaceState(null, "", `${window.location.pathname}?${params.toString()}`);
+ };
  useEffect(() => {
   const controller = new AbortController();
-
   const loadProducts = async () => {
    setIsLoading(true);
    setErrorMessage("");
    try {
     const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
     const url = hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`;
+
     const options = hasFilters
      ? {
         method: "POST",
@@ -52,7 +71,7 @@ export default function Catalog() {
          priceTo: priceTo ?? undefined,
          sortBy: sortBy || undefined,
          aZ: aZ || undefined,
-         page: page - 1,
+         page: Math.max(0, page - 1), // ensure non-negative
          size,
         }),
         signal: controller.signal,
@@ -64,15 +83,22 @@ export default function Catalog() {
        };
 
     const response = await fetch(url, options);
-
     if (!response.ok) {
      throw new Error(`Request failed with status ${response.status}`);
     }
-
     const data = await response.json();
     console.log("Catalog response:", data);
-    const items = Array.isArray(data) ? data : data.content || [];
-    setProducts(items);
+
+    // try to support both shapes: array OR { content: [...], totalElements: N }
+    if (Array.isArray(data)) {
+     setProducts(data);
+     setTotalItems(data.length);
+    } else {
+     const items = data.content || data.items || [];
+     setProducts(items);
+     // backend might return totalElements / totalItems — try to read it
+     setTotalItems(data.totalElements ?? data.total ?? data.totalItems ?? items.length);
+    }
    } catch (error) {
     if (error.name !== "AbortError") setErrorMessage(error.message || "Network error");
    } finally {
@@ -81,22 +107,82 @@ export default function Catalog() {
   };
 
   loadProducts();
-
   return () => controller.abort();
  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
+ //  useEffect(() => {
+ //   const controller = new AbortController();
+
+ //   const loadProducts = async () => {
+ //    setIsLoading(true);
+ //    setErrorMessage("");
+ //    try {
+ //     const hasFilters = !!(selectedCategory || selectedBrands.length > 0 || priceFrom || priceTo || sortBy || aZ);
+ //     const url = hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`;
+ //     const options = hasFilters
+ //      ? {
+ //         method: "POST",
+ //         headers: {"Content-Type": "application/json", accept: "application/json"},
+ //         body: JSON.stringify({
+ //          categoryName: selectedCategory || undefined,
+ //          brand: selectedBrands[0] || undefined,
+ //          priceFrom: priceFrom ?? undefined,
+ //          priceTo: priceTo ?? undefined,
+ //          sortBy: sortBy || undefined,
+ //          aZ: aZ || undefined,
+ //          page: page - 1,
+ //          size,
+ //         }),
+ //         signal: controller.signal,
+ //        }
+ //      : {
+ //         method: "GET",
+ //         headers: {accept: "application/json"},
+ //         signal: controller.signal,
+ //        };
+
+ //     const response = await fetch(url, options);
+
+ //     if (!response.ok) {
+ //      throw new Error(`Request failed with status ${response.status}`);
+ //     }
+
+ //     const data = await response.json();
+ //     console.log("Catalog response:", data);
+ //     const items = Array.isArray(data) ? data : data.content || [];
+ //     setProducts(items);
+ //    } catch (error) {
+ //     if (error.name !== "AbortError") setErrorMessage(error.message || "Network error");
+ //    } finally {
+ //     setIsLoading(false);
+ //    }
+ //   };
+
+ //   loadProducts();
+
+ //   return () => controller.abort();
+ //  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
 
  //  const filteredProducts = products.filter((product) =>
  //   product.productName.toLowerCase().includes(searchQuery.toLowerCase())
  //  );
-
+ // search-term client filtering (applies on already fetched page)
  useEffect(() => {
-  const result = products.filter((p) => p.productName?.toLowerCase().includes(searchTerm.toLowerCase()));
+  const term = (searchTerm || "").toLowerCase();
+  const result = products.filter((p) => p.productName?.toLowerCase().includes(term));
   setFilteredProducts(result);
  }, [searchTerm, products]);
 
- const totalProducts = filteredProducts.length;
+ //  useEffect(() => {
+ //   const result = products.filter((p) => p.productName?.toLowerCase().includes(searchTerm.toLowerCase()));
+ //   setFilteredProducts(result);
+ //  }, [searchTerm, products]);
+
+ //  const totalProducts = filteredProducts.length;
+
+ const totalProducts = totalItems ?? filteredProducts.length;
  const totalPages = Math.ceil(totalProducts / size);
  const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
+ console.log("selectedCategory:", selectedCategory);
 
  return (
   <>
@@ -104,7 +190,7 @@ export default function Catalog() {
    <div className={styles.top}>
     <h2 className={styles.title}>Catalog</h2>
    </div>
-   <CatalogCategories />
+   <CatalogCategories onCategoryClick={handleCategorySelect} />
 
    <div className={styles.container}>
     <div className={styles.catalogContent}>
@@ -112,7 +198,8 @@ export default function Catalog() {
       selectedBrands={selectedBrands}
       onBrandsChange={setSelectedBrands}
       selectedCategory={selectedCategory}
-      onCategoryChange={setSelectedCategory}
+      // onCategoryChange={setSelectedCategory}
+      onCategoryChange={(categoryName) => setSelectedCategory(categoryName)}
       priceFrom={priceFrom}
       priceTo={priceTo}
       onPriceChange={({min, max}) => {
@@ -129,7 +216,7 @@ export default function Catalog() {
        size={size}
        onSizeChange={(val) => {
         setSize(val);
-        setPage(0);
+        setPage(1);
        }}
       />
       <ActiveFilters

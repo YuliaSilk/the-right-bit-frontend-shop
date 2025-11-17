@@ -53,16 +53,20 @@
 
 .grid {
  display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: auto;
-gap: 32px;
-height: auto;
-align-items: start;
-align-self: stretch;
-justify-content: space-between;
-
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: auto;
+ gap: 32px;
+ height: auto;
+ align-items: start;
+ align-self: stretch;
+ justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+ .grid {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
 /* Варіант для Home page */
 
 .home .wrapper {
@@ -89,11 +93,13 @@ justify-content: space-between;
  width: 312px;
  height: 52px;
  padding: 12px 74px;
- justify-content: flex-end;
+ justify-content: center;
  align-items: center;
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
@@ -116,12 +122,18 @@ justify-content: space-between;
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
 
 .home .showLessBtn:hover {
  background-color: var(--accent-color-hover);
+}
+
+.home .arrow {
+ display: none;
 }
 /* Варіант для Item page */
 
