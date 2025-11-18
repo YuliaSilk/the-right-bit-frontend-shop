@@ -1,70 +1,71 @@
 .newsletter {
-  background: #7CB184;
+ background: #7cb184;
 }
 
 .container {
-  max-width: 1320px;
-  margin: 0 auto;
+ max-width: 1440px;
+ padding: 0 60px;
+ margin: 0 auto;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
 
 .left {
-  padding: 12px 0;
+ padding: 12px 0;
 }
 
 .title {
-  font-family: var(--third-family);
-  font-weight: 300;
-  font-size: 50px;
-  color: #1a1a1a;
+ font-family: var(--third-family);
+ font-weight: 300;
+ font-size: 50px;
+ color: #1a1a1a;
 }
 
 .text {
-  font-weight: 500;
-  font-size: 24px;
-  color: #525252;
+ font-weight: 500;
+ font-size: 24px;
+ color: #525252;
 }
 
 .input {
-  font-family: var(--font-primary);
-  border: 1px solid #e6e6e6;
-  border-radius: 32px;
-  padding: 14px 24px;
-  width: 650px;
-  height: 52px;
+ font-family: var(--font-primary);
+ border: 1px solid #e6e6e6;
+ border-radius: 32px;
+ padding: 14px 24px;
+ width: 650px;
+ height: 52px;
 }
 
 .input::placeholder {
-  letter-spacing: -0.02em;
-  color: #808080;
+ letter-spacing: -0.02em;
+ color: #808080;
 }
 
 .btn {
-  position: absolute;
-  border-radius: 32px;
-  padding: 16px 60px;
-  background: #202020;
-  letter-spacing: -0.02em;
-  color: #fff;
-  right: 0;
-  transition: background-color 0.2s ease, color 0.2s ease;  
-  
-  &:hover {
-    background-color: var(--accent-color-hover); 
-    color: #ffffff;
-    cursor: pointer;
-  }
+ position: absolute;
+ border-radius: 32px;
+ padding: 16px 60px;
+ background: #202020;
+ letter-spacing: -0.02em;
+ color: #fff;
+ right: 0;
+ transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+ background-color: var(--accent-color-hover);
+ color: #ffffff;
+ cursor: pointer;
 }
 
 .form {
-  position: relative;
+ position: relative;
 }
-@media (max-width:768px) {
-  .container{
-    display: flex;
-    flex-direction: column;
-  }
+@media (max-width: 768px) {
+ .container {
+  display: flex;
+  flex-direction: column;
+ }
 }

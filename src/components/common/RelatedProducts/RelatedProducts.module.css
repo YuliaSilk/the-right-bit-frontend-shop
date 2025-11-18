@@ -1,20 +1,18 @@
 .block {
  /* background-color: #fffaf0; */
- width: 1380px;
+ max-width: 1440px;
+ padding: 0 60px;
  margin: 0 auto;
 }
 
 .wrapper {
- margin: 40px 0;
  width: 100%;
- max-width: 1320px;
  height: auto;
  display: flex;
  flex-direction: column;
  gap: 32px;
  margin-bottom: 76px;
  margin: 0 auto;
- padding: 40px 0;
 }
 
 .header {
@@ -55,16 +53,20 @@
 
 .grid {
  display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: auto;
-gap: 32px;
-height: auto;
-align-items: start;
-align-self: stretch;
-justify-content: space-between;
-
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: auto;
+ gap: 32px;
+ height: auto;
+ align-items: start;
+ align-self: stretch;
+ justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+ .grid {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
 /* Варіант для Home page */
 
 .home .wrapper {
@@ -91,11 +93,13 @@ justify-content: space-between;
  width: 312px;
  height: 52px;
  padding: 12px 74px;
- justify-content: flex-end;
+ justify-content: center;
  align-items: center;
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
@@ -118,12 +122,18 @@ justify-content: space-between;
  gap: 10px;
  border-radius: 32px;
  color: #f9f1eb;
+ font-size: 16px;
+ font-weight: 400;
  background-color: var(--accent-color);
  transition: all 0.2s ease;
 }
 
 .home .showLessBtn:hover {
  background-color: var(--accent-color-hover);
+}
+
+.home .arrow {
+ display: none;
 }
 /* Варіант для Item page */
 
@@ -177,4 +187,8 @@ justify-content: space-between;
 
 .item .showLessBtn:hover {
  border-color: #234d2e;
+}
+
+.bmi .title {
+ font-size: 40px;
 }

@@ -57,6 +57,8 @@
 }
 
 .resultExplanations {
+ width: 144opx;
+ padding: 0 60px;
  display: flex;
  justify-content: space-around;
  align-items: center;
@@ -78,7 +80,7 @@
 
 .productListTitle {
  color: #202020;
- font-size: 2rem;
+ font-size: 40px;
 }
 
 .similarProductListHeader {
@@ -91,13 +93,18 @@
  display: flex;
  align-items: center;
  gap: 0.5rem;
- padding: 0.5rem 3rem;
- border: 1px solid #bdbdbd;
- border-radius: 30px;
+ color: #234d2e;
+ cursor: pointer;
+ font-size: 24px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 28px;
 }
 
 .itemsShowcaseContainer {
- padding: 0 60px 60px;
+ max-width: 1440px;
+ padding: 0 60px;
+ margin: 0 auto;
 }
 
 .otherProductCard {
@@ -123,4 +130,12 @@
  width: 536px;
  height: 378px;
  object-fit: cover;
+}
+
+.relatedProducts {
+ margin-bottom: 100px;
+}
+
+.similarProductList {
+ margin-bottom: 60px;
 }
