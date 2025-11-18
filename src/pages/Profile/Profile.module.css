@@ -1,64 +1,65 @@
 .container {
-  background: var(--background);
+ background: var(--background);
 }
 
 .wrapper {
-  max-width: 1320px;
-  margin: 0 auto;
-  min-height: calc(100vh + 70px);
+ max-width: 1440px;
+ padding: 0 60px;
+ margin: 0 auto;
+ min-height: calc(100vh + 70px);
 }
 
 .top {
-  padding-top: 32px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+ padding-top: 32px;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
 }
 
 .username {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+ display: flex;
+ align-items: center;
+ gap: 20px;
 }
 
 .name {
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: -0.01em;
-  color: #000;
+ font-weight: 700;
+ font-size: 24px;
+ letter-spacing: -0.01em;
+ color: #000;
 }
 
 .content {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+ display: flex;
+ gap: 24px;
+ align-items: flex-start;
 }
 
 .shippingAddress {
-  margin: 24px 0 40px 0;
+ margin: 24px 0 40px 0;
 }
 
 .btnsContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin: 32px 0 72px;
+ display: flex;
+ justify-content: flex-end;
+ margin: 32px 0 72px;
 }
 
 .btnChange {
-  font-weight: 600;
-  font-size: 20px;
-  text-align: center;
-  color: #fff;
-  padding: 20px 97px;
-  background: var(--accent-color);
-  border-radius: 32px;
+ font-weight: 600;
+ font-size: 20px;
+ text-align: center;
+ color: #fff;
+ padding: 20px 97px;
+ background: var(--accent-color);
+ border-radius: 32px;
 }
 
 .btnSubscribe {
-  font-size: 20px;
-  text-align: center;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 32px;
-  padding: 20px 66px;
+ font-size: 20px;
+ text-align: center;
+ color: #000;
+ border: 1px solid #000;
+ border-radius: 32px;
+ padding: 20px 66px;
 }

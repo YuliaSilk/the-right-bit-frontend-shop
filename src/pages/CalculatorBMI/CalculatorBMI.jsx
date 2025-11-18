@@ -5,17 +5,31 @@ import rectangle from "@assets/images/bb37277abecb9af9c52234bf2a0fa4a9a41901b8.p
 import CalculatorInputCard from "../../components/calculator/CalculatorInputCard/CalculatorInputCard";
 import CalculatorOutputCard from "../../components/calculator/CalculatorOutputCard/CalculatorOutputCard";
 import CatalogCard from "@components/catalog/CatalogCard/CatalogCard";
-// import { mockCard } from "@mocks/mockCard";
 import picture from "@assets/images/d4ca643f8d5d6cff2455a63f5c5d898ea1516b3b.png";
 import RelatedProducts from "@components/common/RelatedProducts/RelatedProducts";
 
 export default function CalculatorBMI() {
  const [bmiResult, setBmiResult] = useState(null);
+ const [visibleItems, setVisibleItems] = useState(4);
 
  const handleCalculate = (result) => {
   setBmiResult(result);
  };
- console.log("BMI result items:", bmiResult?.items);
+ //  console.log("BMI result items:", bmiResult?.items);
+ const handleShowMore = () => {
+  setVisibleItems((prev) => Math.min(prev + 4, bmiResult?.items?.length || 0));
+ };
+
+ const handleShowLess = () => {
+  setVisibleItems(4);
+  document.querySelector(`.${styles.similarProductList}`)?.scrollIntoView({
+   behavior: "smooth",
+   block: "start",
+  });
+ };
+
+ const hasMoreItems = visibleItems < (bmiResult?.items?.length || 0);
+ const canShowLess = visibleItems > 4;
 
  return (
   <div className={styles.container}>
@@ -87,18 +101,23 @@ export default function CalculatorBMI() {
      className={styles.whatYourBMIResultsMeansImage}
     ></img>
    </div>
-   <div>
+   <div className={styles.similarProductList}>
     {bmiResult && (
      <div className={styles.itemsShowcaseContainer}>
       <div className={styles.similarProductListHeader}>
        <h3 className={styles.productListTitle}>Personalized recomendations</h3>
-       <button className={styles.showMoreButton}>
-        Show More
-        <span className="material-symbols-outlined">east</span>
-       </button>
+       {hasMoreItems && (
+        <button
+         className={styles.showMoreButton}
+         onClick={handleShowMore}
+        >
+         Show More
+         <span className="material-symbols-outlined">east</span>
+        </button>
+       )}
       </div>
       <div className={styles.otherProductCard}>
-       {bmiResult?.items?.map((item) => (
+       {bmiResult?.items?.slice(0, visibleItems).map((item) => (
         <CatalogCard
          key={item.id}
          id={item.id}
@@ -111,18 +130,33 @@ export default function CalculatorBMI() {
         />
        ))}
       </div>
+      {(hasMoreItems || canShowLess) && (
+       <div className={styles.buttonGroup}>
+     
+
+        {canShowLess && (
+         <button
+          className={styles.showLessButton}
+          onClick={handleShowLess}
+         >
+          <span>Show Less</span>
+          <span className="material-symbols-outlined">expand_less</span>
+         </button>
+        )}
+       </div>
+      )}
      </div>
     )}
    </div>
    <div>
-    {/* <div className={styles.itemsShowcaseContainer}>
-     <div className={styles.otherProductCard}></div>
-    </div> */}
+   
    </div>
-   <div className={styles.similarProductListHeader}>
+   <div className={styles.relatedProducts}>
     <RelatedProducts
      productId={null}
      title={"Our Bestsellers"}
+     limit={4}
+     variant={"bmi"}
     />
    </div>
    <NewsLetter />

@@ -74,6 +74,7 @@ export default function RelatedProducts({productId, title, limit = 4, variant = 
         height="16"
         viewBox="0 0 12 16"
         fill="none"
+        className={styles.arrow}
        >
         <path
          d="M1.91797 15L10.0846 8L1.91797 1"
