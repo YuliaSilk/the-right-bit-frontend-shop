@@ -72,7 +72,9 @@
 .fullWidthLine {
  position: absolute;
  bottom: 100px;
- width: 100vw;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 100vw; /* keep viewport-width line but centered to avoid overflow */
  height: 2px;
  background-color: #333;
 }
