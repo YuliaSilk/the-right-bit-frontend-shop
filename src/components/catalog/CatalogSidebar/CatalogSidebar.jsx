@@ -4,10 +4,9 @@ import PriceRange from "../PriceRange/PriceRange";
 import PopularBrands from "@components/catalog/PopularBrands/PopularBrands";
 
 import FruitsIcon from "../../../assets/svgs/Fruits.svg";
-import Vegetables from '../../../assets/svgs/Vegatables.svg';
 import HighProteinIcon from "../../../assets/svgs/HighProtein.svg";
 import WholeGrainsIcon from "../../../assets/svgs/WholeGrains.svg";
-import MilkProductsIcon from "../../../assets/svgs/MilkProducts.svg";
+import DairyProductsIcon from "../../../assets/svgs/DairyProducts.svg";
 import LowFatProductsIcon from "../../../assets/svgs/LowFatProducts.svg";
 import PreMeatsIcon from "../../../assets/svgs/PreMeats.svg";
 import NutsAndPasteIcon from "../../../assets/svgs/Nuts&Paste.svg";
@@ -17,8 +16,10 @@ import DessertsIcon from "../../../assets/svgs/Desserts.svg";
 import PreCookedMealsIcon from "../../../assets/svgs/PreCookedMeals.svg";
 import DietsIcon from "../../../assets/svgs/Diets.svg";
 import AccessoriesIcon from "../../../assets/svgs/Accesories.svg";
-import Drinks from '../../../assets/svgs/Drinks.svg';
-import FishAndSeafood from '../../../assets/svgs/FishAndSeafood.svg';
+import Poultry from '../../../assets/svgs/Poultry.svg';
+import Beverages from '../../../assets/svgs/Beverages.svg';
+import Sweets from '../../../assets/svgs/Sweets.svg';
+import BakeryAndBread from '../../../assets/svgs/BakeryAndBread.svg';
 
 const categories = [
  {
@@ -43,7 +44,7 @@ const categories = [
   categoryName: "Beverages",
  },
  {
-  categoryName: "Snacks and Sweets",
+  categoryName: "Sweets",
  },
  {
   categoryName: "Drinks",
@@ -66,37 +67,40 @@ const categories = [
  {
   categoryName: "Accessories",
  },
+ {categoryName: "Poultry"},
 ];
 const svgsByCategories = [
- {key: "Fruits", src: FruitsIcon},
- {key:"Vegetables", src:Vegetables},
+ {key: "Fruits ", src: FruitsIcon},
  {key: "High Protein", src: HighProteinIcon},
+ {key:"Poultry", src:Poultry},
+ {key:"Beverages",src:Beverages},
  {key: "Whole grains", src: WholeGrainsIcon},
- {key: "Milk products", src: MilkProductsIcon},
+ {key: "Dairy products", src: DairyProductsIcon},
  {key: "Low fat products", src: LowFatProductsIcon},
  {key: "Pre-cooked meals", src: PreMeatsIcon},
  {key: "Nuts & paste", src: NutsAndPasteIcon},
+ {key:"Bakery and Bread", src:BakeryAndBread},
  {key: "Snacks", src: SnacksIcon},
+ {key:"Sweets", src:Sweets},
  {key: "Oils", src: OilsIcon},
  {key: "Desserts", src: DessertsIcon},
- {key: "Pre-cooked meals", src: PreCookedMealsIcon},
  {key: "Diets", src: DietsIcon},
  {key: "Accessories", src: AccessoriesIcon},
- {key:"Drinks",src:Drinks},
- {key:"FishAndSeafood",src:FishAndSeafood}
 ];
 const categoryIconMap = {
- "Meat and Poultry": "High Protein",
+Poultry:"Meat and Poultry",
+ HightProtein: "High Protein",
  Vegetables: "Fruits & Vegetables",
  Fruits: "Fruits & Vegetables",
- "Dairy Products": "Milk products",
- "Bakery and Bread": "Whole grains",
- Beverages: "Drinks",
- "Snacks and Sweets": "Snacks",
+ DairyProducts:"Dairy Products",
+ WholeGrains:"Whole grains",
+ BakeryAndBread:"Bakery and Bread",
+ Beverages: "Beverages",
+ Snaks:"Snacks",
+ Sweets:"Sweets", 
  Drinks: "Drinks",
- Snacks: "Snacks",
  Desserts: "Desserts",
- "Pre-cooked meals": "Pre-cooked meals",
+ PreCookedMeals:"Pre-cooked meals",
  Diets: "Diets",
  Groceries: "Oils",
  Accessories: "Accessories",
