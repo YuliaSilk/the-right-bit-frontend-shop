@@ -24,6 +24,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground1,
     backgroundWebp: bannerBackground1Webp,
+    link:'/catalog'
   },
   {
     title1: 'Taste Nature.',
@@ -32,6 +33,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground2,
     backgroundWebp: bannerBackground2Webp,
+    link:'/catalog'
   },
   {
     title1: 'Stay Informed.',
@@ -40,6 +42,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground3,
     backgroundWebp: bannerBackground3Webp,
+    link:'/news'
   },
   {
     title1: 'Live Balanced.',
@@ -48,6 +51,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground4,
     backgroundWebp: bannerBackground4Webp,
+    link:'/calculator',
   },
   {
     title1: 'Nature\'s Best,',
@@ -56,6 +60,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground5,
     backgroundWebp: bannerBackground5Webp,
+    link:'/catalog',
   },
   {
     title1: 'Smart Eating',
@@ -64,6 +69,7 @@ const bannerTexts = [
     buttonText: 'Show More',
     background: bannerBackground6,
     backgroundWebp: bannerBackground6Webp,
+    link:'/calculator',
   },
 ];
 
@@ -139,7 +145,12 @@ export default function Banner({ className = '' }) {
                 <span>{slide.title2}</span>
                 <span>{slide.title3}</span>
               </p>
-              <Button>{slide.buttonText}</Button>
+              <Link to={slide.link}>
+              <Button>
+                {slide.buttonText}
+              </Button>
+              </Link>
+              
             </div>
           </div>
         ))}
