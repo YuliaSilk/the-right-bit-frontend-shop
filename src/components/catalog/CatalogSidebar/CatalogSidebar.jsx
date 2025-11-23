@@ -3,41 +3,6 @@ import styles from "./CatalogSidebar.module.css";
 import PriceRange from "../PriceRange/PriceRange";
 import PopularBrands from "@components/catalog/PopularBrands/PopularBrands";
 
-
-import VegetablesIcon from '../../../assets/svgs/Vegetables.svg';
-import HighProteinIcon from '../../../assets/svgs/HighProtein.svg';
-import WholeGrainsIcon from '../../../assets/svgs/WholeGrains.svg';
-import MilkProductsIcon from '../../../assets/svgs/MilkProducts.svg';
-import LowFatProductsIcon from '../../../assets/svgs/LowFatProducts.svg';
-import PreMeatsIcon from '../../../assets/svgs/PreMeats.svg';
-import NutsAndPasteIcon from '../../../assets/svgs/Nuts&Paste.svg';
-import SnacksIcon from '../../../assets/svgs/Snacks.svg';
-import OilsIcon from '../../../assets/svgs/Oils.svg';
-import DessertsIcon from '../../../assets/svgs/Desserts.svg';
-import PreCookedMealsIcon from '../../../assets/svgs/PreCookedMeals.svg';
-import DietsIcon from '../../../assets/svgs/Diets.svg';
-import AccessoriesIcon from '../../../assets/svgs/Accesories.svg';
-import FishAndSeafood from '../../../assets/svgs/FishAndSeafood.svg';
-import Fruits from '../../../assets/svgs/Fruits.svg';
-
-const categories = [
-  'Vegetables',
-  'Fruits',
-  'High Protein',
-  'Whole grains',
-  'Milk products',
-  'Low fat products',
-  'Pre-Meats',
-  'Nuts & paste',
-  'Snacks',
-  'Oils',
-  'Desserts',
-  'Pre-cooked meals',
-  'Diets',
-  'Accessories',
-  'Fish and Seafood',
-  'Drinks'
-
 import FruitsAndVegetablesIcon from "../../../assets/svgs/FruitsAndVegetables.svg";
 import HighProteinIcon from "../../../assets/svgs/HighProtein.svg";
 import WholeGrainsIcon from "../../../assets/svgs/WholeGrains.svg";
@@ -98,27 +63,8 @@ const categories = [
  {
   categoryName: "Accessories",
  },
-
 ];
 const svgsByCategories = [
-
-  { key: 'Vegetables', src: VegetablesIcon },
-  { key: 'High Protein', src: HighProteinIcon },
-  { key: 'Whole grains', src: WholeGrainsIcon },
-  { key: 'Milk products', src: MilkProductsIcon },
-  { key: 'Low fat products', src: LowFatProductsIcon },
-  { key: 'Pre-Meats', src: PreMeatsIcon },
-  { key: 'Nuts & paste', src: NutsAndPasteIcon },
-  { key: 'Snacks', src: SnacksIcon },
-  { key: 'Oils', src: OilsIcon },
-  { key: 'Desserts', src: DessertsIcon },
-  { key: 'Pre-cooked meals', src: PreCookedMealsIcon },
-  { key: 'Diets', src: DietsIcon },
-  { key: 'Accessories', src: AccessoriesIcon },
-  {key:'Fish and Seafood', src:FishAndSeafood},
-  {key:'Drinks',src:Drinks},
-  {key:'Fruits',src:Fruits}
-
  {key: "Fruits & Vegetables", src: FruitsAndVegetablesIcon},
  {key: "High Protein", src: HighProteinIcon},
  {key: "Whole grains", src: WholeGrainsIcon},

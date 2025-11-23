@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
+import {Link} from "react-router-dom";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -93,20 +95,21 @@ export default function CatalogCategories() {
 
       return (
        <SwiperSlide key={`${name}-${idx}`}>
-        <div
-         className={styles.card}
-         style={{backgroundImage: `url(${image})`}}
-        >
-         <div className={styles.overlay}>
-          <span className={styles.label}>{name}</span>
+        <Link to={`/catalog?category=${encodeURIComponent(name)}`}>
+         <div
+          className={styles.card}
+          style={{backgroundImage: `url(${image})`}}
+         >
+          <div className={styles.overlay}>
+           <span className={styles.label}>{name}</span>
+          </div>
          </div>
-        </div>
+        </Link>
        </SwiperSlide>
       );
      })}
     </Swiper>
 
-    {/* Стрілки — ті ж компоненти, просто позиціонуємо їх */}
     <div className="custom-prev">
      <PrevArrow />
     </div>
