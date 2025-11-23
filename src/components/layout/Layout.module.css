@@ -20,6 +20,15 @@
   box-sizing: border-box;
  }
 }
+
+@media print {
+ .desktopOnly {
+  display: block !important;
+ }
+ .mobileOnly {
+  display: none !important;
+ }
+}
 /* @media (max-width: 1440px) {
  .layoutContainer {
   display: flex;
