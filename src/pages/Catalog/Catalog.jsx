@@ -14,11 +14,14 @@ import Pagination from "@components/common/Pagination/Pagination";
 
 import {getProductImageUrl} from "@utils/getProductImage";
 import {useSearch} from "../../context/SearchContext";
+import {usePagination} from "../../hooks/usePagination";
 
 export default function Catalog() {
  const API_URL = import.meta.env.VITE_API_URL;
 
  const [products, setProducts] = useState([]);
+ const [totalItems, setTotalItems] = useState(0);
+
  const [isLoading, setIsLoading] = useState(false);
  const [errorMessage, setErrorMessage] = useState("");
 
@@ -29,39 +32,57 @@ export default function Catalog() {
  const [sortBy, setSortBy] = useState("");
  const [aZ, setAZ] = useState("");
 
- const [page, setPage] = useState(1);
  const [size, setSize] = useState(12);
 
+ const location = useLocation();
  const {searchTerm, setSearchTerm} = useSearch();
 
- const location = useLocation();
+ const {page, setPage, totalPages} = usePagination(totalItems, size);
 
+ //
+ // READ URL PARAMS (search/category/page)
+ //
  useEffect(() => {
-  const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(location.search);
 
   const cat = params.get("category");
   const search = params.get("search");
+  const pageFromUrl = params.get("page");
+  const sizeFromUrl = params.get("size");
 
-  //   if (cat) setSelectedCategory(cat);
-  if (cat) {
-   setSelectedCategory(cat);
-   setPage(1);
-  }
-
+  if (cat) setSelectedCategory(cat);
   if (search) setSearchTerm(search);
+  if (sizeFromUrl) setSize(Number(sizeFromUrl));
+  if (pageFromUrl) setPage(Number(pageFromUrl));
  }, [location.search]);
 
- const handleCategorySelect = (category) => {
-  setSelectedCategory(category);
-  setPage(1);
+ const updateUrl = (overrides = {}) => {
+  const params = new URLSearchParams(location.search);
 
-  const params = new URLSearchParams(window.location.search);
-  params.set("category", category);
-  window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
+  params.set("page", overrides.page ?? page);
+  params.set("size", overrides.size ?? size);
+
+  if (selectedCategory) params.set("category", selectedCategory);
+  else params.delete("category");
+
+  if (searchTerm) params.set("search", searchTerm);
+  else params.delete("search");
+
+  window.history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
  };
 
+ const handleCategorySelect = (cat) => {
+  setSelectedCategory(cat);
+  setPage(1);
+  updateUrl({page: 1});
+ };
+
+ //
+ // LOAD PRODUCTS FROM API
+ //
  useEffect(() => {
   const controller = new AbortController();
+
   const load = async () => {
    setIsLoading(true);
    setErrorMessage("");
@@ -74,13 +95,15 @@ export default function Catalog() {
      priceTo: priceTo ?? undefined,
      sortBy: sortBy || undefined,
      aZ: aZ || undefined,
-     page: page - 1,
+     page: Math.max(0, page - 1),
      size,
     };
 
     const hasFilters = Object.values(filters).some((v) => v !== undefined);
 
-    const response = await fetch(hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`, {
+    const url = hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`;
+
+    const response = await fetch(url, {
      method: hasFilters ? "POST" : "GET",
      headers: {"Content-Type": "application/json", accept: "application/json"},
      body: hasFilters ? JSON.stringify(filters) : null,
@@ -92,8 +115,13 @@ export default function Catalog() {
     const data = await response.json();
 
     const items = Array.isArray(data) ? data : data.content || data.items || [];
-
     setProducts(items);
+
+    // total elements from backend
+    setTotalItems(data.totalElements ?? data.total ?? data.totalItems ?? items.length);
+
+    // update URL
+    updateUrl();
    } catch (err) {
     if (err.name !== "AbortError") setErrorMessage(err.message);
    } finally {
@@ -105,16 +133,13 @@ export default function Catalog() {
   return () => controller.abort();
  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
 
- // ------- SEARCH FILTER (client-side) -------
- const filteredProducts = useMemo(() => {
+ //
+ // FILTER BY SEARCH TERM (ONLY FRONT FILTER)
+ //
+ const visibleProducts = useMemo(() => {
   const term = (searchTerm || "").toLowerCase();
   return products.filter((p) => p.productName?.toLowerCase().includes(term));
  }, [searchTerm, products]);
-
- // PAGINATION
- const totalProducts = filteredProducts.length;
- const totalPages = Math.ceil(totalProducts / size);
- const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
 
  return (
   <>
@@ -138,6 +163,7 @@ export default function Catalog() {
       onPriceChange={({min, max}) => {
        setPriceFrom(min);
        setPriceTo(max);
+       setPage(1);
       }}
      />
 
@@ -171,25 +197,15 @@ export default function Catalog() {
         }
         if (f.startsWith("Sort:")) setSortBy("");
         if (f.startsWith("A-Z:")) setAZ("");
+        setPage(1);
        }}
-       resultsCount={filteredProducts.length}
+       resultsCount={visibleProducts.length}
       />
-
-      {isLoading && <div className={styles.innerCards}>Loading...</div>}
-
-      {!isLoading && errorMessage && (
-       <div
-        className={styles.innerCards}
-        style={{color: "#c62828"}}
-       >
-        {errorMessage}
-       </div>
-      )}
 
       <div className={styles.innerCards}>
        {!isLoading &&
         !errorMessage &&
-        paginatedProducts.map((item) => (
+        visibleProducts.map((item) => (
          <CatalogCard
           key={item.id}
           id={item.id}
@@ -215,6 +231,224 @@ export default function Catalog() {
   </>
  );
 }
+
+// import styles from "./Catalog.module.css";
+// import {useEffect, useState, useMemo} from "react";
+// import {useLocation} from "react-router-dom";
+
+// import Banner from "@components/home/Banner/Banner";
+// import NewsLetter from "@components/home/NewsLetter/NewsLetter";
+
+// import ActiveFilters from "@components/catalog/ActiveFilters/ActiveFilters";
+// import CatalogCard from "@components/catalog/CatalogCard/CatalogCard";
+// import CatalogCategories from "@components/catalog/CatalogCategories/CatalogCategories";
+// import CatalogFilters from "@components/catalog/CatalogFilters/CatalogFilters";
+// import CatalogSidebar from "@components/catalog/CatalogSidebar/CatalogSidebar";
+// import Pagination from "@components/common/Pagination/Pagination";
+
+// import {getProductImageUrl} from "@utils/getProductImage";
+// import {useSearch} from "../../context/SearchContext";
+
+// export default function Catalog() {
+//  const API_URL = import.meta.env.VITE_API_URL;
+
+//  const [products, setProducts] = useState([]);
+//  const [isLoading, setIsLoading] = useState(false);
+//  const [errorMessage, setErrorMessage] = useState("");
+
+//  const [selectedBrands, setSelectedBrands] = useState([]);
+//  const [selectedCategory, setSelectedCategory] = useState("");
+//  const [priceFrom, setPriceFrom] = useState();
+//  const [priceTo, setPriceTo] = useState();
+//  const [sortBy, setSortBy] = useState("");
+//  const [aZ, setAZ] = useState("");
+
+//  const [page, setPage] = useState(1);
+//  const [size, setSize] = useState(12);
+
+//  const {searchTerm, setSearchTerm} = useSearch();
+
+//  const location = useLocation();
+
+//  useEffect(() => {
+//   const params = new URLSearchParams(window.location.search);
+
+//   const cat = params.get("category");
+//   const search = params.get("search");
+//   const pageFromUrl = params.get("page");
+//   const sizeFromUrl = params.get("size");
+//   //   if (cat) setSelectedCategory(cat);
+//   if (cat) {
+//    setSelectedCategory(cat);
+//    //  setPage(1);
+//   }
+//   if (sizeFromUrl) setSize(Number(sizeFromUrl));
+//   if (pageFromUrl) setPage(Number(pageFromUrl));
+//   if (search) setSearchTerm(search);
+//  }, [location.search]);
+
+//  const handleCategorySelect = (category) => {
+//   setSelectedCategory(category);
+//   setPage(1);
+
+//   const params = new URLSearchParams(window.location.search);
+//   params.set("category", category);
+//   window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
+//  };
+
+//  useEffect(() => {
+//   const controller = new AbortController();
+//   const load = async () => {
+//    setIsLoading(true);
+//    setErrorMessage("");
+
+//    try {
+//     const filters = {
+//      categoryName: selectedCategory || undefined,
+//      brand: selectedBrands[0] || undefined,
+//      priceFrom: priceFrom ?? undefined,
+//      priceTo: priceTo ?? undefined,
+//      sortBy: sortBy || undefined,
+//      aZ: aZ || undefined,
+//      page: page - 1,
+//      size,
+//     };
+
+//     const hasFilters = Object.values(filters).some((v) => v !== undefined);
+
+//     const response = await fetch(hasFilters ? `${API_URL}/api/v1/catalog/filter` : `${API_URL}/api/v1/catalog`, {
+//      method: hasFilters ? "POST" : "GET",
+//      headers: {"Content-Type": "application/json", accept: "application/json"},
+//      body: hasFilters ? JSON.stringify(filters) : null,
+//      signal: controller.signal,
+//     });
+
+//     if (!response.ok) throw new Error(`Error: ${response.status}`);
+
+//     const data = await response.json();
+
+//     const items = Array.isArray(data) ? data : data.content || data.items || [];
+
+//     setProducts(items);
+//    } catch (err) {
+//     if (err.name !== "AbortError") setErrorMessage(err.message);
+//    } finally {
+//     setIsLoading(false);
+//    }
+//   };
+
+//   load();
+//   return () => controller.abort();
+//  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
+
+//  const filteredProducts = useMemo(() => {
+//   const term = (searchTerm || "").toLowerCase();
+//   return products.filter((p) => p.productName?.toLowerCase().includes(term));
+//  }, [searchTerm, products]);
+
+//  const totalProducts = filteredProducts.length;
+//  const totalPages = Math.ceil(totalProducts / size);
+//  const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
+
+//  return (
+//   <>
+//    <Banner />
+
+//    <div className={styles.top}>
+//     <h2 className={styles.title}>Catalog</h2>
+//    </div>
+
+//    <CatalogCategories onCategoryClick={handleCategorySelect} />
+
+//    <div className={styles.container}>
+//     <div className={styles.catalogContent}>
+//      <CatalogSidebar
+//       selectedBrands={selectedBrands}
+//       onBrandsChange={setSelectedBrands}
+//       selectedCategory={selectedCategory}
+//       onCategoryChange={setSelectedCategory}
+//       priceFrom={priceFrom}
+//       priceTo={priceTo}
+//       onPriceChange={({min, max}) => {
+//        setPriceFrom(min);
+//        setPriceTo(max);
+//       }}
+//      />
+
+//      <div className={styles.mainContent}>
+//       <CatalogFilters
+//        sortBy={sortBy}
+//        onSortByChange={setSortBy}
+//        aZ={aZ}
+//        onAZChange={setAZ}
+//        size={size}
+//        onSizeChange={(val) => {
+//         setSize(val);
+//         setPage(1);
+//        }}
+//       />
+
+//       <ActiveFilters
+//        filters={[
+//         selectedCategory && `Category: ${selectedCategory}`,
+//         selectedBrands[0] && `Brand: ${selectedBrands[0]}`,
+//         (priceFrom || priceTo) && `Price: ${priceFrom ?? 0} - ${priceTo ?? "∞"}`,
+//         sortBy && `Sort: ${sortBy}`,
+//         aZ && `A-Z: ${aZ}`,
+//        ].filter(Boolean)}
+//        onRemoveFilter={(f) => {
+//         if (f.startsWith("Category:")) setSelectedCategory("");
+//         if (f.startsWith("Brand:")) setSelectedBrands([]);
+//         if (f.startsWith("Price:")) {
+//          setPriceFrom(undefined);
+//          setPriceTo(undefined);
+//         }
+//         if (f.startsWith("Sort:")) setSortBy("");
+//         if (f.startsWith("A-Z:")) setAZ("");
+//        }}
+//        resultsCount={filteredProducts.length}
+//       />
+
+//       {isLoading && <div className={styles.innerCards}>Loading...</div>}
+
+//       {!isLoading && errorMessage && (
+//        <div
+//         className={styles.innerCards}
+//         style={{color: "#c62828"}}
+//        >
+//         {errorMessage}
+//        </div>
+//       )}
+
+//       <div className={styles.innerCards}>
+//        {!isLoading &&
+//         !errorMessage &&
+//         paginatedProducts.map((item) => (
+//          <CatalogCard
+//           key={item.id}
+//           id={item.id}
+//           name={item.productName}
+//           price={item.price}
+//           kcal={item.kcal || item.calories || 0}
+//           description={item.description || ""}
+//           imageUrl={getProductImageUrl(item)}
+//          />
+//         ))}
+//       </div>
+
+//       <Pagination
+//        currentPage={page}
+//        totalPages={totalPages}
+//        onPageChange={setPage}
+//       />
+//      </div>
+//     </div>
+//    </div>
+
+//    <NewsLetter />
+//   </>
+//  );
+// }
 
 // import styles from "./Catalog.module.css";
 // import {useEffect, useState} from "react";

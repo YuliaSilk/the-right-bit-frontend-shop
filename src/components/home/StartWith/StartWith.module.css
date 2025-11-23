@@ -47,7 +47,9 @@
  border-radius: 32px;
  font-weight: 400;
  /* margin-top: 56px; */
-
+ display: flex;
+ justify-content: center;
+ align-items: center;
  a {
   color: #ffff;
  }

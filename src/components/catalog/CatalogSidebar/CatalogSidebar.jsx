@@ -3,7 +3,7 @@ import styles from "./CatalogSidebar.module.css";
 import PriceRange from "../PriceRange/PriceRange";
 import PopularBrands from "@components/catalog/PopularBrands/PopularBrands";
 
-import FruitsAndVegetablesIcon from "../../../assets/svgs/FruitsAndVegetables.svg";
+import FruitsAndVegetablesIcon from "../../../assets/svgs/Fruits.svg";
 import HighProteinIcon from "../../../assets/svgs/HighProtein.svg";
 import WholeGrainsIcon from "../../../assets/svgs/WholeGrains.svg";
 import MilkProductsIcon from "../../../assets/svgs/MilkProducts.svg";
