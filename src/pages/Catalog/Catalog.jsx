@@ -105,13 +105,11 @@ export default function Catalog() {
   return () => controller.abort();
  }, [API_URL, selectedCategory, selectedBrands, priceFrom, priceTo, sortBy, aZ, page, size]);
 
- // ------- SEARCH FILTER (client-side) -------
  const filteredProducts = useMemo(() => {
   const term = (searchTerm || "").toLowerCase();
   return products.filter((p) => p.productName?.toLowerCase().includes(term));
  }, [searchTerm, products]);
 
- // PAGINATION
  const totalProducts = filteredProducts.length;
  const totalPages = Math.ceil(totalProducts / size);
  const paginatedProducts = filteredProducts.slice((page - 1) * size, page * size);
