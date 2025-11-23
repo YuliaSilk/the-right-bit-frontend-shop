@@ -74,8 +74,7 @@
  bottom: 100px;
  left: 50%;
  transform: translateX(-50%);
- width: 100vw; /* keep viewport-width line but centered to avoid overflow */
- height: 2px;
+ width: 100vw;
  background-color: #333;
 }
 @media screen and (max-width: 768px) {

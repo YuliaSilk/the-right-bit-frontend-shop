@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 import logo from "@assets/images/logo.svg";
 import instagramIcon from "@assets/social-icons/instagram.png";
 import facebookIcon from "@assets/social-icons/facebook.png";
-import twitterIcon from "@assets/social-icons/twitter.png";
+// import twitterIcon from "@assets/social-icons/twitter.png";
 import visaIcon from "@assets/social-icons/visa.png";
 import masterCardIcon from "@assets/social-icons/mastercard.png";
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
      <div className={styles.navColumn}>
       <ul className={styles.navList}>
-       {categories.slice(0, 7).map((cat) => (
+       {categories.slice(0, 4).map((cat) => (
         <li key={cat.categoryName}>
          <Link to={`/catalog?category=${encodeURIComponent(cat.categoryName)}`}>{cat.categoryName}</Link>
         </li>
@@ -81,13 +81,22 @@ export default function Footer() {
 
      <div className={styles.navColumn}>
       <ul className={styles.navList}>
-       {categories.slice(7).map((cat) => (
+       {categories.slice(4, 8).map((cat) => (
         <li key={cat.categoryName}>
          <Link to={`/catalog?category=${encodeURIComponent(cat.categoryName)}`}>{cat.categoryName}</Link>
         </li>
        ))}
       </ul>
      </div>
+     {/* <div className={styles.navColumn}>
+      <ul className={styles.navList}>
+       {categories.slice(8, 12).map((cat) => (
+        <li key={cat.categoryName}>
+         <Link to={`/catalog?category=${encodeURIComponent(cat.categoryName)}`}>{cat.categoryName}</Link>
+        </li>
+       ))}
+      </ul>
+     </div> */}
     </nav>
 
     <div className={styles.bottomSection}>
@@ -108,14 +117,14 @@ export default function Footer() {
         height={24}
        />
       </a>
-      <a href="https://www.x.com">
+      {/* <a href="https://www.x.com">
        <img
         src={twitterIcon}
         alt="Twitter"
         width={24}
         height={24}
        />
-      </a>
+      </a> */}
      </div>
 
      <p className={styles.copyright}>RightBite © 2025. All Rights Reserved</p>
