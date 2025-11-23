@@ -3,7 +3,8 @@ import styles from "./CatalogSidebar.module.css";
 import PriceRange from "../PriceRange/PriceRange";
 import PopularBrands from "@components/catalog/PopularBrands/PopularBrands";
 
-import FruitsAndVegetablesIcon from "../../../assets/svgs/FruitsAndVegetables.svg";
+import FruitsIcon from "../../../assets/svgs/Fruits.svg";
+import Vegetables from '../../../assets/svgs/Vegatables.svg';
 import HighProteinIcon from "../../../assets/svgs/HighProtein.svg";
 import WholeGrainsIcon from "../../../assets/svgs/WholeGrains.svg";
 import MilkProductsIcon from "../../../assets/svgs/MilkProducts.svg";
@@ -16,6 +17,8 @@ import DessertsIcon from "../../../assets/svgs/Desserts.svg";
 import PreCookedMealsIcon from "../../../assets/svgs/PreCookedMeals.svg";
 import DietsIcon from "../../../assets/svgs/Diets.svg";
 import AccessoriesIcon from "../../../assets/svgs/Accesories.svg";
+import Drinks from '../../../assets/svgs/Drinks.svg';
+import FishAndSeafood from '../../../assets/svgs/FishAndSeafood.svg';
 
 const categories = [
  {
@@ -65,7 +68,8 @@ const categories = [
  },
 ];
 const svgsByCategories = [
- {key: "Fruits & Vegetables", src: FruitsAndVegetablesIcon},
+ {key: "Fruits", src: FruitsIcon},
+ {key:"Vegetables", src:Vegetables},
  {key: "High Protein", src: HighProteinIcon},
  {key: "Whole grains", src: WholeGrainsIcon},
  {key: "Milk products", src: MilkProductsIcon},
@@ -78,6 +82,8 @@ const svgsByCategories = [
  {key: "Pre-cooked meals", src: PreCookedMealsIcon},
  {key: "Diets", src: DietsIcon},
  {key: "Accessories", src: AccessoriesIcon},
+ {key:"Drinks",src:Drinks},
+ {key:"FishAndSeafood",src:FishAndSeafood}
 ];
 const categoryIconMap = {
  "Meat and Poultry": "High Protein",
