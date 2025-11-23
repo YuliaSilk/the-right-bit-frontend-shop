@@ -4,10 +4,9 @@ import styles from "./Pagination.module.css";
 export default function Pagination({currentPage, totalPages, onPageChange}) {
  if (totalPages <= 1) return null;
 
- // побудова масиву сторінок з крапками
  const getPaginationRange = () => {
-  const totalNumbers = 3; // поточна + 2 сусідні
-  const totalBlocks = totalNumbers + 2; // враховуємо першу й останню
+  const totalNumbers = 3;
+  const totalBlocks = totalNumbers + 2;
 
   if (totalPages <= totalBlocks) {
    return Array.from({length: totalPages}, (_, i) => i + 1);
