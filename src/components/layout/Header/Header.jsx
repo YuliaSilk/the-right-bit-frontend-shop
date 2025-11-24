@@ -3,55 +3,34 @@ import logo from "@/assets/images/logo.svg";
 import searchIcon from "@/assets/icons/search.png";
 import userIcon from "@/assets/icons/profile.png";
 import cartIcon from "@/assets/icons/cart.png";
-import SearchDropdown from "../../home/SearchComponent/SearchDropdown";
+import {searchProducts, highlightMatch} from "@/utils/search";
 
 import {Link} from "react-router-dom";
 import {useAuth} from "@/context/AuthContext";
 import {useSearch} from "../../../context/SearchContext";
-import {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 const Header = () => {
  const {isAuthenticated} = useAuth();
- const {searchTerm, setSearchTerm} = useSearch();
+ const {setSearchTerm} = useSearch();
  const [menuOpen, setMenuOpen] = useState(false);
  const [filtered, setFiltered] = useState([]);
- const [allProducts, setAllProducts] = useState([]);
- const [showDropdown, setShowDropdown] = useState(false);
-
- const navigate = useNavigate();
+ const [allProducts] = useState([]);
+ const [, setShowDropdown] = useState(false);
+ const [query, setQuery] = useState("");
 
  const handleSearch = (e) => {
-  e.preventDefault();
-  if (!searchTerm.trim()) return;
-  navigate(`/catalog?search=${encodeURIComponent(searchTerm)}`);
+  const value = e.target.value;
+  setQuery(value);
+
+  const results = searchProducts(allProducts, value);
+  setFiltered(results);
  };
- useEffect(() => {
-  fetch(import.meta.env.VITE_API_URL + "/api/v1/catalog?size=1000")
-   .then((r) => r.json())
-   .then((data) => {
-    const items = Array.isArray(data) ? data : data.content || [];
-    setAllProducts(items);
-   });
- }, []);
-
- useEffect(() => {
-  const term = searchTerm.toLowerCase();
-  if (!term) {
-   setFiltered([]);
-   return;
-  }
-
-  const res = allProducts.filter((p) => p.productName?.toLowerCase().includes(term));
-
-  setFiltered(res);
- }, [searchTerm, allProducts]);
 
  return (
   <header className={styles.header}>
    <div className={styles.container}>
     <div className={styles.headerContent}>
-     {/* Burger */}
      <button
       className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
       onClick={() => setMenuOpen(!menuOpen)}
@@ -108,7 +87,7 @@ const Header = () => {
        <input
         type="text"
         placeholder="What are you looking for?"
-        value={searchTerm}
+        value={query}
         onChange={(e) => setSearchTerm(e.target.value)}
         className={styles.searchInput}
        />
@@ -122,13 +101,27 @@ const Header = () => {
          alt="Search"
         />
        </button>
-       {showDropdown && (
+
+       {query && filtered.length > 0 && (
         <div className={styles.dropdownWrapper}>
-         <SearchDropdown
-          searchTerm={searchTerm}
-          results={filtered}
-          onSelect={setSearchTerm}
-         />
+         {filtered.map((p) => (
+          <div
+           key={p.id}
+           className={styles.item}
+          >
+           <img
+            src={p.imageUrl}
+            className={styles.image}
+           />
+
+           <div
+            className={styles.name}
+            dangerouslySetInnerHTML={{
+             __html: highlightMatch(p.productName, query),
+            }}
+           />
+          </div>
+         ))}
         </div>
        )}
       </form>
