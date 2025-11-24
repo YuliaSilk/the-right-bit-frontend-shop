@@ -96,7 +96,6 @@ export default function Banner({className = ""}) {
   }
  };
 
- //Handle slide progression
  useEffect(() => {
   if (!isHovered) {
    startInterval();
@@ -107,7 +106,6 @@ export default function Banner({className = ""}) {
   return () => stopInterval();
  }, [isHovered]);
 
- // Handle manual slide changes
  const handleDotClick = (index) => {
   setCurrentSlide(index);
   if (!isHovered) {

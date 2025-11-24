@@ -23,7 +23,6 @@ export default function SuccessPage() {
   if (saved) {
    try {
     const parsed = JSON.parse(saved);
-    // console.log("Loaded order:", parsed);
     setOrder(parsed);
    } catch (error) {
     console.error("Failed to load order:", error);
