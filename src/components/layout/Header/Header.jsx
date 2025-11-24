@@ -3,28 +3,63 @@ import logo from "@/assets/images/logo.svg";
 import searchIcon from "@/assets/icons/search.png";
 import userIcon from "@/assets/icons/profile.png";
 import cartIcon from "@/assets/icons/cart.png";
-import {searchProducts, highlightMatch} from "@/utils/search";
-
+import {searchProducts} from "../../../utils/search";
+import SearchDropdown from "../../home/Search/SearchDropdown";
 import {Link} from "react-router-dom";
 import {useAuth} from "@/context/AuthContext";
 import {useSearch} from "../../../context/SearchContext";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
  const {isAuthenticated} = useAuth();
  const {setSearchTerm} = useSearch();
  const [menuOpen, setMenuOpen] = useState(false);
  const [filtered, setFiltered] = useState([]);
- const [allProducts] = useState([]);
- const [, setShowDropdown] = useState(false);
+ const [allProducts, setAllProducts] = useState([]);
+ const [showDropdown, setShowDropdown] = useState(false);
  const [query, setQuery] = useState("");
+ const navigate = useNavigate();
+ useEffect(() => {
+  const loadProducts = async () => {
+   try {
+    const API_URL = import.meta.env.VITE_API_URL;
+    const response = await fetch(`${API_URL}/api/v1/catalog?size=1000`);
+    if (!response.ok) throw new Error("Failed to load products");
+    const data = await response.json();
+    const items = Array.isArray(data) ? data : data.content || data.items || [];
+    setAllProducts(items);
+   } catch (error) {
+    console.error("Error loading products:", error);
+   }
+  };
+
+  loadProducts();
+ }, []);
+
+ useEffect(() => {
+  if (query.trim()) {
+   const results = searchProducts(allProducts, query);
+   setFiltered(results);
+   setShowDropdown(true);
+  } else {
+   setFiltered([]);
+   setShowDropdown(false);
+  }
+ }, [query, allProducts]);
 
  const handleSearch = (e) => {
-  const value = e.target.value;
-  setQuery(value);
+  e.preventDefault();
+  if (!query.trim()) return;
 
-  const results = searchProducts(allProducts, value);
-  setFiltered(results);
+  setSearchTerm(query);
+  navigate(`/catalog?search=${encodeURIComponent(query)}`);
+  setShowDropdown(false);
+ };
+
+ const handleSelectProduct = () => {
+  setShowDropdown(false);
+  setQuery("");
  };
 
  return (
@@ -88,7 +123,10 @@ const Header = () => {
         type="text"
         placeholder="What are you looking for?"
         value={query}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => {
+         setQuery(e.target.value);
+         setSearchTerm(e.target.value);
+        }}
         className={styles.searchInput}
        />
 
@@ -102,26 +140,13 @@ const Header = () => {
         />
        </button>
 
-       {query && filtered.length > 0 && (
+       {showDropdown && filtered.length > 0 && (
         <div className={styles.dropdownWrapper}>
-         {filtered.map((p) => (
-          <div
-           key={p.id}
-           className={styles.item}
-          >
-           <img
-            src={p.imageUrl}
-            className={styles.image}
-           />
-
-           <div
-            className={styles.name}
-            dangerouslySetInnerHTML={{
-             __html: highlightMatch(p.productName, query),
-            }}
-           />
-          </div>
-         ))}
+         <SearchDropdown
+          results={filtered}
+          searchTerm={query}
+          onSelect={handleSelectProduct}
+         />
         </div>
        )}
       </form>

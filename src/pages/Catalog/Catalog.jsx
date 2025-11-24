@@ -111,15 +111,16 @@ export default function Catalog() {
   return () => controller.abort();
  }, [API_URL]);
 
+ const visibleProducts = useMemo(
+  () => filterProducts(allProducts, {searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo}),
+  [allProducts, searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo]
+ );
+
  const paginatedProducts = useMemo(() => {
   const start = (page - 1) * size;
   const end = start + size;
   return visibleProducts.slice(start, end);
  }, [visibleProducts, page, size]);
- const visibleProducts = useMemo(
-  () => filterProducts(allProducts, {searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo}),
-  [allProducts, searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo]
- );
 
  return (
   <>
