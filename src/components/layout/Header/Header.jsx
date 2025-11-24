@@ -3,30 +3,34 @@ import logo from "@/assets/images/logo.svg";
 import searchIcon from "@/assets/icons/search.png";
 import userIcon from "@/assets/icons/profile.png";
 import cartIcon from "@/assets/icons/cart.png";
+import {searchProducts, highlightMatch} from "@/utils/search";
 
 import {Link} from "react-router-dom";
 import {useAuth} from "@/context/AuthContext";
 import {useSearch} from "../../../context/SearchContext";
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
 
 const Header = () => {
  const {isAuthenticated} = useAuth();
- const {searchTerm, setSearchTerm} = useSearch();
+ const {setSearchTerm} = useSearch();
  const [menuOpen, setMenuOpen] = useState(false);
- const navigate = useNavigate();
+ const [filtered, setFiltered] = useState([]);
+ const [allProducts] = useState([]);
+ const [, setShowDropdown] = useState(false);
+ const [query, setQuery] = useState("");
 
  const handleSearch = (e) => {
-  e.preventDefault();
-  if (!searchTerm.trim()) return;
-  navigate(`/catalog?search=${encodeURIComponent(searchTerm)}`);
+  const value = e.target.value;
+  setQuery(value);
+
+  const results = searchProducts(allProducts, value);
+  setFiltered(results);
  };
 
  return (
   <header className={styles.header}>
    <div className={styles.container}>
     <div className={styles.headerContent}>
-     {/* Burger */}
      <button
       className={`${styles.burger} ${menuOpen ? styles.open : ""}`}
       onClick={() => setMenuOpen(!menuOpen)}
@@ -77,14 +81,17 @@ const Header = () => {
       <form
        className={styles.searchBox}
        onSubmit={handleSearch}
+       onFocus={() => setShowDropdown(true)}
+       onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
       >
        <input
         type="text"
         placeholder="What are you looking for?"
-        value={searchTerm}
+        value={query}
         onChange={(e) => setSearchTerm(e.target.value)}
         className={styles.searchInput}
        />
+
        <button
         type="submit"
         className={styles.searchButton}
@@ -94,6 +101,29 @@ const Header = () => {
          alt="Search"
         />
        </button>
+
+       {query && filtered.length > 0 && (
+        <div className={styles.dropdownWrapper}>
+         {filtered.map((p) => (
+          <div
+           key={p.id}
+           className={styles.item}
+          >
+           <img
+            src={p.imageUrl}
+            className={styles.image}
+           />
+
+           <div
+            className={styles.name}
+            dangerouslySetInnerHTML={{
+             __html: highlightMatch(p.productName, query),
+            }}
+           />
+          </div>
+         ))}
+        </div>
+       )}
       </form>
 
       <div className={styles.icons}>

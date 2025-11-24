@@ -15,6 +15,7 @@ import Pagination from "@components/common/Pagination/Pagination";
 import {getProductImageUrl} from "@utils/getProductImage";
 import {useSearch} from "../../context/SearchContext";
 import {usePagination} from "../../hooks/usePagination";
+import {filterProducts} from "@utils/filterProducts";
 
 export default function Catalog() {
  const API_URL = import.meta.env.VITE_API_URL;
@@ -61,13 +62,9 @@ export default function Catalog() {
   params.set("size", overrides.size ?? size);
 
   if (selectedCategory) params.set("category", selectedCategory);
-  // else params.delete("category");
 
   if (searchTerm) params.set("search", searchTerm);
-  // else params.delete("search");
   navigate(`${location.pathname}?${params.toString()}`, {replace: true});
-
-  // window.history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
  };
 
  const handleCategorySelect = (cat) => {
@@ -113,20 +110,16 @@ export default function Catalog() {
   loadAllProducts();
   return () => controller.abort();
  }, [API_URL]);
- const visibleProducts = useMemo(() => {
-  const term = (searchTerm || "").toLowerCase();
 
-  return allProducts
-   .filter((p) => p.productName?.toLowerCase().includes(term))
-   .filter((p) => (selectedCategory ? p.categories?.some((c) => c.categoryName === selectedCategory) : true))
-   .filter((p) => (selectedBrands.length ? p.brand?.brandName === selectedBrands[0] : true))
-   .filter((p) => (priceFrom || priceTo ? p.price >= (priceFrom || 0) && p.price <= (priceTo || Infinity) : true));
- }, [allProducts, searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo]);
  const paginatedProducts = useMemo(() => {
   const start = (page - 1) * size;
   const end = start + size;
   return visibleProducts.slice(start, end);
  }, [visibleProducts, page, size]);
+ const visibleProducts = useMemo(
+  () => filterProducts(allProducts, {searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo}),
+  [allProducts, searchTerm, selectedCategory, selectedBrands, priceFrom, priceTo]
+ );
 
  return (
   <>
@@ -189,7 +182,6 @@ export default function Catalog() {
        resultsCount={visibleProducts.length}
       />
 
-      {/* Loading State */}
       {isLoading && (
        <div className={styles.loading}>
         <div className={styles.spinner}></div>
@@ -211,7 +203,6 @@ export default function Catalog() {
        </div>
       )}
 
-      {/* Empty State */}
       {!isLoading && !errorMessage && visibleProducts.length === 0 && (
        <div className={styles.empty}>
         <div className={styles.emptyIcon}>🔍</div>
