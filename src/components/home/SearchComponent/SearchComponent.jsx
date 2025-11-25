@@ -1,4 +1,4 @@
-import styles from "./SearchDropdown.module.css";
+import styles from "./SearchComponent.module.css";
 import {Link} from "react-router-dom";
 import {getProductImageUrl} from "@/utils/getProductImage";
 

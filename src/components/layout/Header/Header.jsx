@@ -4,12 +4,12 @@ import searchIcon from "@/assets/icons/search.png";
 import userIcon from "@/assets/icons/profile.png";
 import cartIcon from "@/assets/icons/cart.png";
 import {searchProducts} from "../../../utils/search";
-import SearchDropdown from "../../home/Search/SearchDropdown";
 import {Link} from "react-router-dom";
 import {useAuth} from "@/context/AuthContext";
 import {useSearch} from "../../../context/SearchContext";
 import {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import SearchDropdown from "../../home/SearchComponent/SearchComponent";
 
 const Header = () => {
  const {isAuthenticated} = useAuth();
