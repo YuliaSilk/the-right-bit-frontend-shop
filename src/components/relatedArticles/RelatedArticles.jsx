@@ -8,38 +8,6 @@ import "swiper/css/pagination";
 const RelatedArticles = () => {
  const relatedArticles = data.slice(0, 12);
 
- //  const settings = {
- //   dots: true,
- //   infinite: true,
- //   slidesToShow: 3,
- //   slidesToScroll: 1,
- //   arrows: false,
- //   autoplay: true,
- //   autoplaySpeed: 3000,
- //   speed: 500,
- //   pauseOnHover: true,
- //   pauseOnFocus: true,
- //   pauseOnDotsHover: true,
- //   appendDots: (dots) => (
- //    <div>
- //     <ul style={{margin: "0px", display: "flex"}}> {dots} </ul>
- //    </div>
- //   ),
- //   customPaging: () => (
- //    <button
- //     style={{
- //      width: "10px",
- //      height: "10px",
- //      borderRadius: "50%",
- //      background: "#2D6B41",
-
- //      border: "none",
- //      cursor: "pointer",
- //     }}
- //    ></button>
- //   ),
- //  };
-
  return (
   <div className={styles.relatedArticlesCont}>
    <div className={styles.titleCont}>

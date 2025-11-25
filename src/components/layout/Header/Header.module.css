@@ -36,7 +36,6 @@
 .nav {
  display: flex;
  gap: 32px;
- /* margin-right: 48px; */
 }
 
 .link {

@@ -88,15 +88,6 @@ export default function Footer() {
        ))}
       </ul>
      </div>
-     {/* <div className={styles.navColumn}>
-      <ul className={styles.navList}>
-       {categories.slice(8, 12).map((cat) => (
-        <li key={cat.categoryName}>
-         <Link to={`/catalog?category=${encodeURIComponent(cat.categoryName)}`}>{cat.categoryName}</Link>
-        </li>
-       ))}
-      </ul>
-     </div> */}
     </nav>
 
     <div className={styles.bottomSection}>
@@ -117,14 +108,6 @@ export default function Footer() {
         height={24}
        />
       </a>
-      {/* <a href="https://www.x.com">
-       <img
-        src={twitterIcon}
-        alt="Twitter"
-        width={24}
-        height={24}
-       />
-      </a> */}
      </div>
 
      <p className={styles.copyright}>RightBite © 2025. All Rights Reserved</p>
